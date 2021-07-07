@@ -2,3 +2,5 @@ Base path: '/home/bcuser/Unity_Prjs/2020.3.13f1/Editor/Data', plugins path '/hom
 Cmd: initializeCompiler
 
 Cmd: shutdown
+
+Quitting shader compiler process
