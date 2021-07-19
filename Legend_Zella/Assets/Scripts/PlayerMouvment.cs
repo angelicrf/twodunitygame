@@ -8,7 +8,7 @@ public class PlayerMouvment : MonoBehaviour
     private Rigidbody2D plRigid;
     private Vector3 plChange;
     private Animator animator;
-    
+    public bool waliked; 
     void Start()
     {
      
@@ -27,13 +27,16 @@ public class PlayerMouvment : MonoBehaviour
     void walikngAnimator(){
 
         if(plChange != Vector3.zero){
-            moveCharacters();
+            
             animator.SetFloat("moveX" , plChange.x);
             animator.SetFloat("moveY", plChange.y);
-            animator.SetBool("walked", true);
+            animator.SetBool("waliked", true);
+            moveCharacters();
+            waliked = true;
 
         }else{
-            animator.SetBool("walked", false);
+            animator.SetBool("waliked", false);
+            waliked = false;
         }
     }
     void moveCharacters(){
