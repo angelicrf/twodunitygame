@@ -5,24 +5,27 @@ using UnityEngine;
 public class PlayerMouvment : MonoBehaviour
 {
     public float speed;
-    private Rigidbody2D plRigid;
+    public Rigidbody2D plRigid;
     private Vector3 plChange;
     private Animator animator;
     public bool waliked; 
     void Start()
     {
-     
+        
         plRigid = GetComponent<Rigidbody2D>();
     }
-
-    void Update()
-    {
+    void Update(){
         plChange = Vector3.zero;
         plChange.x = Input.GetAxisRaw("Horizontal");
         plChange.y = Input.GetAxisRaw("Vertical");
-        Debug.Log("plChange is " + plChange);
+    }
+
+    void FixedUpdate()
+    {
+        Debug.Log("plChange is " + plChange );
         animator = GetComponent<Animator>();
         walikngAnimator();
+    
     }
     void walikngAnimator(){
 
@@ -42,4 +45,5 @@ public class PlayerMouvment : MonoBehaviour
     void moveCharacters(){
         plRigid.MovePosition(transform.position + plChange * speed * Time.deltaTime);
     }
+   
 }
