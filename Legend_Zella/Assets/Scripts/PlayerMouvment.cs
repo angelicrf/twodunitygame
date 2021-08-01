@@ -15,7 +15,7 @@ public class PlayerMouvment : MonoBehaviour
         plRigid = GetComponent<Rigidbody2D>();
     }
     void Update(){
-        plChange = Vector3.zero;
+        //plChange = Vector3.zero;
         plChange.x = Input.GetAxisRaw("Horizontal");
         plChange.y = Input.GetAxisRaw("Vertical");
     }

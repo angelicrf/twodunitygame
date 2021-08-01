@@ -247,7 +247,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -122715825
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7152930139536384079, guid: dca134196311037e39c2edfc41c77afa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -288,7 +288,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 159132782}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.11, y: 0.43, z: -0.0000009536743}
+  m_LocalPosition: {x: 0.3, y: 0.6, z: -0.0000009536743}
   m_LocalScale: {x: 1.5637, y: 1.12835, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -658,7 +658,7 @@ MonoBehaviour:
   replaceText: Home Area
   placeText: {fileID: 828020064}
   newTextObj: {fileID: 828020062}
-  rig2d: {fileID: 159132788}
+  mvRigid: {fileID: 159132788}
 --- !u!1 &1191873223
 GameObject:
   m_ObjectHideFlags: 0
@@ -10692,6 +10692,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3201028692446241815, guid: 92248ffb3b8b1c7c99702005a2bf3f99, type: 3}
       propertyPath: rig2d
+      value: 
+      objectReference: {fileID: 159132788}
+    - target: {fileID: 3201028692446241815, guid: 92248ffb3b8b1c7c99702005a2bf3f99, type: 3}
+      propertyPath: mvRigid
+      value: 
+      objectReference: {fileID: 159132788}
+    - target: {fileID: 3201028692446241815, guid: 92248ffb3b8b1c7c99702005a2bf3f99, type: 3}
+      propertyPath: plRigid
       value: 
       objectReference: {fileID: 159132788}
     - target: {fileID: 3201028692446241815, guid: 92248ffb3b8b1c7c99702005a2bf3f99, type: 3}

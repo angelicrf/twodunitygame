@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
+
 public class RoomMove : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -13,35 +14,85 @@ public class RoomMove : MonoBehaviour
     public string replaceText;
     public Text placeText;
     public GameObject newTextObj;
-    private PlayerMouvment rig2d;
-
-    void Start()
-    {
-        cam = Camera.main.GetComponent<CameraMovement>();
-        //rig2d = GetComponent<PlayerMouvment>();
+    public Rigidbody2D mvRigid;
+    private PlayerMouvment playerMouvement;
+    private string newItem;
+    private Vector2 holdMins;
+    private Vector2 dspMins;
+    private Vector2 dspMaxs;
+    private Camera camera2;
+    private Vector2 camPos;
+    private bool isPooled;
     
+    void Start()
+    { 
+        playerMouvement = GetComponent<PlayerMouvment>();
+        
+        mvRigid = playerMouvement.plRigid;
+        
+        //GetComponent<Rigidbody2D>();
+              
     }
 
     void FixedUpdate()
     {
+        ChangeStats();
+    }
+    private void ChangeStats(){
+        Debug.Log("before ChangeStats...");
+        camera2 = GameObject.Find("Main Camera").GetComponent<Camera>();
+        //CameraMovement cv = new CameraMovement(new Vector2(5,3),new Vector2(10,1));
+        //dspMins += cv.MinValues;
+        //dspMaxs += cv.MinValues;
+        CameraMovement vb = new CameraMovement();
+        dspMins = vb.TestMethMins();
+        dspMaxs = vb.TestMethMaxs();
+        //Debug.Log("Constructor Called2..." + dspMins);
+        //Debug.Log("constructor called.." +  dspMaxs);
+        //set camera position
+        
         OnTriggerEnter2D();
+       
     }
     private void OnTriggerEnter2D(){
-      
-            Debug.Log("collision happened..");
-            cam.minPos += cameraChange;
-            cam.maxPos += cameraChange; 
-            //plrMvn.transform.position += playerChange;
+            
+            Debug.Log("collision happened...");
+             //playerMouvement.transform.position += playerChange;
             if (textNeeded){
                  StartCoroutine (displayText());
             }
         
     }
     private IEnumerator displayText(){
+        camPos = camera2.transform.position;
         newTextObj.SetActive(true);
-        placeText.text = replaceText;
-        yield return new WaitForSeconds(4f);
-        newTextObj.SetActive(false);
+         Debug.Log("CamposX-Y is " + camPos);
+         if(camPos.x >= 8){
+           
+             replaceText = "Pool Area";
+             Debug.Log("ReplaceText is " + replaceText);
+             placeText.text = replaceText;
+             chnageAllPos();
+             // a bool similar to: 
+             textNeeded = false;
+             yield return new WaitForSeconds(4f);
+             newTextObj.SetActive(false);
+             textNeeded = true;
+         
 
-    }
+        }else{
+        
+            placeText.text = "Home Area";
+            yield return new WaitForSeconds(4f);
+            newTextObj.SetActive(false);
+        } 
+   }
+   private void chnageAllPos(){
+        GameObject.Find("Main Camera").GetComponent<Camera>().enabled = false;
+             GameObject.Find("Player").GetComponent<PlayerMouvment>().enabled = false;
+             GameObject.Find("Main Camera").GetComponent<Camera>().transform.position = new Vector3(12 , 6, -10);
+             GameObject.Find("Player").GetComponent<PlayerMouvment>().plRigid.transform.position = new Vector3(12, 6, -6);
+             GameObject.Find("Player").GetComponent<PlayerMouvment>().enabled = true;
+             GameObject.Find("Main Camera").GetComponent<Camera>().enabled = true;
+   }
 }
