@@ -34,7 +34,7 @@ public class RoomMove : MonoBehaviour
         ChangeStats();
     }
     private void ChangeStats(){
-        Debug.Log("before ChangeStats...");
+        //Debug.Log("before ChangeStats...");
         camera2 = GameObject.Find("Main Camera").GetComponent<Camera>();
         //CameraMovement cv = new CameraMovement(new Vector2(5,3),new Vector2(10,1));
         //dspMins += cv.MinValues;
@@ -48,7 +48,7 @@ public class RoomMove : MonoBehaviour
         OnTriggerEnter2D();
     }
     private void OnTriggerEnter2D(){
-            Debug.Log("collision happened...");
+            //Debug.Log("collision happened...");
              //playerMouvement.transform.position += playerChange;
             if (textNeeded){
                  StartCoroutine (displayText());
@@ -57,7 +57,7 @@ public class RoomMove : MonoBehaviour
     private IEnumerator displayText(){
         camPos = camera2.transform.position;
         newTextObj.SetActive(true);
-         Debug.Log("CamposX-Y is " + camPos);
+         //Debug.Log("CamposX-Y is " + camPos);
          if(camPos.x >= 8){
              replaceText = "Pool Area";
              placeText.text = replaceText;

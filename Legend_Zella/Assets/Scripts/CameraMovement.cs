@@ -23,11 +23,11 @@ public class CameraMovement : MonoBehaviour, NewInterFace
     }
      public Vector2 GetMins()
     {
-        Debug.Log("DID Min! from CameraMouvement ..." + MinValues);
+        //Debug.Log("DID Min! from CameraMouvement ..." + MinValues);
         return minPos;
     }
     public Vector2 GetMaxs(){
-        Debug.Log("DID Max! from CameraMouvement ... " + MaxValue);
+        //Debug.Log("DID Max! from CameraMouvement ... " + MaxValue);
        return maxPos;
     }
     void Start()
