@@ -622,8 +622,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dd43b83a0c4c54a4bcf892b08cfa8ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraChange: {x: -10, y: 1}
-  playerChange: {x: -3, y: 1, z: 0}
+  cameraChange: {x: 0, y: 2, z: -10}
+  playerChange: {x: 0, y: 2, z: -6}
   textNeeded: 1
   replaceText: Home Area
   placeText: {fileID: 828020064}
@@ -10799,6 +10799,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2581083694108348980, guid: 54dee524c75c135f8b0494751dbe5bea, type: 3}
+      propertyPath: m_Size.x
+      value: 0.7860365
+      objectReference: {fileID: 0}
+    - target: {fileID: 2581083694108348980, guid: 54dee524c75c135f8b0494751dbe5bea, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.106981754
+      objectReference: {fileID: 0}
     - target: {fileID: 2581083694108348981, guid: 54dee524c75c135f8b0494751dbe5bea, type: 3}
       propertyPath: m_Name
       value: RoomTransferDown
@@ -10809,7 +10817,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2581083694108348983, guid: 54dee524c75c135f8b0494751dbe5bea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.74
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2581083694108348983, guid: 54dee524c75c135f8b0494751dbe5bea, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10866,7 +10874,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3201028692446241813, guid: 92248ffb3b8b1c7c99702005a2bf3f99, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.72
+      value: 8.7
       objectReference: {fileID: 0}
     - target: {fileID: 3201028692446241813, guid: 92248ffb3b8b1c7c99702005a2bf3f99, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10904,6 +10912,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3201028692446241814, guid: 92248ffb3b8b1c7c99702005a2bf3f99, type: 3}
+      propertyPath: m_Size.x
+      value: 0.59584713
+      objectReference: {fileID: 0}
+    - target: {fileID: 3201028692446241814, guid: 92248ffb3b8b1c7c99702005a2bf3f99, type: 3}
+      propertyPath: m_Size.y
+      value: 1.9703491
+      objectReference: {fileID: 0}
+    - target: {fileID: 3201028692446241814, guid: 92248ffb3b8b1c7c99702005a2bf3f99, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.20207644
+      objectReference: {fileID: 0}
+    - target: {fileID: 3201028692446241814, guid: 92248ffb3b8b1c7c99702005a2bf3f99, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.24743772
+      objectReference: {fileID: 0}
     - target: {fileID: 3201028692446241815, guid: 92248ffb3b8b1c7c99702005a2bf3f99, type: 3}
       propertyPath: rig2d
       value: 
@@ -10931,6 +10955,30 @@ PrefabInstance:
     - target: {fileID: 3201028692446241815, guid: 92248ffb3b8b1c7c99702005a2bf3f99, type: 3}
       propertyPath: replaceText
       value: Pool Area
+      objectReference: {fileID: 0}
+    - target: {fileID: 3201028692446241815, guid: 92248ffb3b8b1c7c99702005a2bf3f99, type: 3}
+      propertyPath: cameraChange.x
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3201028692446241815, guid: 92248ffb3b8b1c7c99702005a2bf3f99, type: 3}
+      propertyPath: cameraChange.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3201028692446241815, guid: 92248ffb3b8b1c7c99702005a2bf3f99, type: 3}
+      propertyPath: cameraChange.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3201028692446241815, guid: 92248ffb3b8b1c7c99702005a2bf3f99, type: 3}
+      propertyPath: playerChange.x
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3201028692446241815, guid: 92248ffb3b8b1c7c99702005a2bf3f99, type: 3}
+      propertyPath: playerChange.y
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3201028692446241815, guid: 92248ffb3b8b1c7c99702005a2bf3f99, type: 3}
+      propertyPath: playerChange.z
+      value: -6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92248ffb3b8b1c7c99702005a2bf3f99, type: 3}

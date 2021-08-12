@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMouvment : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class PlayerMouvment : MonoBehaviour
     private Vector3 plChange;
     private Animator animator;
     public bool waliked; 
+    //private string replacePlText;
+    //public Text placePlText;
+    //public GameObject newPlTextObj;
       void Awake(){
         BoxCollider2D bc;
         bc = GameObject.Find("Player").AddComponent<BoxCollider2D>() as BoxCollider2D;
@@ -19,6 +23,7 @@ public class PlayerMouvment : MonoBehaviour
     void Start()
     {   
         plRigid = GetComponent<Rigidbody2D>();
+        
     }
 
     void FixedUpdate()
@@ -29,6 +34,7 @@ public class PlayerMouvment : MonoBehaviour
         plChange.y = Input.GetAxisRaw("Vertical");
         animator = GetComponent<Animator>();
         walikngAnimator();
+        //StartCoroutine(areaPlChangeMSG("Home Area"));
     
     }
     void walikngAnimator(){
@@ -53,5 +59,11 @@ public class PlayerMouvment : MonoBehaviour
         Debug.Log("IsEnteredClodiderFromPlayer..." + other.name);
         //if Sign or Collision
     } */
-   
+ /*    private IEnumerator areaPlChangeMSG(string dspText){
+             newPlTextObj.SetActive(true);
+             placePlText.text = dspText;
+             placePlText.color = Color.green;
+             yield return new WaitForSeconds(4f);
+             newPlTextObj.SetActive(false);
+   } */
 }
