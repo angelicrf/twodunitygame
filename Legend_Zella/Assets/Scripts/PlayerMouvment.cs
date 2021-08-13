@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class PlayerMouvment : MonoBehaviour
 {
+    public enum PlayerState{ walk, attack, interact}
     public float speed;
+    public PlayerState currentPlState;
     public Rigidbody2D plRigid;
     private Vector3 plChange;
     private Animator animator;
@@ -22,8 +24,8 @@ public class PlayerMouvment : MonoBehaviour
     }
     void Start()
     {   
+        currentPlState = PlayerState.walk;
         plRigid = GetComponent<Rigidbody2D>();
-        
     }
 
     void FixedUpdate()
@@ -33,9 +35,23 @@ public class PlayerMouvment : MonoBehaviour
         plChange.x = Input.GetAxisRaw("Horizontal");
         plChange.y = Input.GetAxisRaw("Vertical");
         animator = GetComponent<Animator>();
+        if(Input.GetButtonDown("attack") & currentPlState != PlayerState.attack){
+           // use space button to attack
+                StartCoroutine(AttackStart());
+        }
+        else if(currentPlState == PlayerState.walk){
         walikngAnimator();
+        }
         //StartCoroutine(areaPlChangeMSG("Home Area"));
     
+    }
+    public IEnumerator AttackStart(){
+       animator.SetBool("attacking", true);
+       currentPlState = PlayerState.attack;
+       yield return null;
+       animator.SetBool("attacking",false);
+       yield return new WaitForSeconds(.3f);
+       currentPlState = PlayerState.walk;
     }
     void walikngAnimator(){
         
