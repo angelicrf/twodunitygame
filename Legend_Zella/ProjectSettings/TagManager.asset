@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Circle
   - Square
+  - PotBreak
   layers:
   - Default
   - TransparentFX
