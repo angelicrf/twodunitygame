@@ -26,6 +26,8 @@ public class PlayerMouvment : MonoBehaviour
     {   
         currentPlState = PlayerState.walk;
         plRigid = GetComponent<Rigidbody2D>();
+        animator.SetFloat("moveX" , 0);
+        animator.SetFloat("moveY", -1);
     }
 
     void FixedUpdate()
@@ -69,6 +71,7 @@ public class PlayerMouvment : MonoBehaviour
          
     }
     void moveCharacters(){
+        plChange.Normalize();
         plRigid.MovePosition(transform.position + plChange * speed * Time.deltaTime);
     }
    /*  void OnTriggerEnter2D(Collider2D other){

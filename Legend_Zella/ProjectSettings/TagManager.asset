@@ -9,6 +9,7 @@ TagManager:
   - Circle
   - Square
   - PotBreak
+  - Log
   layers:
   - Default
   - TransparentFX
