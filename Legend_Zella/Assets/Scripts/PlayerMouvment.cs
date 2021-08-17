@@ -12,15 +12,18 @@ public class PlayerMouvment : MonoBehaviour
     private Vector3 plChange;
     private Animator animator;
     public bool waliked; 
+    private BoxCollider2D bc;
     //private string replacePlText;
     //public Text placePlText;
     //public GameObject newPlTextObj;
       void Awake(){
-        BoxCollider2D bc;
+        
         bc = GameObject.Find("Player").AddComponent<BoxCollider2D>() as BoxCollider2D;
         bc.size = new Vector2(0.9672769f, 0.6574417f);
         bc.offset = new Vector2(0.05468863f,-0.4300305f);
-        bc.isTrigger = true;
+        //plRigid.bodyType = RigidbodyType2D.Dynamic;
+        //if isKinematic
+        //bc.isTrigger = true;
     }
     void Start()
     {   
@@ -33,7 +36,6 @@ public class PlayerMouvment : MonoBehaviour
     void FixedUpdate()
     {
         plChange = Vector3.zero;
-        //Debug.Log("plChange is " + plChange );
         plChange.x = Input.GetAxisRaw("Horizontal");
         plChange.y = Input.GetAxisRaw("Vertical");
         animator = GetComponent<Animator>();
@@ -85,4 +87,8 @@ public class PlayerMouvment : MonoBehaviour
              yield return new WaitForSeconds(4f);
              newPlTextObj.SetActive(false);
    } */
+ 
+    void OnCollisionEnter2D(Collision2D col){
+         Debug.Log("Player is collisioned with ");
+    }
 }
