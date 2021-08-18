@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 96427134}
   m_Layer: 0
   m_Name: UpHitBox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -180,12 +180,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.0891651, y: 1.0605311}
-      - {x: -0.54981434, y: 1.0353894}
+    - - {x: 0.01732322, y: 0.7342411}
+      - {x: -0.5361427, y: 0.674325}
       - {x: -0.45403776, y: 0.06868309}
       - {x: -0.027867954, y: 0.3108074}
       - {x: 0.5432028, y: 0.25027627}
-      - {x: 0.61668795, y: 1.1867173}
+      - {x: 0.41738334, y: 0.8890544}
 --- !u!114 &96427134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,9 +195,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 96427131}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a659325c2b083366c86364929500886f, type: 3}
+  m_Script: {fileID: 11500000, guid: 02aff767cd8adfbcaa39304ef8bdbd0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  force: 2
+  knockTime: 0.2
 --- !u!1 &159132782
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,7 +213,7 @@ GameObject:
   - component: {fileID: 159132787}
   - component: {fileID: 159132786}
   - component: {fileID: 159132785}
-  - component: {fileID: 159132783}
+  - component: {fileID: 159132784}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -219,20 +221,32 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &159132783
-MonoBehaviour:
+--- !u!61 &159132784
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 159132782}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02aff767cd8adfbcaa39304ef8bdbd0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: 4
-  knockTime: 0.3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.02321145, y: -0.2363621}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 2}
+    newSize: {x: 1, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.58219403, y: 1.0230377}
+  m_EdgeRadius: 0
 --- !u!95 &159132785
 Animator:
   serializedVersion: 3
@@ -471,7 +485,7 @@ GameObject:
   - component: {fileID: 533364334}
   m_Layer: 0
   m_Name: DownHitBox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -530,9 +544,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 533364331}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a659325c2b083366c86364929500886f, type: 3}
+  m_Script: {fileID: 11500000, guid: 02aff767cd8adfbcaa39304ef8bdbd0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  force: 2
+  knockTime: 0.2
 --- !u!1 &681605306
 GameObject:
   m_ObjectHideFlags: 0
@@ -853,7 +869,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.09354305, y: -0.00000023841858}
+  m_Offset: {x: 0.009906769, y: -0.06272709}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -864,7 +880,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1254139, y: 1.1883297}
+  m_Size: {x: 0.9581413, y: 0.9792402}
   m_EdgeRadius: 0
 --- !u!212 &1080214099
 SpriteRenderer:
@@ -975,7 +991,7 @@ GameObject:
   - component: {fileID: 1138034444}
   m_Layer: 0
   m_Name: LefttHitBox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1034,9 +1050,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1138034441}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a659325c2b083366c86364929500886f, type: 3}
+  m_Script: {fileID: 11500000, guid: 02aff767cd8adfbcaa39304ef8bdbd0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  force: 2
+  knockTime: 0.2
 --- !u!1 &1191873223
 GameObject:
   m_ObjectHideFlags: 0
@@ -8577,6 +8595,8 @@ GameObject:
   - component: {fileID: 1545038493}
   - component: {fileID: 1545038494}
   - component: {fileID: 1545038495}
+  - component: {fileID: 1545038496}
+  - component: {fileID: 1545038497}
   m_Layer: 0
   m_Name: Log
   m_TagString: Log
@@ -8731,10 +8751,52 @@ MonoBehaviour:
   attackBase: 1
   enmSpeed: 1.5
   enemName: PetLog
+  currentEnState: 0
   target: {fileID: 0}
   chaseRad: 10
-  attackRad: 3
+  attackRad: 1.7
   HomePos: {fileID: 0}
+  currentEnmState: 0
+--- !u!61 &1545038496
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545038489}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.1881856}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 2, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.70774126, y: 1.6236289}
+  m_EdgeRadius: 0
+--- !u!114 &1545038497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545038489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02aff767cd8adfbcaa39304ef8bdbd0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  knockTime: 0.2
 --- !u!1 &1891008628
 GameObject:
   m_ObjectHideFlags: 0
@@ -10782,7 +10844,7 @@ GameObject:
   - component: {fileID: 1910375744}
   m_Layer: 0
   m_Name: RightHitBox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10841,9 +10903,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1910375741}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a659325c2b083366c86364929500886f, type: 3}
+  m_Script: {fileID: 11500000, guid: 02aff767cd8adfbcaa39304ef8bdbd0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  force: 2
+  knockTime: 0.2
 --- !u!1001 &2581083694511696121
 PrefabInstance:
   m_ObjectHideFlags: 0

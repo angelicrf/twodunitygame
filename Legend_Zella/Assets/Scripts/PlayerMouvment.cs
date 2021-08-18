@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerMouvment : MonoBehaviour
 {
-    public enum PlayerState{ walk, attack, interact}
+    public enum PlayerState{ walk, attack, interact,idle,stagger}
     public float speed;
     public PlayerState currentPlState;
     public Rigidbody2D plRigid;
@@ -39,11 +39,11 @@ public class PlayerMouvment : MonoBehaviour
         plChange.x = Input.GetAxisRaw("Horizontal");
         plChange.y = Input.GetAxisRaw("Vertical");
         animator = GetComponent<Animator>();
-        if(Input.GetButtonDown("attack") & currentPlState != PlayerState.attack){
+        if(Input.GetButtonDown("attack") & currentPlState != PlayerState.attack && currentPlState != PlayerState.stagger){
            // use space button to attack
                 StartCoroutine(AttackStart());
         }
-        else if(currentPlState == PlayerState.walk){
+        else if(currentPlState == PlayerState.walk || currentPlState == PlayerState.idle){
         walikngAnimator();
         }
         //StartCoroutine(areaPlChangeMSG("Home Area"));
@@ -88,7 +88,20 @@ public class PlayerMouvment : MonoBehaviour
              newPlTextObj.SetActive(false);
    } */
  
-    void OnCollisionEnter2D(Collision2D col){
+  /*   void OnCollisionEnter2D(Collision2D col){
          Debug.Log("Player is collisioned with ");
+    }
+    void OnTriggerEnter2D(Collider2D other){
+         
+         Debug.Log("Player is collided with ");
+    } */
+    public void callPlayerStart(float timeBack){
+        StartCoroutine(PlayerStart(timeBack));
+    }
+    IEnumerator PlayerStart(float timeBack){
+        yield return new WaitForSeconds(timeBack);
+        plRigid.velocity = Vector2.zero;
+        currentPlState = PlayerState.idle;
+        plRigid.velocity = Vector2.zero; 
     }
 }
