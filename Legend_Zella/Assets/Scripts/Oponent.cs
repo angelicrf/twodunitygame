@@ -5,15 +5,26 @@ using UnityEngine;
 public class Oponent : MonoBehaviour
 {
   public enum EnemStates{idle,walk,stagger};
-  //private Animator anim;
-  public int healthOk;
+  public NumValues maxNum;
+  public float healthOk;
   public int attackBase;
   public float enmSpeed;
   public string enemName;
+
+  private void Awake(){
+    healthOk = maxNum.numToUse;
+  }
   public EnemStates currentEnState;
 
-     public void callEnemyStart(Rigidbody2D enmRigid,float timeBack){
+     public void callEnemyStart(Rigidbody2D enmRigid,float timeBack, float damage){
         StartCoroutine(EnemyStart(enmRigid,timeBack));
+        ChangeHealthScore(damage);
+    }
+    private void ChangeHealthScore(float damage){
+      healthOk -= damage;
+      if(healthOk <= 0){
+        this.gameObject.SetActive(false);
+      }
     }
     IEnumerator EnemyStart(Rigidbody2D enmRigid,float timeBack){
       if(enmRigid != null){

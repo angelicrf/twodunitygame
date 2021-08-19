@@ -200,6 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 2
   knockTime: 0.2
+  lossScore: 2
 --- !u!1 &159132782
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,6 +550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 2
   knockTime: 0.2
+  lossScore: 2
 --- !u!1 &681605306
 GameObject:
   m_ObjectHideFlags: 0
@@ -1055,6 +1057,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 2
   knockTime: 0.2
+  lossScore: 2
 --- !u!1 &1191873223
 GameObject:
   m_ObjectHideFlags: 0
@@ -8747,6 +8750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2cc4998587684319a92938956a37264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxNum: {fileID: 11400000, guid: cf36477b1a157714ba75375763f3c7a2, type: 2}
   healthOk: 2
   attackBase: 1
   enmSpeed: 1.5
@@ -8798,6 +8802,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 4
   knockTime: 0.2
+  lossScore: 0
 --- !u!1 &1891008628
 GameObject:
   m_ObjectHideFlags: 0
@@ -10909,6 +10914,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 2
   knockTime: 0.2
+  lossScore: 2
 --- !u!1001 &2581083694511696121
 PrefabInstance:
   m_ObjectHideFlags: 0

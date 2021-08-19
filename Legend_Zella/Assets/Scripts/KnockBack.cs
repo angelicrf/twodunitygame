@@ -6,14 +6,13 @@ public class KnockBack : MonoBehaviour
 {
     public float force;
     public float knockTime;
-
+    public float lossScore;
    
     void OnTriggerEnter2D(Collider2D other){
       if(other != null){
           if(other.gameObject.CompareTag("PotBreak")
            //&& other.gameObject.CompareTag("Player")
            ){     
-           Debug.Log("PotBreak is called..."); 
            other.GetComponent<Pot>().SmashStart();
          } 
         if(other.gameObject.CompareTag("Log") || other.gameObject.CompareTag("Player")){     
@@ -23,13 +22,11 @@ public class KnockBack : MonoBehaviour
                 getDifference = getDifference.normalized * force;
                 enemRgdBody.AddForce(getDifference,ForceMode2D.Impulse);
                 if(enemRgdBody != null){
-                if(other.CompareTag("Log")){
-                   // Debug.Log("InsideLogTrans....");
+                if(other.CompareTag("Log") && other.isTrigger){
                   enemRgdBody.GetComponent<Oponent>().currentEnState = Oponent.EnemStates.stagger;  
-                  other.GetComponent<Oponent>().callEnemyStart(enemRgdBody,knockTime);
+                  other.GetComponent<Oponent>().callEnemyStart(enemRgdBody,knockTime, lossScore);
                 }
                 if(other.CompareTag("Player")){
-                   //  Debug.Log("InsidePlayerTrans....");
                   other.GetComponent<PlayerMouvment>().currentPlState = PlayerMouvment.PlayerState.stagger;
                   other.GetComponent<PlayerMouvment>().callPlayerStart(knockTime);
                 }

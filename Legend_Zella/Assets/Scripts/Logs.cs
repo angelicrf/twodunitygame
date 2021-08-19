@@ -40,7 +40,6 @@ public class Logs : Oponent
     private void SetAnimPos(Vector2 setPos){
         enmAnim.SetFloat("moveX" , setPos.x);
         enmAnim.SetFloat("moveY", setPos.y);
-
     }
     private void CalcAnimChange(Vector2 tmpRes){
         if(Mathf.Abs(tmpRes.x) > Mathf.Abs(tmpRes.y)){
