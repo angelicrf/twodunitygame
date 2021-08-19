@@ -24,12 +24,12 @@ public class KnockBack : MonoBehaviour
                 enemRgdBody.AddForce(getDifference,ForceMode2D.Impulse);
                 if(enemRgdBody != null){
                 if(other.CompareTag("Log")){
-                    Debug.Log("InsideLogTrans....");
+                   // Debug.Log("InsideLogTrans....");
                   enemRgdBody.GetComponent<Oponent>().currentEnState = Oponent.EnemStates.stagger;  
                   other.GetComponent<Oponent>().callEnemyStart(enemRgdBody,knockTime);
                 }
                 if(other.CompareTag("Player")){
-                     Debug.Log("InsidePlayerTrans....");
+                   //  Debug.Log("InsidePlayerTrans....");
                   other.GetComponent<PlayerMouvment>().currentPlState = PlayerMouvment.PlayerState.stagger;
                   other.GetComponent<PlayerMouvment>().callPlayerStart(knockTime);
                 }

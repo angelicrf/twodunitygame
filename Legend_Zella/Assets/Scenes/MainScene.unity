@@ -8722,7 +8722,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1545038489}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -8756,6 +8756,7 @@ MonoBehaviour:
   chaseRad: 10
   attackRad: 1.7
   HomePos: {fileID: 0}
+  enmAnim: {fileID: 1545038493}
   currentEnmState: 0
 --- !u!61 &1545038496
 BoxCollider2D:
