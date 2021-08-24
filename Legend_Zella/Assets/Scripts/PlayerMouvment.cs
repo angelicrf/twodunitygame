@@ -7,12 +7,14 @@ public class PlayerMouvment : MonoBehaviour
 {
     public enum PlayerState{ walk, attack, interact,idle,stagger}
     public float speed;
+    public NumValues plHealth;
     public PlayerState currentPlState;
     public Rigidbody2D plRigid;
     private Vector3 plChange;
     private Animator animator;
     public bool waliked; 
     private BoxCollider2D bc;
+    public Signal plSignal;
     //private string replacePlText;
     //public Text placePlText;
     //public GameObject newPlTextObj;
@@ -40,14 +42,12 @@ public class PlayerMouvment : MonoBehaviour
         plChange.y = Input.GetAxisRaw("Vertical");
         animator = GetComponent<Animator>();
         if(Input.GetButtonDown("attack") & currentPlState != PlayerState.attack && currentPlState != PlayerState.stagger){
-           // use space button to attack
                 StartCoroutine(AttackStart());
         }
         else if(currentPlState == PlayerState.walk || currentPlState == PlayerState.idle){
         walikngAnimator();
         }
-        //StartCoroutine(areaPlChangeMSG("Home Area"));
-    
+           
     }
     public IEnumerator AttackStart(){
        animator.SetBool("attacking", true);
@@ -95,8 +95,12 @@ public class PlayerMouvment : MonoBehaviour
          
          Debug.Log("Player is collided with ");
     } */
-    public void callPlayerStart(float timeBack){
-        StartCoroutine(PlayerStart(timeBack));
+    public void callPlayerStart(float timeBack, float dmg){
+         plHealth.numToUse -=  dmg;
+        if(plHealth.numToUse > 0){
+          plSignal.ReadSignals(); 
+          StartCoroutine(PlayerStart(timeBack));
+        }
     }
     IEnumerator PlayerStart(float timeBack){
         yield return new WaitForSeconds(timeBack);
