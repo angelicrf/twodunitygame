@@ -4,7 +4,14 @@ using UnityEngine;
 
 
 [CreateAssetMenu]
-public class NumValues : ScriptableObject
+public class NumValues : ScriptableObject, ISerializationCallbackReceiver
 {
    public float numToUse;
+   [HideInInspector]
+   public float runTime;
+   //For each time the project runs the value resets to 6
+    public void OnAfterDeserialize(){
+       runTime = numToUse;
+    }
+    public void OnBeforeSerialize(){}
 }

@@ -200,7 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 2
   knockTime: 0.2
-  lossScore: {fileID: 11400000, guid: a94339ac55ba2d92398201601efc2d52, type: 2}
+  lossScore: 2
   enemRgdBody: {fileID: 1545038494}
 --- !u!1 &159132782
 GameObject:
@@ -466,6 +466,7 @@ MonoBehaviour:
   halfHeart: {fileID: -3276687688264177478, guid: 90d427c8597be51728c84601aaf41543, type: 3}
   emptyHeart: {fileID: -9053378900703536071, guid: 90d427c8597be51728c84601aaf41543, type: 3}
   heartsContainer: {fileID: 11400000, guid: ea60527868288cb31a3f9d7b0d914b95, type: 2}
+  playerHealth: {fileID: 11400000, guid: 558a133a6d3a5c73da1a2aebd511ea06, type: 2}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,7 +644,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 2
   knockTime: 0.2
-  lossScore: {fileID: 11400000, guid: a94339ac55ba2d92398201601efc2d52, type: 2}
+  lossScore: 2
   enemRgdBody: {fileID: 1545038494}
 --- !u!1 &667797988
 GameObject:
@@ -1302,7 +1303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 2
   knockTime: 0.2
-  lossScore: {fileID: 11400000, guid: a94339ac55ba2d92398201601efc2d52, type: 2}
+  lossScore: 2
   enemRgdBody: {fileID: 1545038494}
 --- !u!1 &1191873223
 GameObject:
@@ -9048,7 +9049,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 4
   knockTime: 0.2
-  lossScore: {fileID: 11400000, guid: a94339ac55ba2d92398201601efc2d52, type: 2}
+  lossScore: 1
   enemRgdBody: {fileID: 0}
 --- !u!1 &1891008628
 GameObject:
@@ -11161,7 +11162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 2
   knockTime: 0.2
-  lossScore: {fileID: 11400000, guid: ea60527868288cb31a3f9d7b0d914b95, type: 2}
+  lossScore: 2
   enemRgdBody: {fileID: 0}
 --- !u!1 &2020188352
 GameObject:

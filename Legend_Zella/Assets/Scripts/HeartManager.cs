@@ -10,10 +10,14 @@ public class HeartManager : MonoBehaviour
     public Sprite halfHeart;
     public Sprite emptyHeart;
     public NumValues heartsContainer;
+    public NumValues playerHealth;
     private float tmpHealth;
     public void Start()
     {   
        ShowHearts();
+    }
+    public void FixedUpdate(){
+        UpdateArray();
     }
     private void ShowHearts(){
         for (int i = 0; i < heartsContainer.numToUse; i++){   
@@ -24,31 +28,24 @@ public class HeartManager : MonoBehaviour
         }
     }
     private float GetTmpHealth(){
-         tmpHealth = heartsContainer.numToUse / 2;  
+         tmpHealth = playerHealth.runTime / 2;  
          return tmpHealth;
     }
     public void UpdateArray(){
-        Debug.Log("UpdateArray is called...");
      float getResTmpHealth = GetTmpHealth();
      Debug.Log("TmpHealth is " + getResTmpHealth);
         for (int i = 0; i < heartsContainer.numToUse; i++)
         {
-            Debug.Log("InsideUpdate..");
-           if(!hearts[i].gameObject.activeSelf){
                 hearts[i].gameObject.SetActive(true); 
-                if(i <= getResTmpHealth){
-                    Debug.Log("FullHeart..");
+                if(i <= getResTmpHealth - 1 ){ 
                     hearts[i].sprite = fullHeart;
                  }
-                 else if(i > getResTmpHealth){
-                     Debug.Log("EmptyHeart..");
+                 else if(i > getResTmpHealth || getResTmpHealth == 0){
                      hearts[i].sprite = emptyHeart;
-                 }else{
-                     Debug.Log("HalfHear...");
+                 }else if(getResTmpHealth != 0){
                      hearts[i].sprite = halfHeart;
                   }
-                }
-         }    
+                }   
     }
  
 }

@@ -6,7 +6,7 @@ public class KnockBack : MonoBehaviour
 {
     public float force;
     public float knockTime;
-    public NumValues lossScore;
+    public float lossScore;
     public Rigidbody2D enemRgdBody;
    
     void OnTriggerEnter2D(Collider2D other){
@@ -27,12 +27,12 @@ public class KnockBack : MonoBehaviour
                 if(enemRgdBody != null){
                 if(other.CompareTag("Log") && other.isTrigger){
                   enemRgdBody.GetComponent<Oponent>().currentEnState = Oponent.EnemStates.stagger;  
-                  other.GetComponent<Oponent>().callEnemyStart(enemRgdBody,knockTime, lossScore.numToUse);
+                  other.GetComponent<Oponent>().callEnemyStart(enemRgdBody,knockTime, lossScore);
                 }
                 if(other.CompareTag("Player") && other.GetComponent<PlayerMouvment>().currentPlState != PlayerMouvment.PlayerState.stagger ){
                   //Debug.Log("Tag is player...");
                   other.GetComponent<PlayerMouvment>().currentPlState = PlayerMouvment.PlayerState.stagger;
-                  other.GetComponent<PlayerMouvment>().callPlayerStart(knockTime, lossScore.numToUse);
+                  other.GetComponent<PlayerMouvment>().callPlayerStart(knockTime, lossScore);
                   }
                 }
              }

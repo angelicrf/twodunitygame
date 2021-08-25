@@ -27,6 +27,7 @@ public class PlayerMouvment : MonoBehaviour
     }
     void Start()
     {   
+        //plHealth.numToUse = 6;
         currentPlState = PlayerState.walk;
         plRigid = GetComponent<Rigidbody2D>();
         animator.SetFloat("moveX" , 0);
@@ -94,11 +95,10 @@ public class PlayerMouvment : MonoBehaviour
          Debug.Log("Player is collided with ");
     } */
     public void callPlayerStart(float timeBack, float dmg){
-        
-         plHealth.numToUse -=  dmg;
-         Debug.Log("LogHitPlayer.." + plHealth.numToUse);
-        if(plHealth.numToUse > 0){
-          plSignal.ReadSignals(); 
+                 
+         plHealth.runTime -=  dmg;
+         plSignal.ReadSignals();    
+        if(plHealth.runTime > 0){
           StartCoroutine(PlayerStart(timeBack));
         }else{
           this.gameObject.SetActive(false);  
