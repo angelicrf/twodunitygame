@@ -43,14 +43,14 @@ public class Logs : Oponent
     }
     private void CalcAnimChange(Vector2 tmpRes){
         if(Mathf.Abs(tmpRes.x) > Mathf.Abs(tmpRes.y)){
-            Debug.Log("X is greater...");
+            //Debug.Log("X is greater...");
             if(tmpRes.x > 0){
              SetAnimPos(Vector2.right); 
             }else if(tmpRes.x < 0){
              SetAnimPos(Vector2.left);
             }
         }else if(Mathf.Abs(tmpRes.x) < Mathf.Abs(tmpRes.y)){
-            Debug.Log("X is smaller..");
+            //Debug.Log("X is smaller..");
             if(tmpRes.y > 0){
               SetAnimPos(Vector2.up);
             }else if(tmpRes.y < 0){

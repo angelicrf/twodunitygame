@@ -6,7 +6,7 @@ public class KnockBack : MonoBehaviour
 {
     public float force;
     public float knockTime;
-    public float lossScore;
+    public NumValues lossScore;
     public Rigidbody2D enemRgdBody;
    
     void OnTriggerEnter2D(Collider2D other){
@@ -18,7 +18,7 @@ public class KnockBack : MonoBehaviour
          } 
         if(other.gameObject.CompareTag("Log") || other.gameObject.CompareTag("Player")){     
              enemRgdBody = other.GetComponent<Rigidbody2D>();
-             if(enemRgdBody.gameObject.name == "Log"){    
+             if(enemRgdBody.gameObject.name == "Log" || enemRgdBody.gameObject.name == "Player"){    
                 enemRgdBody.isKinematic = false;
                 Vector2 getDifference = enemRgdBody.transform.position - transform.position;
                 getDifference = getDifference.normalized * force;
@@ -27,24 +27,17 @@ public class KnockBack : MonoBehaviour
                 if(enemRgdBody != null){
                 if(other.CompareTag("Log") && other.isTrigger){
                   enemRgdBody.GetComponent<Oponent>().currentEnState = Oponent.EnemStates.stagger;  
-                  other.GetComponent<Oponent>().callEnemyStart(enemRgdBody,knockTime, lossScore);
+                  other.GetComponent<Oponent>().callEnemyStart(enemRgdBody,knockTime, lossScore.numToUse);
                 }
                 if(other.CompareTag("Player") && other.GetComponent<PlayerMouvment>().currentPlState != PlayerMouvment.PlayerState.stagger ){
+                  //Debug.Log("Tag is player...");
                   other.GetComponent<PlayerMouvment>().currentPlState = PlayerMouvment.PlayerState.stagger;
-                  other.GetComponent<PlayerMouvment>().callPlayerStart(knockTime, lossScore);
-                }
+                  other.GetComponent<PlayerMouvment>().callPlayerStart(knockTime, lossScore.numToUse);
+                  }
                 }
              }
            }
         }
     }
-  /*   IEnumerator KnockStart(Rigidbody2D enem){
-      if(enem != null){
-            yield return new WaitForSeconds(knockTime);
-            enem.velocity = Vector2.zero;
-            enem.isKinematic = true;
-            enem.GetComponent<Logs>().currentEnmState = Logs.LogSates.idle;
-      }
-        
-    } */
+
 }

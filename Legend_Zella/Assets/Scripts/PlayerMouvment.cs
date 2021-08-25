@@ -15,9 +15,7 @@ public class PlayerMouvment : MonoBehaviour
     public bool waliked; 
     private BoxCollider2D bc;
     public Signal plSignal;
-    //private string replacePlText;
-    //public Text placePlText;
-    //public GameObject newPlTextObj;
+
       void Awake(){
         
         bc = GameObject.Find("Player").AddComponent<BoxCollider2D>() as BoxCollider2D;
@@ -96,10 +94,14 @@ public class PlayerMouvment : MonoBehaviour
          Debug.Log("Player is collided with ");
     } */
     public void callPlayerStart(float timeBack, float dmg){
+        
          plHealth.numToUse -=  dmg;
+         Debug.Log("LogHitPlayer.." + plHealth.numToUse);
         if(plHealth.numToUse > 0){
           plSignal.ReadSignals(); 
           StartCoroutine(PlayerStart(timeBack));
+        }else{
+          this.gameObject.SetActive(false);  
         }
     }
     IEnumerator PlayerStart(float timeBack){
