@@ -2,44 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraMovement : MonoBehaviour, NewInterFace
+public class CameraMovement : MonoBehaviour
 {
     public Transform target;
+    public Vector3 cameraChange;
     public float smoothing;
-    public Vector2 minPos;
-    public Vector2 maxPos;
-    private string dspText;
+    private Vector3 camNewPos;
+
     public CameraMovement(){}
-    public CameraMovement(Vector2 mnP, Vector2 mxP){
-        minPos = mnP;
-        maxPos = mxP;
-    }
-     public Vector2 MinValues
-    {
-        get { return minPos; }
-    } 
-    public Vector2 MaxValue { 
-        get {return maxPos;}
-    }
-     public Vector2 GetMins()
-    {
-        //Debug.Log("DID Min! from CameraMouvement ..." + MinValues);
-        return minPos;
-    }
-    public Vector2 GetMaxs(){
-        //Debug.Log("DID Max! from CameraMouvement ... " + MaxValue);
-       return maxPos;
-    }
-    void Start()
-    {
-         
-    }
-   public Vector2 TestMethMins(){
-       return minPos = new Vector2(10,1);
+  
+   public Vector3 ChangeCamPos(){
+       return camNewPos = new Vector3(cameraChange.x,cameraChange.y, cameraChange.z);
    }
-   public Vector2 TestMethMaxs(){
-       return maxPos = new Vector2(3,1);
-   }
+ 
     void LateUpdate()
     { 
         // Camera cam = Camera.main;
@@ -49,9 +24,7 @@ public class CameraMovement : MonoBehaviour, NewInterFace
             //targetPst.x = Mathf.Clamp(targetPst.x, minPos.x, maxPos.x);
             //targetPst.y = Mathf.Clamp(targetPst.y, minPos.y, maxPos.y);
             //if(GameObject.Find("Main Camera").GetComponent<Camera>().transform.position.x < 8)
-            transform.position = Vector3.Lerp(transform.position,targetPst,smoothing);
-          
-     
+            transform.position = Vector3.Lerp(transform.position,targetPst,smoothing);     
        } 
     }
 }
