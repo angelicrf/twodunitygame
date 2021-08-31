@@ -15,12 +15,14 @@ public class PlayerMouvment : MonoBehaviour
     public bool waliked; 
     private BoxCollider2D bc;
     public Signal plSignal;
+    public VectorTransitValue plStartPos;
 
       void Awake(){
         
         bc = GameObject.Find("Player").AddComponent<BoxCollider2D>() as BoxCollider2D;
         bc.size = new Vector2(0.9672769f, 0.6574417f);
         bc.offset = new Vector2(0.05468863f,-0.4300305f);
+       
         //plRigid.bodyType = RigidbodyType2D.Dynamic;
         //if isKinematic
         //bc.isTrigger = true;
@@ -28,14 +30,20 @@ public class PlayerMouvment : MonoBehaviour
     void Start()
     {   
         //plHealth.numToUse = 6;
+       if(plStartPos.isTransited){
+        transform.position = plStartPos.transitionValue;
+        plStartPos.isTransited = false;
+       }
         currentPlState = PlayerState.walk;
         plRigid = GetComponent<Rigidbody2D>();
         animator.SetFloat("moveX" , 0);
         animator.SetFloat("moveY", -1);
+             
     }
 
     void FixedUpdate()
     {
+        
         plChange = Vector3.zero;
         plChange.x = Input.GetAxisRaw("Horizontal");
         plChange.y = Input.GetAxisRaw("Vertical");
