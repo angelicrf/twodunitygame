@@ -15,7 +15,6 @@ public class RoomMove :  MonoBehaviour
     public Rigidbody2D mvRigid;
     private PlayerMouvment playerMouvement;
     private Vector3 dspMins;
-    private Vector2 dspMaxs;
     private Camera camera2;
     private Vector2 camPos;
     private int countPool = 0;
@@ -33,8 +32,8 @@ public class RoomMove :  MonoBehaviour
     private void ChangeStats(){
      
         camera2 = GameObject.Find("Main Camera").GetComponent<Camera>();
-        CameraMovement vb = GetComponent<CameraMovement>();
-        dspMins = vb.ChangeCamPos();
+        cam = GetComponent<CameraMovement>();
+        dspMins = cam.ChangeCamPos();
         
     }
     private void OnTriggerEnter2D(){
