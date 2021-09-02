@@ -16588,12 +16588,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 04ec5d124b7ae1e6cb20957ec8ebb752, type: 2}
     - target: {fileID: 444308980, guid: a5adc133e9928e50e8f2cb35fc6de6f3, type: 3}
+      propertyPath: fadedEffect
+      value: 
+      objectReference: {fileID: 107791562955838061, guid: 878ba66ee973cc0e3a9a8e5ae5ee6d22, type: 3}
+    - target: {fileID: 444308980, guid: a5adc133e9928e50e8f2cb35fc6de6f3, type: 3}
       propertyPath: plTransit.x
       value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 444308980, guid: a5adc133e9928e50e8f2cb35fc6de6f3, type: 3}
       propertyPath: plTransit.y
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 444308980, guid: a5adc133e9928e50e8f2cb35fc6de6f3, type: 3}
+      propertyPath: fadeWaiteDur
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 444308980, guid: a5adc133e9928e50e8f2cb35fc6de6f3, type: 3}
       propertyPath: sceneToDisplay
