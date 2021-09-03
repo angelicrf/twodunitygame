@@ -5,12 +5,13 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     public Transform target;
+    // = GameObject.Find("Player").transform;
     public Vector3 cameraChange;
     public float smoothing;
     private Vector3 camNewPos;
 
     public CameraMovement(){}
-  
+
    public Vector3 ChangeCamPos(){
        return camNewPos = new Vector3(cameraChange.x,cameraChange.y, cameraChange.z);
    }

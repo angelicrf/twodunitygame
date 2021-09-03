@@ -7,13 +7,14 @@ public class SignalListener : MonoBehaviour
 {
     public Signal signal;
     public UnityEvent eve;
-     public void OnRaiseSignal(){
+
+     public void  OnRaiseSignal(){
         eve.Invoke();
      }
-     private void ActiveEvent(){
+     private void OnEnable(){
          signal.AddSignals(this);
      }
-     private void DeactiveEvent(){
+     private void OnDisable(){
          signal.DeleteSignal(this);
      }
 }

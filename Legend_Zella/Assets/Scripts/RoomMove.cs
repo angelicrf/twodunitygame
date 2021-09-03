@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RoomMove :  MonoBehaviour
 {
@@ -12,7 +12,7 @@ public class RoomMove :  MonoBehaviour
     public string replaceText;
     public Text placeText;
     public GameObject newTextObj;
-    public Rigidbody2D mvRigid;
+    private Rigidbody2D mvRigid;
     private PlayerMouvment playerMouvement;
     private Vector3 dspMins;
     private Camera camera2;
@@ -103,6 +103,4 @@ public class RoomMove :  MonoBehaviour
         GameObject.Find("Main Camera").GetComponent<Camera>().transform.position = dspMins;
         GameObject.Find("Player").GetComponent<PlayerMouvment>().plRigid.transform.position = playerChange; 
    }
-   
- 
 }

@@ -23,6 +23,7 @@ public class HeartManager : MonoBehaviour
         for (int i = 0; i < heartsContainer.numToUse; i++){   
             if(!hearts[i].gameObject.activeSelf){
                 hearts[i].gameObject.SetActive(true);
+                //.gameObject.SetActive(true);
                 hearts[i].sprite = fullHeart;
             }        
         }
