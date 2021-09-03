@@ -5,9 +5,11 @@ using UnityEngine;
 [CreateAssetMenu]
 public class Signal : ScriptableObject
 {
+  
    public List<SignalListener> allSignals = new List<SignalListener>();
 
    public void ReadSignals(){
+       Debug.Log("ReadSignal Calledd...");
        for (int i = allSignals.Count -1; i >= 0; i--){
            allSignals[i].OnRaiseSignal();
        }
@@ -17,5 +19,8 @@ public class Signal : ScriptableObject
    }
    public void DeleteSignal(SignalListener listener){
       allSignals.Remove(listener);
+   }
+   public void TestSignal(){
+       Debug.Log("TestSignal called...");
    }
 }

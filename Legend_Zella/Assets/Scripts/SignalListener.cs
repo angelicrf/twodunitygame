@@ -11,10 +11,10 @@ public class SignalListener : MonoBehaviour
      public void  OnRaiseSignal(){
         eve.Invoke();
      }
-     private void OnEnable(){
+     public void OnEnable(){
          signal.AddSignals(this);
      }
-     private void OnDisable(){
+     public void OnDisable(){
          signal.DeleteSignal(this);
      }
 }

@@ -9,21 +9,21 @@ public class Sign : MonoBehaviour
     public Text dialogText;
     public string textDisplay; 
     public bool isDialogActive;
-    public Signal textMarkOn;
-    public Signal textMarkOff;
+    public Signal textMarkSignal;
     
     private void OnTriggerEnter2D(Collider2D other){
 
         if(other.name == "Player"){  
-            textMarkOn.ReadSignals();
-            TextFunc();
+            //textMarkSignal.TestSignal();
+            textMarkSignal.ReadSignals();
+            //TextFunc();
         }    
     }
     private void OnTriggerExit2D(Collider2D other){
-        if(other.name == "Player"){
-            textMarkOff.ReadSignals();
-            isDialogActive = false;
-            dialogBox.SetActive(false);
+        if(other.name == "Player"){ 
+            textMarkSignal.ReadSignals();
+           /*  isDialogActive = false;
+            dialogBox.SetActive(false); */
         }
     }
     private void TextFunc(){

@@ -7,7 +7,6 @@ public class Logs : Oponent
     public Transform target;
     public float chaseRad;
     public float attackRad;
-    public Transform HomePos;
     public Animator enmAnim;
     public EnemStates currentEnmState;
 
@@ -15,7 +14,7 @@ public class Logs : Oponent
     {
         enmAnim = GetComponent<Animator>();
         currentEnmState = EnemStates.idle;
-        target = GameObject.Find("Player").transform;
+        //target = GameObject.Find("Player").transform;
     }
     void FixedUpdate()
     {
