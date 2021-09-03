@@ -715,10 +715,10 @@ TextureImporter:
       name: objects_9
       rect:
         serializedVersion: 2
-        x: 182
-        y: 304
-        width: 21
-        height: 15
+        x: 181
+        y: 303
+        width: 22
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -989,9 +989,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 197
-        y: 279
+        y: 282
         width: 22
-        height: 18
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1012,7 +1012,7 @@ TextureImporter:
         x: 229
         y: 279
         width: 22
-        height: 18
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
