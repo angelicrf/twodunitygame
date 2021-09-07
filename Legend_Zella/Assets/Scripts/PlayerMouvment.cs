@@ -29,6 +29,7 @@ public class PlayerMouvment : MonoBehaviour
     }
     void Start()
     {   
+
         //plHealth.numToUse = 6;
        if(plStartPos.isTransited){
         transform.position = plStartPos.transitionValue;
@@ -37,22 +38,27 @@ public class PlayerMouvment : MonoBehaviour
         currentPlState = PlayerState.walk;
         plRigid = GetComponent<Rigidbody2D>();
         animator.SetFloat("moveX" , 0);
-        animator.SetFloat("moveY", -1);
-             
+        animator.SetFloat("moveY", -1);             
     }
 
     void FixedUpdate()
     {
-        
+         
         plChange = Vector3.zero;
         plChange.x = Input.GetAxisRaw("Horizontal");
         plChange.y = Input.GetAxisRaw("Vertical");
         animator = GetComponent<Animator>();
+ 
         if(Input.GetButtonDown("attack") & currentPlState != PlayerState.attack && currentPlState != PlayerState.stagger){
                 StartCoroutine(AttackStart());
+                //unHoldHands();
         }
-        else if(currentPlState == PlayerState.walk || currentPlState == PlayerState.idle){
+        else if(currentPlState == PlayerState.walk || currentPlState == PlayerState.idle && currentPlState != PlayerState.interact){
         walikngAnimator();
+
+        }else if(currentPlState == PlayerState.interact){
+            //display holdHand Anim
+            onHoldHands();
         }
            
     }
@@ -117,5 +123,15 @@ public class PlayerMouvment : MonoBehaviour
         plRigid.velocity = Vector2.zero;
         currentPlState = PlayerState.idle;
         plRigid.velocity = Vector2.zero; 
+    }
+    private void onHoldHands(){
+        //animator.SetBool("isHeld", true);
+        animator.SetBool("HoldToStop", true);
+        animator.SetBool("waliked", false);
+        //currentPlState = PlayerState.interact;
+       
+    }
+    private void unHoldHands(){
+        animator.SetBool("isHeld", false);
     }
 }

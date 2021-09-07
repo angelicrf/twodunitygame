@@ -11,6 +11,7 @@ TagManager:
   - PotBreak
   - Log
   - AskMark
+  - KeyItem
   layers:
   - Default
   - TransparentFX
