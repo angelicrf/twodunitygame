@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ChestBox : MonoBehaviour
 {
+
     public Inventory gmInventory;
     public TresureItem gmItem;
     private GameObject interObj;
@@ -63,7 +64,6 @@ public class ChestBox : MonoBehaviour
                interObj.SetActive(false);
                animator.SetBool("isActive", false);     
             //interObj.textMarkSignal.ReadSignals();
-                // change player status to walk
                 gmItem.items.SetActive(false);
                 gmInventory.isItem = false;
                 gmItem.isOpen = false;

@@ -16,17 +16,12 @@ public class PlayerMouvment : MonoBehaviour
     private BoxCollider2D bc;
     public Signal plSignal;
     public VectorTransitValue plStartPos;
-
-     private DialogBoxMsg dlgMsg;
+    private DialogBoxMsg dlgMsg;
       void Awake(){
         
         bc = GameObject.Find("Player").AddComponent<BoxCollider2D>() as BoxCollider2D;
         bc.size = new Vector2(0.9672769f, 0.6574417f);
         bc.offset = new Vector2(0.05468863f,-0.4300305f);
-       
-        //plRigid.bodyType = RigidbodyType2D.Dynamic;
-        //if isKinematic
-        //bc.isTrigger = true;
     }
     void Start()
     {  
