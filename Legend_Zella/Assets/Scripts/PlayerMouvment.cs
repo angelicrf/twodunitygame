@@ -17,6 +17,7 @@ public class PlayerMouvment : MonoBehaviour
     public Signal plSignal;
     public VectorTransitValue plStartPos;
 
+     private DialogBoxMsg dlgMsg;
       void Awake(){
         
         bc = GameObject.Find("Player").AddComponent<BoxCollider2D>() as BoxCollider2D;
@@ -28,17 +29,17 @@ public class PlayerMouvment : MonoBehaviour
         //bc.isTrigger = true;
     }
     void Start()
-    {   
-
-        //plHealth.numToUse = 6;
+    {  
+       dlgMsg = DialogBoxMsg.Instance(); 
+      //plHealth.numToUse = 6;
        if(plStartPos.isTransited){
-        transform.position = plStartPos.transitionValue;
-        plStartPos.isTransited = false;
+           transform.position = plStartPos.transitionValue;
+           plStartPos.isTransited = false;
        }
-        currentPlState = PlayerState.walk;
-        plRigid = GetComponent<Rigidbody2D>();
-        animator.SetFloat("moveX" , 0);
-        animator.SetFloat("moveY", -1);             
+            currentPlState = PlayerState.walk;
+            plRigid = GetComponent<Rigidbody2D>();
+            animator.SetFloat("moveX" , 0);
+            animator.SetFloat("moveY", -1);             
     }
 
     void FixedUpdate()
@@ -48,17 +49,15 @@ public class PlayerMouvment : MonoBehaviour
         plChange.x = Input.GetAxisRaw("Horizontal");
         plChange.y = Input.GetAxisRaw("Vertical");
         animator = GetComponent<Animator>();
- 
+
         if(Input.GetButtonDown("attack") & currentPlState != PlayerState.attack && currentPlState != PlayerState.stagger){
                 StartCoroutine(AttackStart());
-                //unHoldHands();
         }
         else if(currentPlState == PlayerState.walk || currentPlState == PlayerState.idle && currentPlState != PlayerState.interact){
         walikngAnimator();
 
         }else if(currentPlState == PlayerState.interact){
-            //display holdHand Anim
-            onHoldHands();
+           StartCoroutine(onHoldHands());
         }
            
     }
@@ -124,14 +123,16 @@ public class PlayerMouvment : MonoBehaviour
         currentPlState = PlayerState.idle;
         plRigid.velocity = Vector2.zero; 
     }
-    private void onHoldHands(){
-        //animator.SetBool("isHeld", true);
+    private IEnumerator onHoldHands(){
         animator.SetBool("HoldToStop", true);
         animator.SetBool("waliked", false);
-        //currentPlState = PlayerState.interact;
-       
+        dlgMsg.appearBox();
+        yield return new WaitForSeconds(6f);
+        animator.SetBool("HoldToStop", false); 
+        yield return null;
+        animator.SetBool("waliked", true);
+        currentPlState = PlayerState.walk;
+        dlgMsg.disappearBox();     
     }
-    private void unHoldHands(){
-        animator.SetBool("isHeld", false);
-    }
+
 }

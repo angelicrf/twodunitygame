@@ -40,7 +40,7 @@ public class ChestBox : MonoBehaviour
         }
     } */
       private void OnCollisionEnter2D(Collision2D other){
-           if(isCollision){
+           if(isCollision && Input.anyKey){
                if(Input.GetKey("right") || Input.GetKey("left") || Input.GetKey("up") || Input.GetKey("down")){
                //interObj.textMarkSignal.ReadSignals();
                animator.SetTrigger("TrBox");
@@ -48,13 +48,10 @@ public class ChestBox : MonoBehaviour
                gmItem.isOpen = true;
               
                if(gmItem.items.CompareTag("KeyItem")){
-                   otherPlRigid.GetComponent<PlayerMouvment>().currentPlState = PlayerMouvment.PlayerState.interact;
-              
+                   otherPlRigid.GetComponent<PlayerMouvment>().currentPlState = PlayerMouvment.PlayerState.interact;             
                    interObj.SetActive(true);              
                    gmInventory.isItem = true;
                    gmInventory.getItems();
-                   //active key on top of the player animation with no loop
-                   //change player status to interact and stop Walking
                    isCollision = false;
                }
              }

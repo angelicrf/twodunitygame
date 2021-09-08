@@ -714,6 +714,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &776367848 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8565112526229018688, guid: df5a282faaa6758bd95d8905083a5a0f, type: 3}
+  m_PrefabInstance: {fileID: 8565112525722276260}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &817384035 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3201028692446241812, guid: 92248ffb3b8b1c7c99702005a2bf3f99, type: 3}
@@ -1033,7 +1038,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textMarkSignal: {fileID: 11400000, guid: dc298bddbff17718c860c33ed8222e73, type: 2}
   isDialogActive: 1
-  dialogBox: {fileID: 1540851023}
+  dialogBox: {fileID: 776367848}
   dialogText: {fileID: 620325185}
   textDisplay: Hello Player...
 --- !u!1 &1080214097
@@ -16673,6 +16678,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3501738739705116450, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
   m_PrefabInstance: {fileID: 3501738739584260940}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1519632997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519632996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4144ab1cb010ad9ba23f74f14630251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dspDialogBox: {fileID: 1540851023}
+  dspText: {fileID: 620325185}
+  dspMsg: Hey, You got a key...
 --- !u!114 &1519632998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20140,9 +20160,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3501738739705116478, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
+      propertyPath: dspMsg
+      value: Hi You got a key....
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501738739705116478, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
+      propertyPath: dspText
+      value: 
+      objectReference: {fileID: 620325185}
+    - target: {fileID: 3501738739705116478, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
       propertyPath: plStartPos
       value: 
       objectReference: {fileID: 11400000, guid: 04ec5d124b7ae1e6cb20957ec8ebb752, type: 2}
+    - target: {fileID: 3501738739705116478, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
+      propertyPath: showKeyMsg
+      value: 
+      objectReference: {fileID: 11400000, guid: 8cce4c5f3ce9fcf4484e9d6446cd2160, type: 2}
+    - target: {fileID: 3501738739705116478, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
+      propertyPath: dspDialogBox
+      value: 
+      objectReference: {fileID: 1540851023}
     - target: {fileID: 3501738739949806882, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
       propertyPath: enemRgdBody
       value: 
@@ -20400,6 +20436,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8565112524553016555, guid: df5a282faaa6758bd95d8905083a5a0f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8565112524553016565, guid: df5a282faaa6758bd95d8905083a5a0f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8565112526382868762, guid: df5a282faaa6758bd95d8905083a5a0f, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -20487,6 +20531,10 @@ PrefabInstance:
     - target: {fileID: 8565112526382868766, guid: df5a282faaa6758bd95d8905083a5a0f, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8565112526382868766, guid: df5a282faaa6758bd95d8905083a5a0f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df5a282faaa6758bd95d8905083a5a0f, type: 3}

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: RecivedTrItems
   m_EditorClassIdentifier: 
   items: {fileID: 4585218524296017897, guid: 0983de25f6131d274941bfe12d74c675, type: 3}
-  isOpen: 1
+  isOpen: 0

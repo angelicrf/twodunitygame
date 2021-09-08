@@ -15,4 +15,5 @@ MonoBehaviour:
   itemCount: 0
   isItem: 0
   trItem: {fileID: 11400000, guid: 6296a237a12f9faedbec51c63f808309, type: 2}
-  itemsList: []
+  itemsList:
+  - {fileID: 4585218524296017897, guid: 0983de25f6131d274941bfe12d74c675, type: 3}
