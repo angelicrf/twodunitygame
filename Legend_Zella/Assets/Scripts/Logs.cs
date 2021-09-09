@@ -9,18 +9,22 @@ public class Logs : Oponent
     public float attackRad;
     public Animator enmAnim;
     public EnemStates currentEnmState;
+    public Rigidbody2D ptLogRigid;
+   
 
     void Start()
     {
         enmAnim = GetComponent<Animator>();
+        ptLogRigid = GetComponent<Rigidbody2D>();
         currentEnmState = EnemStates.idle;
+        enmAnim.SetBool("isWokeUp", true);
         //target = GameObject.Find("Player").transform;
     }
     void FixedUpdate()
     {
         CheckDistance();
     }
-    void CheckDistance(){
+    public virtual void CheckDistance(){
         if(Vector3.Distance(target.position, transform.position) <= chaseRad
          & 
         Vector3.Distance(target.position , transform.position) > attackRad){
@@ -40,7 +44,7 @@ public class Logs : Oponent
         enmAnim.SetFloat("moveX" , setPos.x);
         enmAnim.SetFloat("moveY", setPos.y);
     }
-    private void CalcAnimChange(Vector2 tmpRes){
+    public void CalcAnimChange(Vector2 tmpRes){
         if(Mathf.Abs(tmpRes.x) > Mathf.Abs(tmpRes.y)){
             //Debug.Log("X is greater...");
             if(tmpRes.x > 0){
