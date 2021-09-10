@@ -44,12 +44,13 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 425190e92945d1efa85951bb23fe8d52, type: 3}
-    totalSpriteSurfaceArea: 807948
+    totalSpriteSurfaceArea: 808938
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: 80d59d100dcedaf20bf4d2b8a1a3ee99, type: 3}
   - {fileID: 21300000, guid: b4c87c20c683706ff85b880836bd2503, type: 3}
   - {fileID: -464034680190023423, guid: fa4a7011af93f9c7f857daf3c9775e47, type: 3}
   - {fileID: -6069640938520168933, guid: fa4a7011af93f9c7f857daf3c9775e47, type: 3}
@@ -1699,6 +1700,7 @@ SpriteAtlas:
   - {fileID: 147799070741053269, guid: ddea3bfbcde5bba978f304d5c7d720ea, type: 3}
   - {fileID: 21300000, guid: fd829b2d82a700ef29ef9ae24f076979, type: 3}
   m_PackedSpriteNamesToIndex:
+  - door
   - Skeleton Key - Icon
   - Inner_48
   - Inner_49
