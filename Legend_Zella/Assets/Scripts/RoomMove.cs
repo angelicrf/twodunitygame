@@ -7,14 +7,14 @@ public class RoomMove :  MonoBehaviour
 {
    
     public Vector3 playerChange;
-    private CameraMovement cam; 
+    //private CameraMovement cam; 
     public bool textNeeded;
     public string replaceText;
     public Text placeText;
     public GameObject newTextObj;
     private Rigidbody2D mvRigid;
     private PlayerMouvment playerMouvement;
-    private Vector3 dspMins;
+    public Vector3 dspMins;
     private Camera camera2;
     private Vector2 camPos;
     private int countPool = 0;
@@ -32,8 +32,9 @@ public class RoomMove :  MonoBehaviour
     private void ChangeStats(){
      
         camera2 = GameObject.Find("Main Camera").GetComponent<Camera>();
-        cam = GetComponent<CameraMovement>();
-        dspMins = cam.ChangeCamPos();
+        //cam = GetComponent<CameraMovement>();
+        //dspMins = new Vector3()
+        //cam.ChangeCamPos();
         
     }
     private void OnTriggerEnter2D(){

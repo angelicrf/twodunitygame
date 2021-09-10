@@ -7,6 +7,7 @@ public class InteractableObjs : MonoBehaviour
     public Signal textMarkSignal;
 
     public bool isDialogActive;
+    public bool hasSignal = false;
     void Start()
     {
         
@@ -19,6 +20,7 @@ public class InteractableObjs : MonoBehaviour
 
         if(other.name == "Player"){  
             textMarkSignal.ReadSignals();
+            hasSignal = true;
             //TextFunc();
         }    
     }

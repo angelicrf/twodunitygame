@@ -8,7 +8,7 @@ public class Inventory : ScriptableObject
     public int itemCount;
     public bool isItem;
     public TresureItem trItem;
-      public List<GameObject> itemsList;
+    public List<GameObject> itemsList;
     public void getItems(){
         if(isItem){       
                 itemCount++;
