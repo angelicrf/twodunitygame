@@ -18,7 +18,7 @@ public class KnockBack : MonoBehaviour
          } 
         if(other.gameObject.CompareTag("Log") || other.gameObject.CompareTag("Player")){     
              enemRgdBody = other.GetComponent<Rigidbody2D>();
-             if(enemRgdBody.gameObject.name == "Log" || enemRgdBody.gameObject.name == "Player"){    
+             if(enemRgdBody.gameObject.CompareTag("Log") || enemRgdBody.gameObject.CompareTag("Player")){    
                 enemRgdBody.isKinematic = false;
                 Vector2 getDifference = enemRgdBody.transform.position - transform.position;
                 getDifference = getDifference.normalized * force;

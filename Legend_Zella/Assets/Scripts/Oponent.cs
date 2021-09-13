@@ -6,11 +6,12 @@ public class Oponent : MonoBehaviour
 {
   public enum EnemStates{idle,walk,stagger};
   public NumValues maxNum;
+  public GameObject deathEffect;
   public float healthOk;
   public int attackBase;
   public float enmSpeed;
   public string enemName;
-
+  public Rigidbody2D ptLogRigid;
   private void Awake(){
     healthOk = maxNum.numToUse;
   }
@@ -24,10 +25,19 @@ public class Oponent : MonoBehaviour
     private void ChangeHealthScore(float damage){
       healthOk -= damage;
       if(healthOk <= 0){
+        generateDeathEffect();
         this.gameObject.SetActive(false);
-        Rigidbody2D tg = this.gameObject.GetComponent<Rigidbody2D>();
-        Destroy(tg);
+
+        //Rigidbody2D tg = this.gameObject.GetComponent<Rigidbody2D>();
+        Destroy(ptLogRigid);
+        destroyDeathEffect();
       }
+    }
+    private void generateDeathEffect(){
+      GameObject dtObj = Instantiate(deathEffect, transform.position , Quaternion.identity);
+    }
+    private void destroyDeathEffect(){
+         Destroy(deathEffect,1f);
     }
     IEnumerator EnemyStart(Rigidbody2D enmRigid,float timeBack,float damage){
       if(enmRigid != null){
