@@ -571,7 +571,6 @@ MonoBehaviour:
   attackRad: 1.7
   enmAnim: {fileID: 427624670}
   currentEnmState: 0
-  ptLogRigid: {fileID: 427624669}
 --- !u!50 &427624669
 Rigidbody2D:
   serializedVersion: 4
@@ -703,6 +702,100 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &436343946
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2116478421354733927, guid: 16d5026e01dc26c6eb659746efdb6448, type: 3}
+      propertyPath: m_Name
+      value: HeartIdle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3454657339094825079, guid: 16d5026e01dc26c6eb659746efdb6448, type: 3}
+      propertyPath: m_Size.x
+      value: 0.7400665
+      objectReference: {fileID: 0}
+    - target: {fileID: 3454657339094825079, guid: 16d5026e01dc26c6eb659746efdb6448, type: 3}
+      propertyPath: m_Size.y
+      value: 0.7404976
+      objectReference: {fileID: 0}
+    - target: {fileID: 3454657339094825079, guid: 16d5026e01dc26c6eb659746efdb6448, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.12996674
+      objectReference: {fileID: 0}
+    - target: {fileID: 3454657339094825079, guid: 16d5026e01dc26c6eb659746efdb6448, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.1297512
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202038714015699743, guid: 16d5026e01dc26c6eb659746efdb6448, type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202038714015699743, guid: 16d5026e01dc26c6eb659746efdb6448, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.0419521
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202038714015699743, guid: 16d5026e01dc26c6eb659746efdb6448, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -12.780121
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202038714015699743, guid: 16d5026e01dc26c6eb659746efdb6448, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202038714015699743, guid: 16d5026e01dc26c6eb659746efdb6448, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202038714015699743, guid: 16d5026e01dc26c6eb659746efdb6448, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202038714015699743, guid: 16d5026e01dc26c6eb659746efdb6448, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202038714015699743, guid: 16d5026e01dc26c6eb659746efdb6448, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202038714015699743, guid: 16d5026e01dc26c6eb659746efdb6448, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202038714015699743, guid: 16d5026e01dc26c6eb659746efdb6448, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202038714015699743, guid: 16d5026e01dc26c6eb659746efdb6448, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 16d5026e01dc26c6eb659746efdb6448, type: 3}
+--- !u!1 &436343947 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2116478421354733927, guid: 16d5026e01dc26c6eb659746efdb6448, type: 3}
+  m_PrefabInstance: {fileID: 436343946}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &436343948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436343947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbefab219d84f96ccbc727d164db1b23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUpSignal: {fileID: 11400000, guid: 8e61c9dfcc6f4ffda8d2ed33a3bf5b28, type: 2}
+  heartValue: {fileID: 11400000, guid: ea60527868288cb31a3f9d7b0d914b95, type: 2}
+  maxHearts: 2
+  plHealthValue: {fileID: 11400000, guid: 558a133a6d3a5c73da1a2aebd511ea06, type: 2}
 --- !u!1 &443122790
 GameObject:
   m_ObjectHideFlags: 0
@@ -933,7 +1026,6 @@ MonoBehaviour:
   attackRad: 1.7
   enmAnim: {fileID: 574309755}
   currentEnmState: 0
-  ptLogRigid: {fileID: 574309754}
   allPaths:
   - {fileID: 443122791}
   - {fileID: 1479560336}

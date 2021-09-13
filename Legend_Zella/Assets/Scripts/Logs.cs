@@ -9,13 +9,12 @@ public class Logs : Oponent
     public float attackRad;
     public Animator enmAnim;
     public EnemStates currentEnmState;
-    public Rigidbody2D ptLogRigid;
+    
    
 
     void Start()
     {
         enmAnim = GetComponent<Animator>();
-        ptLogRigid = GetComponent<Rigidbody2D>();
         currentEnmState = EnemStates.idle;
         enmAnim.SetBool("isWokeUp", true);
         //target = GameObject.Find("Player").transform;
