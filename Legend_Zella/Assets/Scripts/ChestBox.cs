@@ -19,8 +19,8 @@ public class ChestBox : MonoBehaviour
         animator = GetComponent<Animator>(); 
         gmInventory.itemCount = 0; 
      
-     gmInventory.isItem = false;
-     gmItem.isOpen = false;
+        gmInventory.isItem = false;
+        //gmItem.isOpen = false;
     }
 
     void Update()
@@ -29,7 +29,7 @@ public class ChestBox : MonoBehaviour
     }
      private void OnTriggerEnter2D(Collider2D other){
 
-        if(other.name == "Player"){  
+        if(other.name == "Player" && ! gmItem.initialIsOpen){  
 
            isCollision = true;
            otherPlRigid  = other.GetComponent<Rigidbody2D>();
@@ -66,7 +66,7 @@ public class ChestBox : MonoBehaviour
             //interObj.textMarkSignal.ReadSignals();
                 gmItem.items.SetActive(false);
                 gmInventory.isItem = false;
-                gmItem.isOpen = false;
+                //gmItem.isOpen = false;
             }
         }
 

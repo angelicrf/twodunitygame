@@ -971,7 +971,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.4228017
+  orthographic size: 2.4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1039,6 +1039,10 @@ PrefabInstance:
       propertyPath: kickSignal
       value: 
       objectReference: {fileID: 11400000, guid: 33a85067fc24f6277810c852a0623365, type: 2}
+    - target: {fileID: 559039985360292372, guid: d37c3f7013e0d16e1b7cae87552896f5, type: 3}
+      propertyPath: ptLogRigid
+      value: 
+      objectReference: {fileID: 574309754}
     - target: {fileID: 559039985360292375, guid: d37c3f7013e0d16e1b7cae87552896f5, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -21185,6 +21189,22 @@ PrefabInstance:
     - target: {fileID: 8565112524553016565, guid: df5a282faaa6758bd95d8905083a5a0f, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8565112524981883012, guid: df5a282faaa6758bd95d8905083a5a0f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 314.8034
+      objectReference: {fileID: 0}
+    - target: {fileID: 8565112524981883012, guid: df5a282faaa6758bd95d8905083a5a0f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 148.5258
+      objectReference: {fileID: 0}
+    - target: {fileID: 8565112524981883012, guid: df5a282faaa6758bd95d8905083a5a0f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 193.57253
+      objectReference: {fileID: 0}
+    - target: {fileID: 8565112524981883012, guid: df5a282faaa6758bd95d8905083a5a0f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -89.61087
       objectReference: {fileID: 0}
     - target: {fileID: 8565112524981883015, guid: df5a282faaa6758bd95d8905083a5a0f, type: 3}
       propertyPath: eve.m_PersistentCalls.m_Calls.Array.data[0].m_Target
