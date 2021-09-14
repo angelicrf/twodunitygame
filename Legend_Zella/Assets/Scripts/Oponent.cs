@@ -12,6 +12,7 @@ public class Oponent : MonoBehaviour
   public float enmSpeed;
   public string enemName;
   public Rigidbody2D ptLogRigid;
+ 
   private void Awake(){
     healthOk = maxNum.numToUse;
   }
@@ -46,8 +47,11 @@ public class Oponent : MonoBehaviour
         enmRigid.isKinematic = true;
         currentEnState = EnemStates.idle;
         enmRigid.velocity = Vector2.zero;
+        //call kickFunc
+        //StartCoroutine(kickAnimStart());
         ChangeHealthScore(damage);
       }
     }
+  
 
 }

@@ -23,6 +23,8 @@ public class KnockBack : MonoBehaviour
                 Vector2 getDifference = enemRgdBody.transform.position - transform.position;
                 getDifference = getDifference.normalized * force;
                 enemRgdBody.AddForce(getDifference,ForceMode2D.Impulse);
+                //call kick func
+                StartCoroutine( other.GetComponent<PlayerMouvment>().kickAnimStart()); 
              
                 if(enemRgdBody != null){
                 if(other.CompareTag("Log") && other.isTrigger){
@@ -30,9 +32,10 @@ public class KnockBack : MonoBehaviour
                   other.GetComponent<Oponent>().callEnemyStart(enemRgdBody,knockTime, lossScore);
                 }
                 if(other.CompareTag("Player") && other.GetComponent<PlayerMouvment>().currentPlState != PlayerMouvment.PlayerState.stagger ){
-                  //Debug.Log("Tag is player...");
+                  
                   other.GetComponent<PlayerMouvment>().currentPlState = PlayerMouvment.PlayerState.stagger;
                   other.GetComponent<PlayerMouvment>().callPlayerStart(knockTime, lossScore);
+                  
                   }
                 }
              }

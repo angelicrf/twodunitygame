@@ -913,6 +913,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1000,6 +1001,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &519420033
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1dff10a3c0c54cb909fd8bdbba5f9d0c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &574309752
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1015,6 +1035,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 159132789}
+    - target: {fileID: 559039985360292372, guid: d37c3f7013e0d16e1b7cae87552896f5, type: 3}
+      propertyPath: kickSignal
+      value: 
+      objectReference: {fileID: 11400000, guid: 33a85067fc24f6277810c852a0623365, type: 2}
     - target: {fileID: 559039985360292375, guid: d37c3f7013e0d16e1b7cae87552896f5, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -17422,6 +17446,10 @@ PrefabInstance:
       value: PetLog1
       objectReference: {fileID: 0}
     - target: {fileID: 559039985360292372, guid: d37c3f7013e0d16e1b7cae87552896f5, type: 3}
+      propertyPath: kickSignal
+      value: 
+      objectReference: {fileID: 11400000, guid: 33a85067fc24f6277810c852a0623365, type: 2}
+    - target: {fileID: 559039985360292372, guid: d37c3f7013e0d16e1b7cae87552896f5, type: 3}
       propertyPath: ptLogRigid
       value: 
       objectReference: {fileID: 1594667716}
@@ -20567,6 +20595,10 @@ PrefabInstance:
       value: PetLog3
       objectReference: {fileID: 0}
     - target: {fileID: 559039985360292372, guid: d37c3f7013e0d16e1b7cae87552896f5, type: 3}
+      propertyPath: kickSignal
+      value: 
+      objectReference: {fileID: 11400000, guid: 33a85067fc24f6277810c852a0623365, type: 2}
+    - target: {fileID: 559039985360292372, guid: d37c3f7013e0d16e1b7cae87552896f5, type: 3}
       propertyPath: ptLogRigid
       value: 
       objectReference: {fileID: 1545038494}
@@ -20873,6 +20905,10 @@ PrefabInstance:
       propertyPath: dspText
       value: 
       objectReference: {fileID: 620325185}
+    - target: {fileID: 3501738739705116478, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
+      propertyPath: kickSignal
+      value: 
+      objectReference: {fileID: 11400000, guid: 33a85067fc24f6277810c852a0623365, type: 2}
     - target: {fileID: 3501738739705116478, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
       propertyPath: plStartPos
       value: 

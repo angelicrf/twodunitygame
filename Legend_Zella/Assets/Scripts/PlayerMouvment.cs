@@ -17,6 +17,8 @@ public class PlayerMouvment : MonoBehaviour
     public Signal plSignal;
     public VectorTransitValue plStartPos;
     private DialogBoxMsg dlgMsg;
+    public Animator enmCameraAnim;
+    public Signal kickSignal;
       void Awake(){
         
         bc = GameObject.Find("Player").AddComponent<BoxCollider2D>() as BoxCollider2D;
@@ -26,6 +28,7 @@ public class PlayerMouvment : MonoBehaviour
     void Start()
     {  
        dlgMsg = DialogBoxMsg.Instance(); 
+       enmCameraAnim = GameObject.Find("Main Camera").GetComponent<Animator>();
       //plHealth.numToUse = 6;
        if(plStartPos.isTransited){
            transform.position = plStartPos.transitionValue;
@@ -63,6 +66,14 @@ public class PlayerMouvment : MonoBehaviour
        animator.SetBool("attacking",false);
        yield return new WaitForSeconds(.3f);
        currentPlState = PlayerState.walk;
+    }
+      public IEnumerator kickAnimStart(){
+      kickSignal.ReadSignals();
+      if(kickSignal.hasSignal){
+        enmCameraAnim.SetBool("isCkicked", true);
+        yield return null;
+        enmCameraAnim.SetBool("isCkicked", false);
+      }
     }
     void walikngAnimator(){
         
