@@ -6,13 +6,15 @@ using UnityEngine;
 public class Inventory : ScriptableObject
 {
     public int itemCount;
-    public bool isItem;
+    public bool isItem = false;
     public TresureItem trItem;
     public List<GameObject> itemsList;
+    
     public void getItems(){
         if(isItem){       
                 itemCount++;
-                itemsList.Add(trItem.items);      
-        }
+                itemsList.Add(trItem.items);             
+        }      
     }
+
 }

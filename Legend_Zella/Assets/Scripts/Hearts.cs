@@ -22,7 +22,6 @@ public class Hearts : PowerUpHeart
         if(other.CompareTag("Player")){
             powerUpSignal.ReadSignals();
              if(powerUpSignal.hasSignal){
-            
                 heartValue.runTime += maxHearts;
                 if(heartValue.numToUse > heartValue.runTime * 2f){
                     plHealthValue.numToUse = heartValue.runTime * 2f;
