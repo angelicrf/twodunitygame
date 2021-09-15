@@ -972,7 +972,7 @@ Camera:
   field of view: 60
   orthographic: 1
   orthographic size: 6
-  m_Depth: -1
+  m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -9485,8 +9485,8 @@ Tilemap:
   - first: {x: -7, y: -3, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 2
-      m_TileSpriteIndex: 10
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -12356,7 +12356,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileSpriteIndex: 10
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -14674,12 +14674,12 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 507
+  - m_RefCount: 508
     m_Data: {fileID: 11400000, guid: fd9aeac78f7d66f31829a3f63b6cb460, type: 2}
   - m_RefCount: 83
     m_Data: {fileID: 11400000, guid: 3d4cc10f7dfdd9475bde61cda5149dec, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: b1249f9bd7ebd9371adf8082c1922686, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 387
     m_Data: {fileID: 11400000, guid: e1117d7fee2cc9cf2b5909cc819d9690, type: 2}
   - m_RefCount: 188
@@ -14697,7 +14697,7 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   m_TileSpriteArray:
-  - m_RefCount: 507
+  - m_RefCount: 508
     m_Data: {fileID: -8552779481319937432, guid: c26555a2ceea33ea4b7270a91c705942, type: 3}
   - m_RefCount: 83
     m_Data: {fileID: -4957324397105027644, guid: c26555a2ceea33ea4b7270a91c705942, type: 3}
@@ -14709,8 +14709,8 @@ Tilemap:
     m_Data: {fileID: 4256050304118005748, guid: c26555a2ceea33ea4b7270a91c705942, type: 3}
   - m_RefCount: 21
     m_Data: {fileID: -8681471816325407847, guid: c26555a2ceea33ea4b7270a91c705942, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -4856597035943072115, guid: c26555a2ceea33ea4b7270a91c705942, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 45
     m_Data: {fileID: -5332163973513142145, guid: c26555a2ceea33ea4b7270a91c705942, type: 3}
   - m_RefCount: 26
@@ -14718,7 +14718,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: -3755490242047247800, guid: c26555a2ceea33ea4b7270a91c705942, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 4479181887894498110, guid: c26555a2ceea33ea4b7270a91c705942, type: 3}
+    m_Data: {fileID: -4856597035943072115, guid: c26555a2ceea33ea4b7270a91c705942, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 1260
     m_Data:
@@ -17441,6 +17441,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LogOne
       objectReference: {fileID: 0}
+    - target: {fileID: 559039985360292370, guid: d37c3f7013e0d16e1b7cae87552896f5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 559039985360292372, guid: d37c3f7013e0d16e1b7cae87552896f5, type: 3}
       propertyPath: target
       value: 
@@ -17505,7 +17509,8 @@ PrefabInstance:
       propertyPath: enemRgdBody
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 559039985360292372, guid: d37c3f7013e0d16e1b7cae87552896f5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d37c3f7013e0d16e1b7cae87552896f5, type: 3}
 --- !u!1 &1621060923
 GameObject:
@@ -20403,6 +20408,45 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!1 &1960893437 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 559039985360292370, guid: d37c3f7013e0d16e1b7cae87552896f5, type: 3}
+  m_PrefabInstance: {fileID: 1615147052}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1960893438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960893437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ddac005927cdc73881af9808f957c5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxNum: {fileID: 11400000, guid: a94339ac55ba2d92398201601efc2d52, type: 2}
+  deathEffect: {fileID: 8646047485631212281, guid: 024351ea02d16e900b90f4742853ae7b, type: 3}
+  healthOk: 2
+  attackBase: 0
+  enmSpeed: 0
+  enemName: EnemyLog
+  ptLogRigid: {fileID: 1594667716}
+  currentEnState: 0
+  target: {fileID: 159132789}
+  chaseRad: 10
+  attackRad: 1.7
+  enmAnim: {fileID: 1960893441}
+  currentEnmState: 0
+  isPassed: 0
+  ballRidgid2: {fileID: 4614425761158682356, guid: 61368fbefe73a2d83af30d7310560be1, type: 3}
+  distanceBall: {x: 0, y: 0}
+  setTimer: 0.5
+--- !u!95 &1960893441 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 559039985360292374, guid: d37c3f7013e0d16e1b7cae87552896f5, type: 3}
+  m_PrefabInstance: {fileID: 1615147052}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2034668367
 GameObject:
   m_ObjectHideFlags: 0

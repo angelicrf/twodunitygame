@@ -60,7 +60,7 @@ public class Logs : Oponent
             }
         }
     }
-    void ChangeLgState(EnemStates newSt){
+    public void ChangeLgState(EnemStates newSt){
         if(currentEnmState != newSt){
             currentEnmState = newSt;
         }
