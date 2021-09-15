@@ -860,8 +860,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 141.72034, y: 50}
-  m_SizeDelta: {x: 283.4482, y: 100}
+  m_AnchoredPosition: {x: 241.5506, y: 186.05}
+  m_SizeDelta: {x: 239.9388, y: 71.254}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &504822975
 MonoBehaviour:
@@ -971,7 +971,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.4
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -17541,8 +17541,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -199.8969, y: -177.68}
-  m_SizeDelta: {x: 141.0345, y: 55.345}
+  m_AnchoredPosition: {x: -102.2247, y: -36.3202}
+  m_SizeDelta: {x: 127.4839, y: 44.5045}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1621060925
 MonoBehaviour:
@@ -21192,19 +21192,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8565112524981883012, guid: df5a282faaa6758bd95d8905083a5a0f, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 314.8034
+      value: 215.9354
       objectReference: {fileID: 0}
     - target: {fileID: 8565112524981883012, guid: df5a282faaa6758bd95d8905083a5a0f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 148.5258
+      value: 86.8798
       objectReference: {fileID: 0}
     - target: {fileID: 8565112524981883012, guid: df5a282faaa6758bd95d8905083a5a0f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 193.57253
+      value: 210.12332
       objectReference: {fileID: 0}
     - target: {fileID: 8565112524981883012, guid: df5a282faaa6758bd95d8905083a5a0f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -89.61087
+      value: -99.85406
       objectReference: {fileID: 0}
     - target: {fileID: 8565112524981883015, guid: df5a282faaa6758bd95d8905083a5a0f, type: 3}
       propertyPath: eve.m_PersistentCalls.m_Calls.Array.data[0].m_Target
