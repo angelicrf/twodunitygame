@@ -18,14 +18,14 @@ public class InteractableObjs : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other){
 
-        if(other.name == "Player"){  
+        if(other.name == "Player" && !other.isTrigger){  
             textMarkSignal.ReadSignals();
             hasSignal = true;
             //TextFunc();
         }    
     }
     private void OnTriggerExit2D(Collider2D other){
-        if(other.name == "Player"){ 
+        if(other.name == "Player" && ! other.isTrigger){ 
             textMarkSignal.ReadSignals();
            /*  isDialogActive = false;
             dialogBox.SetActive(false); */

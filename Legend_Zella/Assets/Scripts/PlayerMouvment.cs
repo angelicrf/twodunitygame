@@ -22,8 +22,8 @@ public class PlayerMouvment : MonoBehaviour
       void Awake(){
         
         bc = GameObject.Find("Player").AddComponent<BoxCollider2D>() as BoxCollider2D;
-        bc.size = new Vector2(0.9672769f, 0.6574417f);
-        bc.offset = new Vector2(0.05468863f,-0.4300305f);
+        bc.size = new Vector2(1.2f, 1.7f);
+        bc.offset = new Vector2(0.02f,0.02f);
     }
     void Start()
     {  

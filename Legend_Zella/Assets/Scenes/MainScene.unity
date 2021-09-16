@@ -171,9 +171,9 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -1.6716309, y: 12.868578}
-      - {x: -1.6197085, y: -4.371549}
-      - {x: -1.4236012, y: -4.73735}
+    - - {x: 0.9933157, y: 11.916812}
+      - {x: 0.9500618, y: -4.466727}
+      - {x: 1.050992, y: -4.8325276}
       - {x: 14.96381, y: -4.8209314}
       - {x: 15.076337, y: 12.595503}
 --- !u!4 &159722811
@@ -15111,7 +15111,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.03219539, y: 0.053110033}
@@ -15125,7 +15125,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4393908, y: 1.10622}
+  m_Size: {x: 1.4, y: 1.1}
   m_EdgeRadius: 0
 --- !u!61 &1468663590
 BoxCollider2D:
@@ -15137,7 +15137,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.35406643}
@@ -15151,7 +15151,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.375, y: 1.7081329}
+  m_Size: {x: 1.375, y: 1.7}
   m_EdgeRadius: 0
 --- !u!114 &1468663591
 MonoBehaviour:
@@ -17646,32 +17646,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!61 &1519633000
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1519632996}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.108171195}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
-    newSize: {x: 1, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.7836576}
-  m_EdgeRadius: 0
 --- !u!1 &1540851023 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8565112524553016555, guid: df5a282faaa6758bd95d8905083a5a0f, type: 3}
@@ -17724,11 +17698,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 559039985360292375, guid: d37c3f7013e0d16e1b7cae87552896f5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.533318
+      value: -14.96
       objectReference: {fileID: 0}
     - target: {fileID: 559039985360292375, guid: d37c3f7013e0d16e1b7cae87552896f5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.3020153
+      value: -7.97
       objectReference: {fileID: 0}
     - target: {fileID: 559039985360292375, guid: d37c3f7013e0d16e1b7cae87552896f5, type: 3}
       propertyPath: m_LocalPosition.z

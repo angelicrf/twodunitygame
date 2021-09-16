@@ -10,7 +10,7 @@ public class Sign : InteractableObjs
     public string textDisplay; 
    
     private void OnTriggerExit2D(Collider2D other){
-        if(other.name == "Player"){ 
+        if(other.name == "Player" && !other.isTrigger){ 
             textMarkSignal.ReadSignals();
             // need to create a  new dialog box 
            /*  isDialogActive = false;

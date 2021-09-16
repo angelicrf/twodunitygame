@@ -18,7 +18,7 @@ public class Coins : PowerUpHeart
     } 
 
     private void OnTriggerEnter2D(Collider2D other){
-        if(other.CompareTag("Player")){
+        if(other.CompareTag("Player") && ! other.isTrigger){
             powerUpSignal.ReadSignals();
             isCoin = true;
              
@@ -35,9 +35,11 @@ public class Coins : PowerUpHeart
     }
     private void OnTriggerExit2D(Collider2D other){
         //this.gameObject.SetActive(true);
+        if(other.CompareTag("Player") && ! other.isTrigger){
         isCoin = false;
         coinsInventory.isItem = false;
         powerUpSignal.hasSignal = false;
+        }
 
     }
      
