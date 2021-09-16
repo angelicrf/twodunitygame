@@ -18,7 +18,7 @@ public class Pot : MonoBehaviour
     }
     IEnumerator BreakStart(){
         animator.SetBool("isSmashed", true);
-        yield return new WaitForSeconds(.4f);
+        yield return null;
         animator.SetBool("isSmashed", false);
     }
 }

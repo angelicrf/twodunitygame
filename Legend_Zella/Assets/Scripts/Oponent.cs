@@ -28,9 +28,9 @@ public class Oponent : MonoBehaviour
       if(healthOk <= 0){
         generateDeathEffect();
         this.gameObject.SetActive(false);
-
+    
         //Rigidbody2D tg = this.gameObject.GetComponent<Rigidbody2D>();
-        Destroy(ptLogRigid);
+        //Destroy(ptLogRigid);
         destroyDeathEffect();
       }
     }

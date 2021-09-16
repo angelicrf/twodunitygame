@@ -9,7 +9,7 @@ public class Logs : Oponent
     public float attackRad;
     public Animator enmAnim;
     public EnemStates currentEnmState;
-    
+    public Vector3 originalPos;
    
 
     void Start()
@@ -19,6 +19,9 @@ public class Logs : Oponent
         enmAnim.SetBool("isWokeUp", true);
         //target = GameObject.Find("Player").transform;
     }
+  /*   void OnEnable(){
+        this.transform.position = originalPos;
+    } */
     void FixedUpdate()
     {
         CheckDistance();
