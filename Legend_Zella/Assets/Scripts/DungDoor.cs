@@ -10,9 +10,7 @@ public class DungDoor : InteractableObjs
     public Collider2D dnDoorCld;
     public Inventory dngInventory;
     public Image replaceDoorSprt;
-    public GameObject roomTrs;
-    public GameObject scriptTrs;
-     
+
 
     void Update()
     {
@@ -41,6 +39,9 @@ public class DungDoor : InteractableObjs
                     //transfer to another room
     }
     void doorClose(){
-
+       transform.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+       dngDoor.enabled = true;
+       GameObject.Find("Canvas").transform.GetChild(0).gameObject.SetActive(false);
     }
+  
 }

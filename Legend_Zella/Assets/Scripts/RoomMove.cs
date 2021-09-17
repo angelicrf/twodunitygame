@@ -37,8 +37,8 @@ public class RoomMove :  MonoBehaviour
         //cam.ChangeCamPos();
         
     }
-    private void OnTriggerEnter2D(){
-            if (textNeeded){
+    private void OnTriggerEnter2D(Collider2D other){
+            if (textNeeded ){
                  StartCoroutine (areaChangeMSG());
             }     
     }
