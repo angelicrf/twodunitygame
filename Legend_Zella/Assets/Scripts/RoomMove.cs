@@ -33,9 +33,6 @@ public class RoomMove :  MonoBehaviour
     private void ChangeStats(){
      
         camera2 = GameObject.Find("Main Camera").GetComponent<Camera>();
-        //cam = GetComponent<CameraMovement>();
-        //dspMins = new Vector3()
-        //cam.ChangeCamPos();
         
     }
     private void OnTriggerEnter2D(Collider2D other){

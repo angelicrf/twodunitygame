@@ -9,8 +9,10 @@ public class DungObjectAnim : MonoBehaviour
     public Rigidbody2D plRigid;
     //private bool isThree = false;
     public Signal changeDungStates;
-   public static DungObjectAnim  isDoorDungClass;
-  
+    private DialogBoxMsg msgBoxAnim;
+    private bool isPlayed = false;
+    public static DungObjectAnim  isDoorDungClass;
+   
    public static DungObjectAnim Instance(){ 
          if (!isDoorDungClass)
          {
@@ -22,10 +24,16 @@ public class DungObjectAnim : MonoBehaviour
     void Start()
     {
        dungAnim = GetComponent<Animator>(); 
+       msgBoxAnim = DialogBoxMsg.Instance();
     }
    void OnTriggerEnter2D(Collider2D other){
-       if(other.CompareTag("Player") && !isFDoorOpen){
+       if(other.CompareTag("Player")){
+           if(!isFDoorOpen){
           StartCoroutine(dungObjChange());
+           }else if(isPlayed && isFDoorOpen){
+               //display abox msg
+               msgBoxAnim.appearBox();
+           }
        }
    }
    public IEnumerator dungObjChange(){
@@ -34,10 +42,12 @@ public class DungObjectAnim : MonoBehaviour
            isFDoorOpen = true;         
            yield return new WaitForSeconds(4f);
            plRigid.GetComponent<PlayerMouvment>().currentPlState = PlayerMouvment.PlayerState.walk;
+           isPlayed = true;
    }
    void OnTriggerExit2D(Collider2D other){
        if(other.CompareTag("Player")){
-        StartCoroutine(dungObjStart());
+         StartCoroutine(dungObjStart());
+         msgBoxAnim.disappearBox();
        // doorClose();
        }
    }
