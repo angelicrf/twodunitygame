@@ -17,21 +17,33 @@ public class DungDoor : InteractableObjs
     public bool setHasSignal;
     public bool setDoorSignal;
     public bool testIsOpen;
+    public bool setDoorThree;
+    private DungRoomThree dngRoomThree;
+    public static DungDoor isDungDoorClass;
+
+   public static DungDoor Instance(){ 
+         if (!isDungDoorClass)
+         {
+             isDungDoorClass = FindObjectOfType(typeof(DungDoor)) as DungDoor;
+         }
+         return isDungDoorClass;
+         }
     void LateUpdate()
     {
+     dngRoomThree = DungRoomThree.Instance();      
+     setDoorThree = dngRoomThree.isDefeated; 
      setHasSignal = dungDoorSignal.hasSignal;
      setDoorSignal = getChangeDoorSignal.hasSignal;
-     //testIsOpen = dngObjAnim.Instance().isFDoorOpen;
      DungObjectAnim gt = DungObjectAnim.Instance();
      testIsOpen = gt.isFDoorOpen; 
-     if(setHasSignal || setDoorSignal){
+     if(setHasSignal || setDoorSignal || setDoorThree){
         StartCoroutine(doChanges());
      }
     }
     public IEnumerator doChanges(){
        changeStatesByname();
        yield return null;
-       changeDoorsStat();
+       //changeDoorsStat();
     }
      bool useFunc(){ return true;}
      string strFunc(string strF){return strF;}
@@ -40,8 +52,12 @@ public class DungDoor : InteractableObjs
      string useStrFunc = strFunc("rfe");
          (dngDoorType, selectDungRoom , useStrFunc) = (setDoorSignal && testIsOpen) ? (DungDoorName.dungDoorThree, DungRoomName.roomThree,casesMethod("DungenDoorRight")) : 
                       (setHasSignal)  ? (DungDoorName.dungDoorOne , DungRoomName.roomOne, casesMethod("DungenDoor")): 
-                      (DungDoorName.NoDoor, DungRoomName.NoRoom, casesMethod(""));     
-        //close door with a condition
+                      (setDoorThree)  ? (DungDoorName.dungDoorTwo , DungRoomName.roomTwo, casesMethod("DungenDoorDown")): 
+                      (DungDoorName.NoDoor, DungRoomName.NoRoom, casesMethod(""));   
+
+         if(!setDoorThree){
+            doorClose("DungenDoorDown");
+         }               
      }        
     private string casesMethod(string gmName){
        if(gmName != null || gmName != ""){
@@ -53,7 +69,7 @@ public class DungDoor : InteractableObjs
        }
         return gmName;
       }
-    void doorOpen(string nameDoor){         
+    public void doorOpen(string nameDoor){         
        dngDoor = GameObject.Find(nameDoor);
        dngDoor.GetComponent<SpriteRenderer>().enabled = false;              
           //dngInventory.itemCount--;
@@ -64,18 +80,23 @@ public class DungDoor : InteractableObjs
           if(setHasSignal){
             dungDoorSignal.hasSignal = false;
             setHasSignal = false;
-            }else{
+            }else if(setDoorSignal){
             getChangeDoorSignal.hasSignal = false; 
             setDoorSignal = false;
             }
+            /* else{
+              countedThreeSignals = 0;
+              dngRoomThree.isDefeated = false;
+              dngRoomThree.dungLogsSignal.hasSignal = false;
+            } */
        }
     }
-    public bool doorClose(){
+    public void doorClose(string nameDoor){
        //transform.gameObject.transform.GetChild(0).gameObject.SetActive(false);
-       dungDoorSignal.hasSignal = false;
+       //dungDoorSignal.hasSignal = false;
+       dngDoor = GameObject.Find(nameDoor);
        dngDoor.GetComponent<SpriteRenderer>().enabled = true;
-       //GameObject.Find("Canvas").transform.GetChild(0).gameObject.SetActive(false);
-      return true;
+       //GameObject.Find("Canvas").transform.GetChild(0).gameObject.SetActive(false);    
     }
   
 }

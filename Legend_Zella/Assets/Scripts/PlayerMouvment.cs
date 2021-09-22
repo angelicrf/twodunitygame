@@ -19,6 +19,7 @@ public class PlayerMouvment : MonoBehaviour
     private DialogBoxMsg dlgMsg;
     public Animator enmCameraAnim;
     public Signal kickSignal;
+    public Signal dungDefeatSignal;
       void Awake(){
         
         bc = GameObject.Find("Player").AddComponent<BoxCollider2D>() as BoxCollider2D;
@@ -69,8 +70,10 @@ public class PlayerMouvment : MonoBehaviour
     }
       public IEnumerator kickAnimStart(){
       kickSignal.ReadSignals();
+     
       if(kickSignal.hasSignal){
         enmCameraAnim.SetBool("isCkicked", true);
+        dungDefeatSignal.ReadSignals();
         yield return null;
         enmCameraAnim.SetBool("isCkicked", false);
       }

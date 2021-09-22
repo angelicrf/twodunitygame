@@ -9,6 +9,7 @@ public class KnockBack : MonoBehaviour
     public float lossScore;
     public Rigidbody2D enemRgdBody;
    
+   
     void OnTriggerEnter2D(Collider2D other){
       if(other != null){
           if(other.gameObject.CompareTag("PotBreak")
@@ -34,6 +35,7 @@ public class KnockBack : MonoBehaviour
                   other.GetComponent<PlayerMouvment>().currentPlState = PlayerMouvment.PlayerState.stagger;
                   other.GetComponent<PlayerMouvment>().callPlayerStart(knockTime, lossScore);
                   StartCoroutine( other.GetComponent<PlayerMouvment>().kickAnimStart()); 
+                 
                   }
                 }
              }

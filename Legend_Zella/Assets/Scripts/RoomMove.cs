@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class RoomMove :  MonoBehaviour
 {
-   
     public Vector3 playerChange;
     //private CameraMovement cam; 
     public bool textNeeded;
     public string replaceText;
     public Text placeText;
     public GameObject newTextObj;
-    private Rigidbody2D mvRigid;
+    //private Rigidbody2D mvRigid;
     private PlayerMouvment playerMouvement;
     public Vector3 dspMins;
     private Camera camera2;
@@ -22,8 +22,8 @@ public class RoomMove :  MonoBehaviour
   
     void Start()
     { 
-        playerMouvement = GetComponent<PlayerMouvment>();        
-        mvRigid = playerMouvement.plRigid;           
+        playerMouvement = GameObject.Find("Player").GetComponent<PlayerMouvment>();        
+        //mvRigid = playerMouvement.plRigid;           
     }
 
      void FixedUpdate()
@@ -101,7 +101,8 @@ public class RoomMove :  MonoBehaviour
         placeText.color = new Color(a,b,c,d);
    }
    private void changeAllPos(){ 
-        GameObject.Find("Main Camera").GetComponent<Camera>().transform.position = dspMins;
-        GameObject.Find("Player").GetComponent<PlayerMouvment>().plRigid.transform.position = playerChange; 
+        camera2.transform.position = dspMins;
+        playerMouvement.plRigid.transform.position = playerChange; 
    }
+    
 }
