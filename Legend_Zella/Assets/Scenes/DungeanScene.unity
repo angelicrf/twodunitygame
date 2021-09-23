@@ -4757,7 +4757,7 @@ MonoBehaviour:
   setHasSignal: 0
   setDoorSignal: 0
   testIsOpen: 0
-  countedThreeSignals: 0
+  setDoorThree: 0
 --- !u!1 &996332555
 GameObject:
   m_ObjectHideFlags: 0
@@ -19841,8 +19841,8 @@ Camera:
   m_GameObject: {fileID: 2075875711}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.7735849, g: 0.4488252, b: 0.6386384, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -19914,7 +19914,7 @@ Animator:
   m_GameObject: {fileID: 2075875711}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1dff10a3c0c54cb909fd8bdbba5f9d0c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -19982,7 +19982,7 @@ MonoBehaviour:
   setHasSignal: 0
   setDoorSignal: 0
   testIsOpen: 0
-  countedThreeSignals: 0
+  setDoorThree: 0
 --- !u!212 &2077177499
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20181,6 +20181,7 @@ MonoBehaviour:
   attackBase: 1
   enmSpeed: 1
   enemName: DungLog1
+  dungDefeatSignal: {fileID: 11400000, guid: ac1f1231b3640a4b4b5d947215b8fe4a, type: 2}
   ptLogRigid: {fileID: 559039985095446602}
   currentEnState: 0
   target: {fileID: 1342428976}
@@ -20491,6 +20492,7 @@ MonoBehaviour:
   attackBase: 1
   enmSpeed: 1
   enemName: DungLog
+  dungDefeatSignal: {fileID: 11400000, guid: ac1f1231b3640a4b4b5d947215b8fe4a, type: 2}
   ptLogRigid: {fileID: 559039985101011637}
   currentEnState: 0
   target: {fileID: 1342428976}
@@ -20734,6 +20736,7 @@ MonoBehaviour:
   attackBase: 1
   enmSpeed: 1
   enemName: DungLog2
+  dungDefeatSignal: {fileID: 11400000, guid: ac1f1231b3640a4b4b5d947215b8fe4a, type: 2}
   ptLogRigid: {fileID: 559039985934633444}
   currentEnState: 0
   target: {fileID: 1342428976}
@@ -20885,7 +20888,7 @@ MonoBehaviour:
   setHasSignal: 0
   setDoorSignal: 0
   testIsOpen: 0
-  countedThreeSignals: 0
+  setDoorThree: 0
 --- !u!4 &849142594194078788
 Transform:
   m_ObjectHideFlags: 0

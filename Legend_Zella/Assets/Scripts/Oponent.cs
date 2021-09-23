@@ -11,6 +11,8 @@ public class Oponent : MonoBehaviour
   public int attackBase;
   public float enmSpeed;
   public string enemName;
+  public Signal dungDefeatSignal;
+
   public Rigidbody2D ptLogRigid;
  
   private void Awake(){
@@ -28,9 +30,6 @@ public class Oponent : MonoBehaviour
       if(healthOk <= 0){
         generateDeathEffect();
         this.gameObject.SetActive(false);
-    
-        //Rigidbody2D tg = this.gameObject.GetComponent<Rigidbody2D>();
-        //Destroy(ptLogRigid);
         destroyDeathEffect();
       }
     }
@@ -39,6 +38,7 @@ public class Oponent : MonoBehaviour
     }
     private void destroyDeathEffect(){
          Destroy(deathEffect,1f);
+         dungDefeatSignal.ReadSignals();
     }
     IEnumerator EnemyStart(Rigidbody2D enmRigid,float timeBack,float damage){
       if(enmRigid != null){
