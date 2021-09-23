@@ -6,17 +6,12 @@ using System.Threading.Tasks;
 
 public class ConditionalRoomMove : MonoBehaviour
 {
-     public Vector3 playerChange;
-    //private CameraMovement cam; 
+    public Vector3 playerChange;
     public bool textNeeded;
     public string replaceText;
     public Text placeText;
     public GameObject newTextObj;
-    //private Rigidbody2D mvRigid;
     private PlayerMouvment playerMouvement;
-    public Vector3 dspMins;
-    private Camera camera2;
-    private Vector2 camPos;
     private int countPool = 0;
     public Rigidbody2D mvRigid;
     public Signal roomChangeSignal;
@@ -35,13 +30,8 @@ public class ConditionalRoomMove : MonoBehaviour
      void FixedUpdate()
     {
         isInRoomThree = dngThree.isDefeated;
-        ChangeStats();
     } 
-    private void ChangeStats(){
-     
-        camera2 = GameObject.Find("Main Camera").GetComponent<Camera>();
-        
-    }
+
     private void OnTriggerEnter2D(Collider2D other){
         //check some conditions
             if (textNeeded){
@@ -73,7 +63,6 @@ public class ConditionalRoomMove : MonoBehaviour
   }
   private IEnumerator lastStep(){ 
       bool resultSignalConds = areaChangeRooms();
-      //bool resultSignalNoConds = !areaChangeRooms();
 
       if(resultSignalConds){
         execSomeConds();
@@ -82,15 +71,11 @@ public class ConditionalRoomMove : MonoBehaviour
         //change signal to off
         roomChangeSignal.hasSignal = false;
         roomChangeSignal.countSignals = 0;
-        
-        dngThree.dungLogsSignal.hasSignal = false;
-        dngThree.getAllCounts = 0;
+        if(dngThree.dungLogsSignal != null){
+            dngThree.dungLogsSignal.hasSignal = false;
+            dngThree.getAllCounts = 0;
+        }
       }
-     /*  if(resultSignalNoConds){
-         partTwoSteps();
-         yield return new WaitForSeconds(2f);
-         newTextObj.SetActive(false);
-      } */
            
    } 
 /*    private async void stepsTask(){
@@ -120,15 +105,14 @@ public class ConditionalRoomMove : MonoBehaviour
                         changeColor(255, 255, 0, 1);
                      break;
                 }
-         }
-            
+         }           
    }
    private void changeColor(byte a, byte b, byte c, byte d){
         placeText.color = new Color(a,b,c,d);
    }
 
    private void changeAllPos(){         
-        GameObject.Find("Main Camera").GetComponent<Camera>().transform.position = dspMins;       
-        GameObject.Find("Player").GetComponent<PlayerMouvment>().plRigid.transform.position = playerChange; 
+        playerMouvement.plRigid.transform.position = playerChange;
+        playerMouvement.plRigid.isKinematic = true;
    }
 }

@@ -30,6 +30,7 @@ public class PlayerMouvment : MonoBehaviour
     {  
        dlgMsg = DialogBoxMsg.Instance(); 
        enmCameraAnim = GameObject.Find("Main Camera").GetComponent<Animator>();
+       animator = GetComponent<Animator>();
       //plHealth.numToUse = 6;
        if(plStartPos.isTransited){
            transform.position = plStartPos.transitionValue;
