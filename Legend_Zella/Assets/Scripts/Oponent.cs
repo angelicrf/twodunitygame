@@ -37,8 +37,12 @@ public class Oponent : MonoBehaviour
       GameObject dtObj = Instantiate(deathEffect, transform.position , Quaternion.identity);
     }
     private void destroyDeathEffect(){
-         Destroy(deathEffect,1f);
-         dungDefeatSignal.ReadSignals();
+            StartCoroutine(runDestroy());
+    }
+    private IEnumerator runDestroy(){
+       Destroy(deathEffect,1f);
+       yield return new WaitForSeconds(2f);
+       dungDefeatSignal.ReadSignals();
     }
     IEnumerator EnemyStart(Rigidbody2D enmRigid,float timeBack,float damage){
       if(enmRigid != null){

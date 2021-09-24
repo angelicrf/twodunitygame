@@ -18,34 +18,50 @@ public class ConditionalRoomMove : MonoBehaviour
     private DungRoomThree dngThree;
     private DungDoor dngGeneral;
     public bool firstStep = false;
-    private bool isInRoomThree;
+    private bool isInRoomThree = false;
+    private bool isEnteredRThree = false;
+    private int getCounts;
+    public Signal testRoomThree;
     void Start()
     { 
         playerMouvement = GameObject.Find("Player").GetComponent<PlayerMouvment>();        
         mvRigid = playerMouvement.plRigid; 
         dngThree = DungRoomThree.Instance();
         dngGeneral = DungDoor.Instance(); 
+         if(dngThree.dungLogsSignal != null){
+            dngThree.dungLogsSignal.hasSignal = false;
+            dngThree.getAllCounts = 0;
+        }
     }
 
      void FixedUpdate()
-    {
-        isInRoomThree = dngThree.isDefeated;
+    {       
+        if(testRoomThree != null){
+          isInRoomThree = (testRoomThree.countSignals >= 3);
+          if(isInRoomThree){
+               Debug.Log("isInRoomThree " + isInRoomThree);
+               mvRigid.isKinematic = true;
+          }
+         /*  else{
+              mvRigid.isKinematic = false;
+          }
+       */
+        }
+        isEnteredRThree = dngThree.isEntered;
+        
     } 
 
     private void OnTriggerEnter2D(Collider2D other){
-        //check some conditions
             if (textNeeded){
                 StartCoroutine(lastStep());
             }     
     }
   
    private void execSomeConds(){     
-       //get approval from different rooms
-      bool roomThreeApproved = isInRoomThree;
       bool roomTwoApproval = dngGeneral.getChangeDoorSignal.hasSignal;
       bool roomOneApproval = dngGeneral.dungDoorSignal.hasSignal;
-
-       if(roomOneApproval || roomTwoApproval || roomThreeApproved ){
+      
+       if(roomOneApproval || roomTwoApproval || isInRoomThree){
              partTwoSteps();
        }             
    }
@@ -71,10 +87,12 @@ public class ConditionalRoomMove : MonoBehaviour
         //change signal to off
         roomChangeSignal.hasSignal = false;
         roomChangeSignal.countSignals = 0;
-        if(dngThree.dungLogsSignal != null){
-            dngThree.dungLogsSignal.hasSignal = false;
-            dngThree.getAllCounts = 0;
+       
+         if(testRoomThree != null){
+             testRoomThree.hasSignal = false;
+             testRoomThree.countSignals = 0;
         }
+
       }
            
    } 
@@ -113,6 +131,10 @@ public class ConditionalRoomMove : MonoBehaviour
 
    private void changeAllPos(){         
         playerMouvement.plRigid.transform.position = playerChange;
+        if(!isEnteredRThree){
         playerMouvement.plRigid.isKinematic = true;
+        }else{
+            playerMouvement.plRigid.isKinematic = false; 
+        }
    }
 }

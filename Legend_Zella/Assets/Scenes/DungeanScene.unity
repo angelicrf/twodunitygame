@@ -350,6 +350,7 @@ MonoBehaviour:
   mvRigid: {fileID: 0}
   roomChangeSignal: {fileID: 11400000, guid: 78f67e1d455ea7131af7ed947c492ac8, type: 2}
   firstStep: 0
+  testRoomThree: {fileID: 0}
 --- !u!1 &201667348
 GameObject:
   m_ObjectHideFlags: 0
@@ -4671,11 +4672,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b08ea08354496bcba495a0012ad1fa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allDungLogs: []
   isDefeated: 0
   dungLogsSignal: {fileID: 0}
   getAllCounts: 0
   virtualCamera: {fileID: 823913658}
+  isEntered: 0
+  allDungLogs: []
+  TempAllDungLogs: []
+  cameBackThree: 0
 --- !u!1 &480885296
 GameObject:
   m_ObjectHideFlags: 0
@@ -5218,14 +5222,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b08ea08354496bcba495a0012ad1fa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDefeated: 1
+  dungLogsSignal: {fileID: 11400000, guid: ac1f1231b3640a4b4b5d947215b8fe4a, type: 2}
+  getAllCounts: 10
+  virtualCamera: {fileID: 2143488196}
+  isEntered: 0
   allDungLogs:
   - {fileID: 559039985101011636}
   - {fileID: 559039985095446603}
   - {fileID: 559039985934633445}
-  isDefeated: 0
-  dungLogsSignal: {fileID: 11400000, guid: ac1f1231b3640a4b4b5d947215b8fe4a, type: 2}
-  getAllCounts: 0
-  virtualCamera: {fileID: 2143488196}
+  TempAllDungLogs: []
+  cameBackThree: 0
 --- !u!1 &1033121468
 GameObject:
   m_ObjectHideFlags: 0
@@ -5432,6 +5439,7 @@ MonoBehaviour:
   mvRigid: {fileID: 0}
   roomChangeSignal: {fileID: 11400000, guid: 53ebf3bb82d3e5303b4ff9739a95b94e, type: 2}
   firstStep: 0
+  testRoomThree: {fileID: 11400000, guid: ac1f1231b3640a4b4b5d947215b8fe4a, type: 2}
 --- !u!1 &1141335368
 GameObject:
   m_ObjectHideFlags: 3
@@ -5596,7 +5604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2952316bccda8eefa8a497feb96546df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerChange: {x: -2, y: -1, z: -6}
+  playerChange: {x: -3, y: 0, z: -6}
   textNeeded: 1
   replaceText: DumgeanRoom 3
   placeText: {fileID: 1655833576}
@@ -5604,6 +5612,7 @@ MonoBehaviour:
   mvRigid: {fileID: 0}
   roomChangeSignal: {fileID: 11400000, guid: 53ebf3bb82d3e5303b4ff9739a95b94e, type: 2}
   firstStep: 0
+  testRoomThree: {fileID: 0}
 --- !u!1 &1278658734
 GameObject:
   m_ObjectHideFlags: 0
@@ -5863,6 +5872,7 @@ MonoBehaviour:
   setDoorSignal: 0
   testIsOpen: 0
   setDoorThree: 0
+  testDoorThree: {fileID: 11400000, guid: ac1f1231b3640a4b4b5d947215b8fe4a, type: 2}
 --- !u!212 &1344104358
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5965,7 +5975,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400259823}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.4, y: 1, z: -15.807656}
+  m_LocalPosition: {x: -3.3, y: -0.3, z: -15.807656}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6150,6 +6160,7 @@ MonoBehaviour:
   mvRigid: {fileID: 0}
   roomChangeSignal: {fileID: 11400000, guid: 78f67e1d455ea7131af7ed947c492ac8, type: 2}
   firstStep: 0
+  testRoomThree: {fileID: 0}
 --- !u!1 &1613826245
 GameObject:
   m_ObjectHideFlags: 0
@@ -6224,11 +6235,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b08ea08354496bcba495a0012ad1fa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allDungLogs: []
   isDefeated: 0
   dungLogsSignal: {fileID: 0}
   getAllCounts: 0
   virtualCamera: {fileID: 933287267}
+  isEntered: 0
+  allDungLogs: []
+  TempAllDungLogs: []
+  cameBackThree: 0
 --- !u!1 &1643002864
 GameObject:
   m_ObjectHideFlags: 0
@@ -20877,11 +20891,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b08ea08354496bcba495a0012ad1fa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allDungLogs: []
   isDefeated: 0
   dungLogsSignal: {fileID: 0}
   getAllCounts: 0
   virtualCamera: {fileID: 742657521}
+  isEntered: 0
+  allDungLogs: []
+  TempAllDungLogs: []
+  cameBackThree: 0
 --- !u!60 &2018338139
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -21125,6 +21142,7 @@ MonoBehaviour:
   setDoorSignal: 0
   testIsOpen: 0
   setDoorThree: 0
+  testDoorThree: {fileID: 0}
 --- !u!212 &2077177499
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21695,7 +21713,7 @@ GameObject:
   - component: {fileID: 559039985101011595}
   - component: {fileID: 559039985101011594}
   m_Layer: 6
-  m_Name: LogDung
+  m_Name: LogDung0
   m_TagString: Log
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22116,6 +22134,7 @@ MonoBehaviour:
   setDoorSignal: 0
   testIsOpen: 0
   setDoorThree: 0
+  testDoorThree: {fileID: 0}
 --- !u!4 &849142594194078788
 Transform:
   m_ObjectHideFlags: 0
@@ -22278,6 +22297,7 @@ MonoBehaviour:
   mvRigid: {fileID: 0}
   roomChangeSignal: {fileID: 11400000, guid: be9ab6e8f69f74cf8b781fa18b72ce89, type: 2}
   firstStep: 0
+  testRoomThree: {fileID: 0}
 --- !u!61 &2856570869373922399
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22382,3 +22402,4 @@ MonoBehaviour:
   mvRigid: {fileID: 0}
   roomChangeSignal: {fileID: 11400000, guid: be9ab6e8f69f74cf8b781fa18b72ce89, type: 2}
   firstStep: 0
+  testRoomThree: {fileID: 0}

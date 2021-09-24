@@ -20,6 +20,7 @@ public class DungDoor : InteractableObjs
     public bool setDoorThree;
     private DungRoomThree dngRoomThree;
     public static DungDoor isDungDoorClass;
+    public Signal testDoorThree;
 
    public static DungDoor Instance(){ 
          if (!isDungDoorClass)
@@ -30,8 +31,10 @@ public class DungDoor : InteractableObjs
          }
     void LateUpdate()
     {
-     dngRoomThree = DungRoomThree.Instance();      
-     setDoorThree = dngRoomThree.isDefeated; 
+     dngRoomThree = DungRoomThree.Instance();
+     if(testDoorThree != null){      
+       setDoorThree = testDoorThree.hasSignal;
+     } 
      setHasSignal = dungDoorSignal.hasSignal;
      setDoorSignal = getChangeDoorSignal.hasSignal;
      DungObjectAnim gt = DungObjectAnim.Instance();
