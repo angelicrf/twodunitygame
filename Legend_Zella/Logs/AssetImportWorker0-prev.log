@@ -13,11 +13,11 @@ AssetImportWorker0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-42111
+33875
 Successfully changed project path to: /home/bcuser/Git/twodunitygame/Legend_Zella
 /home/bcuser/Git/twodunitygame/Legend_Zella
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 206.04 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 613.71 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.13f1 (71691879b7f5)
 [Subsystems] Discovering subsystems at path /home/bcuser/Unity_Prjs/2020.3.13f1/Editor/Data/Resources/UnitySubsystems
@@ -32,42 +32,42 @@ ion GL_ARB_fragment_coord_conventions GL_ARB_fragment_layer_viewport GL_ARB_frag
 l_texturing GL_ARB_sync GL_ARB_texture_buffer_object GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_buffer_range GL_ARB_texture_compression_bptc GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map_array GL_ARB_texture_float GL_ARB_texture_gather GL_ARB_texture_mirror_clamp_to_edge GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_query_levels GL_ARB_texture_query_lod GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_stencil8 GL_ARB_texture_storage GL_ARB_texture_storage_multisample GL_ARB_texture_swizzle GL_ARB_texture_view GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_transform_feedback_instanced GL_ARB_transform_feedback_overflow_query GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_attrib_64bit GL_ARB_vertex_attrib_binding GL_ARB_vertex_buffer_object GL_ARB_vertex_shader GL_ARB_vertex_type_10f_11f_11f_rev GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_viewport_array G
 L_ATI_blend_equation_separate GL_ATI_texture_float GL_ATI_texture_mirror_once GL_EXT_abgr GL_EXT_blend_equation_separate GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_pixel_buffer_object GL_EXT_polygon_offset_clamp GL_EXT_provoking_vertex GL_EXT_shader_integer_mix GL_EXT_texture_array GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_integer GL_EXT_texture_mirror_clamp GL_EXT_texture_sRGB GL_EXT_texture_sRGB_decode GL_EXT_texture_shared_exponent GL_EXT_texture_snorm GL_EXT_texture_swizzle GL_EXT_timer_query GL_EXT_transform_feedback GL_EXT_vertex_array_bgra GL_EXT_vertex_attrib_64bit GL_IBM_multimode_draw_arrays GL_KHR_context_flush_control GL_KHR_debug GL_KHR_no_error GL_KHR_texture_compression_astc_ldr GL_KHR_texture_compression_astc_sliced_3d GL_MES
 A_pack_invert GL_MESA_shader_integer_functions GL_MESA_texture_signed_rgba GL_MESA_ycbcr_texture GL_NV_conditional_render GL_NV_depth_clamp GL_NV_packed_depth_stencil GL_OES_EGL_image GL_S3_s3tc
-OPENGL LOG: Creating OpenGL 3.3 graphics device ; Context level  <OpenGL 3.3> ; Context handle -1604363344
+OPENGL LOG: Creating OpenGL 3.3 graphics device ; Context level  <OpenGL 3.3> ; Context handle -1017138112
 Initialize mono
 Mono path[0] = '/home/bcuser/Unity_Prjs/2020.3.13f1/Editor/Data/Managed'
 Mono path[1] = '/home/bcuser/Unity_Prjs/2020.3.13f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = '/home/bcuser/Unity_Prjs/2020.3.13f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56759
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56177
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /home/bcuser/Unity_Prjs/2020.3.13f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0.002097 seconds.
+Registered in 0.016605 seconds.
 Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 178.58 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 254.02 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.986 seconds
+- Completed reload, in  8.173 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.007021 seconds.
+Registered in 0.023748 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 176.17 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 307.84 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.245 seconds
+- Completed reload, in  7.322 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler after 0.02 seconds
-Refreshing native plugins compatible for Editor in 0.99 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler after 0.07 seconds
+Refreshing native plugins compatible for Editor in 1.21 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2662 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 114.2 MB.
 System memory in use after: 113.4 MB.
 
 Unloading 144 unused Assets to reduce memory usage. Loaded Objects now: 3086.
-Total: 12.029934 ms (FindLiveObjects: 0.553106 ms CreateObjectMapping: 0.230114 ms MarkObjects: 10.077556 ms  DeleteObjects: 1.162964 ms)
+Total: 25.711220 ms (FindLiveObjects: 0.621819 ms CreateObjectMapping: 0.381584 ms MarkObjects: 23.133557 ms  DeleteObjects: 1.564482 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -80,34 +80,26 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Prefabs/Log 1.prefab
-  artifactKey: Guid(d37c3f7013e0d16e1b7cae87552896f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Log 1.prefab using Guid(d37c3f7013e0d16e1b7cae87552896f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3081d15b9772c9c8554fe1ef9c79ba7d') in 0.502475 seconds 
-  Import took 0.513776 seconds .
+  path: Assets/ScriptableObjects/DungDoorGnSignal.asset
+  artifactKey: Guid(78f67e1d455ea7131af7ed947c492ac8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/DungDoorGnSignal.asset using Guid(78f67e1d455ea7131af7ed947c492ac8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '933f0e71995a5ff4788ec179a2f1e530') in 0.087775 seconds 
+  Import took 0.165473 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 543.912128 seconds.
-  path: Assets/Scripts/KnockBack.cs
-  artifactKey: Guid(02aff767cd8adfbcaa39304ef8bdbd0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/KnockBack.cs using Guid(02aff767cd8adfbcaa39304ef8bdbd0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f44dcca22cace4e9d13fb458844aabb') in 0.001478 seconds 
-  Import took 0.010324 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.012942 seconds.
-  path: Assets/Scripts/KnockBack.cs
-  artifactKey: Guid(02aff767cd8adfbcaa39304ef8bdbd0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/KnockBack.cs using Guid(02aff767cd8adfbcaa39304ef8bdbd0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f44dcca22cace4e9d13fb458844aabb') in 0.001195 seconds 
-  Import took 0.009933 seconds .
+  Time since last request: 0.005536 seconds.
+  path: Assets/ScriptableObjects/DungDoorTwoSignal.asset
+  artifactKey: Guid(be9ab6e8f69f74cf8b781fa18b72ce89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/DungDoorTwoSignal.asset using Guid(be9ab6e8f69f74cf8b781fa18b72ce89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e42fcbe61e8e9b7299ed493c8e80e27') in 0.039708 seconds 
+  Import took 0.092246 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.008530 seconds.
+Registered in 0.021941 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 1.54 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 1.33 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Warning: Annotation not found!
 UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
@@ -119,16 +111,16 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (
 [/home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs line 37]
 
 Mono: successfully reloaded assembly
-- Completed reload, in  7.415 seconds
+- Completed reload, in  8.643 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.20 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 1.34 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2611 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 111.8 MB.
-System memory in use after: 111.2 MB.
+System memory in use before: 109.9 MB.
+System memory in use after: 109.9 MB.
 
-Unloading 26 unused Assets to reduce memory usage. Loaded Objects now: 3097.
-Total: 13.422124 ms (FindLiveObjects: 0.558111 ms CreateObjectMapping: 0.239989 ms MarkObjects: 12.153425 ms  DeleteObjects: 0.463266 ms)
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 3090.
+Total: 37.082205 ms (FindLiveObjects: 1.671536 ms CreateObjectMapping: 0.236355 ms MarkObjects: 34.757260 ms  DeleteObjects: 0.408711 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 

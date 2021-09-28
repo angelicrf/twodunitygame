@@ -220,6 +220,85 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5adc133e9928e50e8f2cb35fc6de6f3, type: 3}
+--- !u!1 &130894599
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 130894600}
+  - component: {fileID: 130894602}
+  - component: {fileID: 130894601}
+  m_Layer: 0
+  m_Name: DungRoomTrs4Back
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &130894600
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130894599}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1, y: -1, z: -518.57416}
+  m_LocalScale: {x: 1.0938525, y: 0.5069006, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1077613408}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &130894601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130894599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2952316bccda8eefa8a497feb96546df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerChange: {x: -13, y: -14, z: -6}
+  textNeeded: 1
+  replaceText: DungeanRoom 1
+  placeText: {fileID: 1655833576}
+  newTextObj: {fileID: 1033121468}
+  mvRigid: {fileID: 0}
+  roomChangeSignal: {fileID: 11400000, guid: 78f67e1d455ea7131af7ed947c492ac8, type: 2}
+  roomThreeSignal: {fileID: 0}
+  firstStep: 0
+--- !u!61 &130894602
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130894599}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.39869577, y: 0.09303534}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.4334129, y: 1.7085855}
+  m_EdgeRadius: 0
 --- !u!1 &148932619
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,13 +423,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerChange: {x: -20, y: -7, z: -6}
   textNeeded: 1
-  replaceText: DungeanRoomEntrance
+  replaceText: DungeanRoom 1
   placeText: {fileID: 1655833576}
   newTextObj: {fileID: 1033121468}
   mvRigid: {fileID: 0}
   roomChangeSignal: {fileID: 11400000, guid: 78f67e1d455ea7131af7ed947c492ac8, type: 2}
+  roomThreeSignal: {fileID: 0}
   firstStep: 0
-  testRoomThree: {fileID: 0}
 --- !u!1 &201667348
 GameObject:
   m_ObjectHideFlags: 0
@@ -1208,26 +1287,6 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 7
       m_TileSpriteIndex: 7
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -8, y: -13, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 8
-      m_TileSpriteIndex: 8
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -7, y: -13, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 8
-      m_TileSpriteIndex: 8
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3821,7 +3880,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 30cdae28fd311708dba90c0e333720c8, type: 2}
   - m_RefCount: 9
     m_Data: {fileID: 11400000, guid: 39ae186021c08d8ba9f06c4b631cd326, type: 2}
-  - m_RefCount: 142
+  - m_RefCount: 140
     m_Data: {fileID: 11400000, guid: 5fccd28e2c656643bb03fefbc6023a58, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 30
@@ -3840,10 +3899,10 @@ Tilemap:
     m_Data: {fileID: -8683155138034320230, guid: c26555a2ceea33ea4b7270a91c705942, type: 3}
   - m_RefCount: 9
     m_Data: {fileID: 2736651363944752385, guid: c26555a2ceea33ea4b7270a91c705942, type: 3}
-  - m_RefCount: 142
+  - m_RefCount: 140
     m_Data: {fileID: -7778452239225803684, guid: c26555a2ceea33ea4b7270a91c705942, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 336
+  - m_RefCount: 334
     m_Data:
       e00: 1
       e01: 0
@@ -3862,7 +3921,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 336
+  - m_RefCount: 334
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -4065,9 +4124,9 @@ CompositeCollider2D:
       - X: -80000000
         Y: -50000000
       - X: -80000000
-        Y: -170000000
+        Y: -119999900
       - X: -60000000
-        Y: -170000000
+        Y: -119999900
     - - X: -80625000
         Y: -10000000
       - X: -80000000
@@ -4244,6 +4303,14 @@ CompositeCollider2D:
         Y: -136875008
       - X: -260624992
         Y: -136875008
+    - - X: -60000000
+        Y: -130000100
+      - X: -80000000
+        Y: -130000100
+      - X: -80000000
+        Y: -170000000
+      - X: -60000000
+        Y: -170000000
     - - X: 70000000
         Y: -156250000
       - X: 70000000
@@ -4334,7 +4401,7 @@ CompositeCollider2D:
       - {x: -27.624992, y: 5.375}
       - {x: -27, y: 5.3749704}
       - {x: -26.999971, y: 5.3125}
-    - - {x: -6.000029, y: -17}
+    - - {x: -6.000029, y: -11.99999}
       - {x: -5.9999704, y: -5}
       - {x: 2.99999, y: -4.999971}
       - {x: 2.999961, y: -3}
@@ -4359,7 +4426,7 @@ CompositeCollider2D:
       - {x: -18, y: -3.0000293}
       - {x: -17.999971, y: -5}
       - {x: -8, y: -5.0000296}
-      - {x: -7.9999704, y: -17}
+      - {x: -7.9999704, y: -11.99999}
     - - {x: -8, y: -1.1248277}
       - {x: -8.062486, y: -0.9999861}
       - {x: -8, y: -0.93758744}
@@ -4448,6 +4515,10 @@ CompositeCollider2D:
       - {x: -27.624992, y: -13.625}
       - {x: -27, y: -13.625029}
       - {x: -26.999971, y: -13.687501}
+    - - {x: -6.000029, y: -17}
+      - {x: -6.000029, y: -13.00001}
+      - {x: -8, y: -13.000039}
+      - {x: -7.9999704, y: -17}
     - - {x: 6.9374895, y: -15.687501}
       - {x: 7, y: -15.624989}
       - {x: 6.9999976, y: -15.124995}
@@ -5222,9 +5293,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b08ea08354496bcba495a0012ad1fa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDefeated: 1
+  isDefeated: 0
   dungLogsSignal: {fileID: 11400000, guid: ac1f1231b3640a4b4b5d947215b8fe4a, type: 2}
-  getAllCounts: 10
+  getAllCounts: 0
   virtualCamera: {fileID: 2143488196}
   isEntered: 0
   allDungLogs:
@@ -5309,6 +5380,118 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1033121468}
   m_CullTransparentMesh: 1
+--- !u!1 &1077613407
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1077613408}
+  - component: {fileID: 1077613410}
+  - component: {fileID: 1077613409}
+  m_Layer: 0
+  m_Name: RoomDoor4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1077613408
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077613407}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1262350306}
+  - {fileID: 130894600}
+  m_Father: {fileID: 1360062775}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1077613409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077613407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf6c8606242e57ddeac57db41a9f948f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMarkSignal: {fileID: 11400000, guid: a00a93c46b2ffc0659f9441725b1ac7e, type: 2}
+  isDialogActive: 1
+  hasSignal: 0
+  dngDoorType: 3
+  selectDungRoom: 3
+  dngDoor: {fileID: 1360062772}
+  dnDoorCld: {fileID: 1360062773}
+  dngInventory: {fileID: 11400000, guid: e6450fceac526348caf3b7f1c4e5ed50, type: 2}
+  doorOneSignal: {fileID: 11400000, guid: 78f67e1d455ea7131af7ed947c492ac8, type: 2}
+  doorTwoSignal: {fileID: 11400000, guid: be9ab6e8f69f74cf8b781fa18b72ce89, type: 2}
+  doorThreeSignal: {fileID: 0}
+  setHasSignal: 0
+  setDoorSignal: 0
+  testIsOpen: 0
+  setDoorThree: 0
+--- !u!212 &1077613410
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077613407}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1098246042
 GameObject:
   m_ObjectHideFlags: 0
@@ -5438,8 +5621,8 @@ MonoBehaviour:
   newTextObj: {fileID: 1033121468}
   mvRigid: {fileID: 0}
   roomChangeSignal: {fileID: 11400000, guid: 53ebf3bb82d3e5303b4ff9739a95b94e, type: 2}
+  roomThreeSignal: {fileID: 11400000, guid: ac1f1231b3640a4b4b5d947215b8fe4a, type: 2}
   firstStep: 0
-  testRoomThree: {fileID: 11400000, guid: ac1f1231b3640a4b4b5d947215b8fe4a, type: 2}
 --- !u!1 &1141335368
 GameObject:
   m_ObjectHideFlags: 3
@@ -5611,8 +5794,87 @@ MonoBehaviour:
   newTextObj: {fileID: 1033121468}
   mvRigid: {fileID: 0}
   roomChangeSignal: {fileID: 11400000, guid: 53ebf3bb82d3e5303b4ff9739a95b94e, type: 2}
+  roomThreeSignal: {fileID: 0}
   firstStep: 0
-  testRoomThree: {fileID: 0}
+--- !u!1 &1262350305
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1262350306}
+  - component: {fileID: 1262350308}
+  - component: {fileID: 1262350307}
+  m_Layer: 0
+  m_Name: DungRoomTrs4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1262350306
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262350305}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1, y: -1, z: -4.5234375}
+  m_LocalScale: {x: 1.0938525, y: 0.5069006, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1077613408}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1262350307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262350305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2952316bccda8eefa8a497feb96546df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerChange: {x: -4, y: -15, z: -6}
+  textNeeded: 1
+  replaceText: DungeanRoom 4
+  placeText: {fileID: 1655833576}
+  newTextObj: {fileID: 1033121468}
+  mvRigid: {fileID: 0}
+  roomChangeSignal: {fileID: 11400000, guid: 78f67e1d455ea7131af7ed947c492ac8, type: 2}
+  roomThreeSignal: {fileID: 0}
+  firstStep: 0
+--- !u!61 &1262350308
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262350305}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.24724078, y: 0.12740886}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.50551844, y: 1.8369448}
+  m_EdgeRadius: 0
 --- !u!1 &1278658734
 GameObject:
   m_ObjectHideFlags: 0
@@ -5824,7 +6086,7 @@ GameObject:
   - component: {fileID: 1344104358}
   - component: {fileID: 1344104357}
   m_Layer: 0
-  m_Name: RoomDoorThree
+  m_Name: RoomDoor3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5866,13 +6128,13 @@ MonoBehaviour:
   dngDoor: {fileID: 1859370012}
   dnDoorCld: {fileID: 1859370013}
   dngInventory: {fileID: 11400000, guid: e6450fceac526348caf3b7f1c4e5ed50, type: 2}
-  dungDoorSignal: {fileID: 11400000, guid: 78f67e1d455ea7131af7ed947c492ac8, type: 2}
-  getChangeDoorSignal: {fileID: 11400000, guid: be9ab6e8f69f74cf8b781fa18b72ce89, type: 2}
+  doorOneSignal: {fileID: 11400000, guid: 78f67e1d455ea7131af7ed947c492ac8, type: 2}
+  doorTwoSignal: {fileID: 11400000, guid: be9ab6e8f69f74cf8b781fa18b72ce89, type: 2}
+  doorThreeSignal: {fileID: 11400000, guid: 53ebf3bb82d3e5303b4ff9739a95b94e, type: 2}
   setHasSignal: 0
   setDoorSignal: 0
   testIsOpen: 0
   setDoorThree: 0
-  testDoorThree: {fileID: 11400000, guid: ac1f1231b3640a4b4b5d947215b8fe4a, type: 2}
 --- !u!212 &1344104358
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5924,6 +6186,116 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1360062772
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1360062775}
+  - component: {fileID: 1360062774}
+  - component: {fileID: 1360062773}
+  m_Layer: 0
+  m_Name: DungenDoorBtn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1360062773
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360062772}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!212 &1360062774
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360062772}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 80d59d100dcedaf20bf4d2b8a1a3ee99, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1360062775
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360062772}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.0793, y: -12.7, z: -9.019926}
+  m_LocalScale: {x: 2.093362, y: 1.2038352, z: 1}
+  m_Children:
+  - {fileID: 1077613408}
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1400259823
 GameObject:
   m_ObjectHideFlags: 0
@@ -5975,7 +6347,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400259823}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.3, y: -0.3, z: -15.807656}
+  m_LocalPosition: {x: -3.79, y: -15.16, z: -15.807656}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6154,13 +6526,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerChange: {x: -17, y: 1, z: -6}
   textNeeded: 1
-  replaceText: DungeanRoom 1
+  replaceText: DungeanRoom 2
   placeText: {fileID: 1655833576}
   newTextObj: {fileID: 1033121468}
   mvRigid: {fileID: 0}
   roomChangeSignal: {fileID: 11400000, guid: 78f67e1d455ea7131af7ed947c492ac8, type: 2}
+  roomThreeSignal: {fileID: 0}
   firstStep: 0
-  testRoomThree: {fileID: 0}
 --- !u!1 &1613826245
 GameObject:
   m_ObjectHideFlags: 0
@@ -21136,13 +21508,13 @@ MonoBehaviour:
   dngDoor: {fileID: 1643002864}
   dnDoorCld: {fileID: 1643002867}
   dngInventory: {fileID: 11400000, guid: e6450fceac526348caf3b7f1c4e5ed50, type: 2}
-  dungDoorSignal: {fileID: 11400000, guid: 78f67e1d455ea7131af7ed947c492ac8, type: 2}
-  getChangeDoorSignal: {fileID: 11400000, guid: be9ab6e8f69f74cf8b781fa18b72ce89, type: 2}
+  doorOneSignal: {fileID: 11400000, guid: 78f67e1d455ea7131af7ed947c492ac8, type: 2}
+  doorTwoSignal: {fileID: 11400000, guid: be9ab6e8f69f74cf8b781fa18b72ce89, type: 2}
+  doorThreeSignal: {fileID: 0}
   setHasSignal: 0
   setDoorSignal: 0
   testIsOpen: 0
   setDoorThree: 0
-  testDoorThree: {fileID: 0}
 --- !u!212 &2077177499
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22128,13 +22500,13 @@ MonoBehaviour:
   dngDoor: {fileID: 849142594194078790}
   dnDoorCld: {fileID: 849142594194078789}
   dngInventory: {fileID: 11400000, guid: e6450fceac526348caf3b7f1c4e5ed50, type: 2}
-  dungDoorSignal: {fileID: 11400000, guid: 78f67e1d455ea7131af7ed947c492ac8, type: 2}
-  getChangeDoorSignal: {fileID: 11400000, guid: be9ab6e8f69f74cf8b781fa18b72ce89, type: 2}
+  doorOneSignal: {fileID: 11400000, guid: 78f67e1d455ea7131af7ed947c492ac8, type: 2}
+  doorTwoSignal: {fileID: 11400000, guid: be9ab6e8f69f74cf8b781fa18b72ce89, type: 2}
+  doorThreeSignal: {fileID: 0}
   setHasSignal: 0
   setDoorSignal: 0
   testIsOpen: 0
   setDoorThree: 0
-  testDoorThree: {fileID: 0}
 --- !u!4 &849142594194078788
 Transform:
   m_ObjectHideFlags: 0
@@ -22296,8 +22668,8 @@ MonoBehaviour:
   newTextObj: {fileID: 1033121468}
   mvRigid: {fileID: 0}
   roomChangeSignal: {fileID: 11400000, guid: be9ab6e8f69f74cf8b781fa18b72ce89, type: 2}
+  roomThreeSignal: {fileID: 0}
   firstStep: 0
-  testRoomThree: {fileID: 0}
 --- !u!61 &2856570869373922399
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22401,5 +22773,5 @@ MonoBehaviour:
   newTextObj: {fileID: 1033121468}
   mvRigid: {fileID: 0}
   roomChangeSignal: {fileID: 11400000, guid: be9ab6e8f69f74cf8b781fa18b72ce89, type: 2}
+  roomThreeSignal: {fileID: 0}
   firstStep: 0
-  testRoomThree: {fileID: 0}

@@ -15,13 +15,15 @@ public class ConditionalRoomMove : MonoBehaviour
     private int countPool = 0;
     public Rigidbody2D mvRigid;
     public Signal roomChangeSignal;
+    public Signal roomThreeSignal;
     private DungRoomThree dngThree;
     private DungDoor dngGeneral;
     public bool firstStep = false;
     private bool isInRoomThree = false;
+
     private bool isEnteredRThree = false;
     private int getCounts;
-    public Signal testRoomThree;
+    
     void Start()
     { 
         playerMouvement = GameObject.Find("Player").GetComponent<PlayerMouvment>();        
@@ -36,16 +38,23 @@ public class ConditionalRoomMove : MonoBehaviour
 
      void FixedUpdate()
     {       
-        if(testRoomThree != null){
-          isInRoomThree = (testRoomThree.countSignals >= 3);
+        if(roomThreeSignal != null){
+          isInRoomThree = (roomThreeSignal.countSignals >= 3);
           if(isInRoomThree){
                Debug.Log("isInRoomThree " + isInRoomThree);
                mvRigid.isKinematic = true;
           }
+        /*   if(roomFourSignal != null){
+          isInRoomFour = roomFourSignal.hasSignal;
+          if(isInRoomFour){
+               Debug.Log("isInRoomFour " + isInRoomFour);
+               //mvRigid.isKinematic = true;
+           }
+          } */
          /*  else{
               mvRigid.isKinematic = false;
           }
-       */
+         */
         }
         isEnteredRThree = dngThree.isEntered;
         
@@ -58,10 +67,11 @@ public class ConditionalRoomMove : MonoBehaviour
     }
   
    private void execSomeConds(){     
-      bool roomTwoApproval = dngGeneral.getChangeDoorSignal.hasSignal;
-      bool roomOneApproval = dngGeneral.dungDoorSignal.hasSignal;
+      bool roomTwoApproval = dngGeneral.doorTwoSignal.hasSignal;
+      bool roomOneApproval = dngGeneral.doorOneSignal.hasSignal;
+      bool roomFourApproval = dngGeneral.doorFourSignal.hasSignal;
       
-       if(roomOneApproval || roomTwoApproval || isInRoomThree){
+       if(roomOneApproval || roomTwoApproval || isInRoomThree || roomFourApproval ){
              partTwoSteps();
        }             
    }
@@ -88,9 +98,9 @@ public class ConditionalRoomMove : MonoBehaviour
         roomChangeSignal.hasSignal = false;
         roomChangeSignal.countSignals = 0;
        
-         if(testRoomThree != null){
-             testRoomThree.hasSignal = false;
-             testRoomThree.countSignals = 0;
+         if(roomThreeSignal != null){
+             roomThreeSignal.hasSignal = false;
+             roomThreeSignal.countSignals = 0;
         }
 
       }
