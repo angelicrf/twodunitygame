@@ -270,7 +270,7 @@ MonoBehaviour:
   placeText: {fileID: 1655833576}
   newTextObj: {fileID: 1033121468}
   mvRigid: {fileID: 0}
-  roomChangeSignal: {fileID: 11400000, guid: 78f67e1d455ea7131af7ed947c492ac8, type: 2}
+  roomChangeSignal: {fileID: 11400000, guid: b70eeadeaff601ee58e0b43530d0ab4f, type: 2}
   roomThreeSignal: {fileID: 0}
   firstStep: 0
 --- !u!61 &130894602
@@ -5437,8 +5437,10 @@ MonoBehaviour:
   doorOneSignal: {fileID: 11400000, guid: 78f67e1d455ea7131af7ed947c492ac8, type: 2}
   doorTwoSignal: {fileID: 11400000, guid: be9ab6e8f69f74cf8b781fa18b72ce89, type: 2}
   doorThreeSignal: {fileID: 0}
+  doorFourSignal: {fileID: 11400000, guid: b70eeadeaff601ee58e0b43530d0ab4f, type: 2}
   setHasSignal: 0
   setDoorSignal: 0
+  setDoorFour: 0
   testIsOpen: 0
   setDoorThree: 0
 --- !u!212 &1077613410
@@ -5846,7 +5848,7 @@ MonoBehaviour:
   placeText: {fileID: 1655833576}
   newTextObj: {fileID: 1033121468}
   mvRigid: {fileID: 0}
-  roomChangeSignal: {fileID: 11400000, guid: 78f67e1d455ea7131af7ed947c492ac8, type: 2}
+  roomChangeSignal: {fileID: 11400000, guid: b70eeadeaff601ee58e0b43530d0ab4f, type: 2}
   roomThreeSignal: {fileID: 0}
   firstStep: 0
 --- !u!61 &1262350308
@@ -6131,8 +6133,10 @@ MonoBehaviour:
   doorOneSignal: {fileID: 11400000, guid: 78f67e1d455ea7131af7ed947c492ac8, type: 2}
   doorTwoSignal: {fileID: 11400000, guid: be9ab6e8f69f74cf8b781fa18b72ce89, type: 2}
   doorThreeSignal: {fileID: 11400000, guid: 53ebf3bb82d3e5303b4ff9739a95b94e, type: 2}
+  doorFourSignal: {fileID: 0}
   setHasSignal: 0
   setDoorSignal: 0
+  setDoorFour: 0
   testIsOpen: 0
   setDoorThree: 0
 --- !u!212 &1344104358
@@ -21511,8 +21515,10 @@ MonoBehaviour:
   doorOneSignal: {fileID: 11400000, guid: 78f67e1d455ea7131af7ed947c492ac8, type: 2}
   doorTwoSignal: {fileID: 11400000, guid: be9ab6e8f69f74cf8b781fa18b72ce89, type: 2}
   doorThreeSignal: {fileID: 0}
+  doorFourSignal: {fileID: 0}
   setHasSignal: 0
   setDoorSignal: 0
+  setDoorFour: 0
   testIsOpen: 0
   setDoorThree: 0
 --- !u!212 &2077177499
@@ -22503,8 +22509,10 @@ MonoBehaviour:
   doorOneSignal: {fileID: 11400000, guid: 78f67e1d455ea7131af7ed947c492ac8, type: 2}
   doorTwoSignal: {fileID: 11400000, guid: be9ab6e8f69f74cf8b781fa18b72ce89, type: 2}
   doorThreeSignal: {fileID: 0}
+  doorFourSignal: {fileID: 0}
   setHasSignal: 0
   setDoorSignal: 0
+  setDoorFour: 0
   testIsOpen: 0
   setDoorThree: 0
 --- !u!4 &849142594194078788

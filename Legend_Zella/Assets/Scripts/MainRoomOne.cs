@@ -24,7 +24,7 @@ public class MainRoomOne : MonoBehaviour
       }
     }
     public void OnTriggerExit2D(Collider2D other){
-       if(other.CompareTag("Player") && ! other.isTrigger){
+       if(other.CompareTag("Player") && !other.isTrigger){
             insidePolygon = false;
           for (int i = 0; i < allOponents.Length; i++)
        {

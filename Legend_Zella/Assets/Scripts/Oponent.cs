@@ -12,8 +12,9 @@ public class Oponent : MonoBehaviour
   public float enmSpeed;
   public string enemName;
   public Signal dungDefeatSignal;
-
+  public LootTable lootTable;
   public Rigidbody2D ptLogRigid;
+  public bool testLoot = false;
  
   private void Awake(){
     healthOk = maxNum.numToUse;
@@ -29,20 +30,25 @@ public class Oponent : MonoBehaviour
       healthOk -= damage;
       if(healthOk <= 0){
         generateDeathEffect();
+        callLootTable();
         this.gameObject.SetActive(false);
-        destroyDeathEffect();
+        StartCoroutine(destroyEnemy());
       }
+    }
+    private void callLootTable(){   
+        if(lootTable != null){
+         GameObject gy = lootTable.pwH();
+         Instantiate(gy, transform.position,Quaternion.identity);
+         testLoot = true;       
+        }
+    }
+    private IEnumerator destroyEnemy(){
+        Destroy(deathEffect,1f);
+         yield return new WaitForSeconds(2f);
+         dungDefeatSignal.ReadSignals();
     }
     private void generateDeathEffect(){
       GameObject dtObj = Instantiate(deathEffect, transform.position , Quaternion.identity);
-    }
-    private void destroyDeathEffect(){
-            StartCoroutine(runDestroy());
-    }
-    private IEnumerator runDestroy(){
-       Destroy(deathEffect,1f);
-       yield return new WaitForSeconds(2f);
-       dungDefeatSignal.ReadSignals();
     }
     IEnumerator EnemyStart(Rigidbody2D enmRigid,float timeBack,float damage){
       if(enmRigid != null){
