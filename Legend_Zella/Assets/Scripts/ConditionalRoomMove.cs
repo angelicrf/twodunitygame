@@ -20,7 +20,6 @@ public class ConditionalRoomMove : MonoBehaviour
     private DungDoor dngGeneral;
     public bool firstStep = false;
     private bool isInRoomThree = false;
-
     private bool isEnteredRThree = false;
     private int getCounts;
     
@@ -44,13 +43,6 @@ public class ConditionalRoomMove : MonoBehaviour
                Debug.Log("isInRoomThree " + isInRoomThree);
                mvRigid.isKinematic = true;
           }
-        /*   if(roomFourSignal != null){
-          isInRoomFour = roomFourSignal.hasSignal;
-          if(isInRoomFour){
-               Debug.Log("isInRoomFour " + isInRoomFour);
-               //mvRigid.isKinematic = true;
-           }
-          } */
          /*  else{
               mvRigid.isKinematic = false;
           }
@@ -106,7 +98,7 @@ public class ConditionalRoomMove : MonoBehaviour
       }
            
    } 
-/*    private async void stepsTask(){
+  /* private async void stepsTask(){
         //await Task.Run(() => areaChangeMSG());
         areaChangeMSG();
         await Task.Run(() => execSomeConds());
