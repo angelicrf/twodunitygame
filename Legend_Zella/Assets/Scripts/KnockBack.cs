@@ -7,8 +7,13 @@ public class KnockBack : MonoBehaviour
     public float force;
     public float knockTime;
     public float lossScore;
-    public Rigidbody2D enemRgdBody;
-   
+    private Rigidbody2D enemRgdBody;
+     
+    private IEnumerator changeVelocity(Rigidbody2D nRg){
+      yield return new WaitForSeconds(2f);
+      nRg.velocity = Vector2.zero;
+      nRg.isKinematic = true;
+    }  
    
     void OnTriggerEnter2D(Collider2D other){
       if(other != null){
@@ -24,7 +29,8 @@ public class KnockBack : MonoBehaviour
                 Vector2 getDifference = enemRgdBody.transform.position - transform.position;
                 getDifference = getDifference.normalized * force;
                 enemRgdBody.AddForce(getDifference,ForceMode2D.Impulse);
-
+                 //call a func
+                StartCoroutine(changeVelocity(enemRgdBody));
                 if(enemRgdBody != null){
                 if(other.CompareTag("Log") && other.isTrigger){
                   enemRgdBody.GetComponent<Oponent>().currentEnState = Oponent.EnemStates.stagger;  

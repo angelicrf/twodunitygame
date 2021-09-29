@@ -6069,13 +6069,37 @@ PrefabInstance:
       propertyPath: enemRgdBody
       value: 
       objectReference: {fileID: 559039985095446602}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3501738739949806882, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
+    - {fileID: 3501738740386815500, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
+    - {fileID: 3501738740688215104, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
+    - {fileID: 3501738739508152114, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
 --- !u!4 &1342428976 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3501738739705116473, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
   m_PrefabInstance: {fileID: 1342428975}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1342428977 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3501738739705116450, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
+  m_PrefabInstance: {fileID: 1342428975}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1342428978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342428977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02aff767cd8adfbcaa39304ef8bdbd0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  knockTime: 0.4
+  lossScore: 2
 --- !u!1 &1344104355
 GameObject:
   m_ObjectHideFlags: 0
@@ -21805,7 +21829,9 @@ MonoBehaviour:
   enmSpeed: 1
   enemName: DungLog1
   dungDefeatSignal: {fileID: 11400000, guid: ac1f1231b3640a4b4b5d947215b8fe4a, type: 2}
+  lootTable: {fileID: 0}
   ptLogRigid: {fileID: 559039985095446602}
+  testLoot: 0
   currentEnState: 0
   target: {fileID: 1342428976}
   chaseRad: 10
@@ -21954,7 +21980,6 @@ MonoBehaviour:
   force: 4
   knockTime: 0.2
   lossScore: 1
-  enemRgdBody: {fileID: 559039985095446602}
 --- !u!114 &559039985101011594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21970,7 +21995,6 @@ MonoBehaviour:
   force: 4
   knockTime: 0.2
   lossScore: 1
-  enemRgdBody: {fileID: 559039985101011637}
 --- !u!61 &559039985101011595
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22116,7 +22140,9 @@ MonoBehaviour:
   enmSpeed: 1
   enemName: DungLog
   dungDefeatSignal: {fileID: 11400000, guid: ac1f1231b3640a4b4b5d947215b8fe4a, type: 2}
+  lootTable: {fileID: 0}
   ptLogRigid: {fileID: 559039985101011637}
+  testLoot: 0
   currentEnState: 0
   target: {fileID: 1342428976}
   chaseRad: 10
@@ -22219,7 +22245,6 @@ MonoBehaviour:
   force: 4
   knockTime: 0.2
   lossScore: 1
-  enemRgdBody: {fileID: 559039985934633444}
 --- !u!61 &559039985934633440
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22360,7 +22385,9 @@ MonoBehaviour:
   enmSpeed: 1
   enemName: DungLog2
   dungDefeatSignal: {fileID: 11400000, guid: ac1f1231b3640a4b4b5d947215b8fe4a, type: 2}
+  lootTable: {fileID: 0}
   ptLogRigid: {fileID: 559039985934633444}
+  testLoot: 0
   currentEnState: 0
   target: {fileID: 1342428976}
   chaseRad: 10
