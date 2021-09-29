@@ -11,7 +11,6 @@ public class DungDoor : InteractableObjs
     public DungRoomName selectDungRoom;
     public GameObject dngDoor;
     public Collider2D dnDoorCld;
-    public Inventory dngInventory;
     public Signal doorOneSignal;
     public Signal doorTwoSignal;
     public Signal doorThreeSignal;
@@ -72,11 +71,11 @@ public class DungDoor : InteractableObjs
      }        
     private string casesMethod(string gmName){
        if(gmName != null || gmName != ""){
-         dngInventory.isItem = true;
-         dngInventory.getItems();
-            if(isDialogActive && dngInventory.itemCount > 0){
+         //dngInventory.isItem = true;
+         //dngInventory.getItems();
+            //if(isDialogActive && dngInventory.itemCount > 0){
                    doorOpen(gmName);
-        }
+        //}
        }
         return gmName;
       }

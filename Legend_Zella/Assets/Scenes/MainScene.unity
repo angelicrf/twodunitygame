@@ -748,7 +748,6 @@ MonoBehaviour:
   force: 4
   knockTime: 0.2
   lossScore: 1
-  enemRgdBody: {fileID: 0}
 --- !u!61 &427624667
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1093,7 +1092,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 241.5506, y: 186.05}
+  m_AnchoredPosition: {x: 119.97, y: 48.592}
   m_SizeDelta: {x: 239.9388, y: 71.254}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &504822975
@@ -17645,7 +17644,6 @@ MonoBehaviour:
   force: 2
   knockTime: 0.4
   lossScore: 2
-  enemRgdBody: {fileID: 3501738739584260941}
 --- !u!1 &1540851023 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8565112524553016555, guid: df5a282faaa6758bd95d8905083a5a0f, type: 3}
@@ -17777,8 +17775,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -102.2247, y: -36.3202}
-  m_SizeDelta: {x: 127.4839, y: 44.5045}
+  m_AnchoredPosition: {x: -223.8, y: -176.29}
+  m_SizeDelta: {x: 127.4839, y: 57.881}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1621060925
 MonoBehaviour:
@@ -21250,11 +21248,6 @@ PrefabInstance:
     - {fileID: 3501738740688215104, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
     - {fileID: 3501738739508152114, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
---- !u!50 &3501738739584260941 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 3501738739705116472, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
-  m_PrefabInstance: {fileID: 3501738739584260940}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4130309600794085011
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21581,11 +21574,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8565112524981883012, guid: df5a282faaa6758bd95d8905083a5a0f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 210.12332
+      value: 107.97
       objectReference: {fileID: 0}
     - target: {fileID: 8565112524981883012, guid: df5a282faaa6758bd95d8905083a5a0f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -99.85406
+      value: -72.58
       objectReference: {fileID: 0}
     - target: {fileID: 8565112524981883015, guid: df5a282faaa6758bd95d8905083a5a0f, type: 3}
       propertyPath: eve.m_PersistentCalls.m_Calls.Array.data[0].m_Target

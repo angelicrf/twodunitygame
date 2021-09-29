@@ -36,17 +36,19 @@ public class ConditionalRoomMove : MonoBehaviour
     }
 
      void FixedUpdate()
-    {       
-        if(roomThreeSignal != null){
-          isInRoomThree = (roomThreeSignal.countSignals >= 3);
-          if(isInRoomThree){
-               Debug.Log("isInRoomThree " + isInRoomThree);
-               mvRigid.isKinematic = true;
-          }
-         /*  else{
-              mvRigid.isKinematic = false;
-          }
-         */
+    { 
+        if(Input.GetButtonDown("attack")){      
+         if(roomThreeSignal != null){
+            isInRoomThree = (roomThreeSignal.countSignals >= 3);
+            if(isInRoomThree){
+                Debug.Log("isInRoomThree " + isInRoomThree);
+                mvRigid.isKinematic = true;
+            }
+            /*  else{
+                mvRigid.isKinematic = false;
+            }
+            */
+            }
         }
         isEnteredRThree = dngThree.isEntered;
         

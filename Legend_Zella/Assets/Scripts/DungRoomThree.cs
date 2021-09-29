@@ -47,18 +47,17 @@ public class DungRoomThree : MonoBehaviour
 
      private void OnTriggerEnter2D(Collider2D other){
         if(other.CompareTag("Player") && other.isTrigger){
-            
+           
             virtualCamera.SetActive(true);
+            activateLogs(allDungLogs,true);
             if(TempAllDungLogs != null){
                 if(dungLogsSignal != null){
                   removeElementPerSignal(TempAllDungLogs,dungLogsSignal.countSignals);
-                }//new WaitForSeconds(2f);
-                //activateLogs(TempAllDungLogs,true);
+                }
             } 
-            if(cameBackThree && TempAllDungLogs.Count == 0){            
-                 activateLogs(allDungLogs,true);
-                 cameBackThree = false;
-            }        
+            //if(cameBackThree){                            
+                 //cameBackThree = false;
+            //}        
         }    
     }
     private void activateLogs(List<Logs> lgs, bool isActive){
@@ -88,13 +87,19 @@ public class DungRoomThree : MonoBehaviour
       }
     }
     private void OnTriggerExit2D(Collider2D other){
-        cameBackThree = true;
+        //cameBackThree = true;
         if(other.name == "Player" && other.isTrigger){  
              virtualCamera.SetActive(false);
              if(allDungLogs != null){
                 for (int i = 0; i < allDungLogs.Count; i++)
                 {
                     logsStats(allDungLogs[i], false);
+                    if(TempAllDungLogs != null){
+                        if(TempAllDungLogs.Count > 0){
+                         activateLogs(TempAllDungLogs, false);
+                         //destroy animation       
+                        }
+                    }
 
                 }
              }

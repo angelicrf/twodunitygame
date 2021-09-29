@@ -6,6 +6,7 @@ public class DungObjectAnim : MonoBehaviour
 {
     public Animator dungAnim;
     public bool isFDoorOpen = false;
+     public Inventory dngInventory;
     public Rigidbody2D plRigid;
     //private bool isThree = false;
     public Signal changeDungStates;
@@ -29,7 +30,10 @@ public class DungObjectAnim : MonoBehaviour
    void OnTriggerEnter2D(Collider2D other){
        if(other.CompareTag("Player")){
            if(!isFDoorOpen){
-          StartCoroutine(dungObjChange());
+               StartCoroutine(dungObjChange());
+                 //add item
+               dngInventory.isItem = true;
+               dngInventory.getItems();
            }else if(isPlayed && isFDoorOpen){
                //display abox msg
                msgBoxAnim.appearBox();

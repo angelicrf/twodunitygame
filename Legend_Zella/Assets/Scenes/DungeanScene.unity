@@ -4796,6 +4796,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &540840177 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3501738740386815601, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
+  m_PrefabInstance: {fileID: 1342428975}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &540840180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540840177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02aff767cd8adfbcaa39304ef8bdbd0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  knockTime: 0.4
+  lossScore: 2
 --- !u!1 &594332050
 GameObject:
   m_ObjectHideFlags: 0
@@ -5433,7 +5453,6 @@ MonoBehaviour:
   selectDungRoom: 3
   dngDoor: {fileID: 1360062772}
   dnDoorCld: {fileID: 1360062773}
-  dngInventory: {fileID: 11400000, guid: e6450fceac526348caf3b7f1c4e5ed50, type: 2}
   doorOneSignal: {fileID: 11400000, guid: 78f67e1d455ea7131af7ed947c492ac8, type: 2}
   doorTwoSignal: {fileID: 11400000, guid: be9ab6e8f69f74cf8b781fa18b72ce89, type: 2}
   doorThreeSignal: {fileID: 0}
@@ -5986,6 +6005,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1317410283 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3501738740688215109, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
+  m_PrefabInstance: {fileID: 1342428975}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1317410286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317410283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02aff767cd8adfbcaa39304ef8bdbd0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  knockTime: 0.4
+  lossScore: 2
 --- !u!1001 &1342428975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5993,6 +6032,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3501738739508152114, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
+      propertyPath: force
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501738739508152114, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
+      propertyPath: knockTime
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 3501738739508152114, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
       propertyPath: enemRgdBody
       value: 
@@ -6073,7 +6120,6 @@ PrefabInstance:
     - {fileID: 3501738739949806882, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
     - {fileID: 3501738740386815500, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
     - {fileID: 3501738740688215104, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
-    - {fileID: 3501738739508152114, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
 --- !u!4 &1342428976 stripped
 Transform:
@@ -6153,7 +6199,6 @@ MonoBehaviour:
   selectDungRoom: 3
   dngDoor: {fileID: 1859370012}
   dnDoorCld: {fileID: 1859370013}
-  dngInventory: {fileID: 11400000, guid: e6450fceac526348caf3b7f1c4e5ed50, type: 2}
   doorOneSignal: {fileID: 11400000, guid: 78f67e1d455ea7131af7ed947c492ac8, type: 2}
   doorTwoSignal: {fileID: 11400000, guid: be9ab6e8f69f74cf8b781fa18b72ce89, type: 2}
   doorThreeSignal: {fileID: 11400000, guid: 53ebf3bb82d3e5303b4ff9739a95b94e, type: 2}
@@ -6381,6 +6426,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1403184124 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3501738739949806887, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
+  m_PrefabInstance: {fileID: 1342428975}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1403184127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403184124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02aff767cd8adfbcaa39304ef8bdbd0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 4
+  knockTime: 0.4
+  lossScore: 2
 --- !u!1 &1423319600
 GameObject:
   m_ObjectHideFlags: 0
@@ -21134,6 +21199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dungAnim: {fileID: 1781932781}
   isFDoorOpen: 0
+  dngInventory: {fileID: 11400000, guid: e6450fceac526348caf3b7f1c4e5ed50, type: 2}
   plRigid: {fileID: 855901359}
   changeDungStates: {fileID: 11400000, guid: be9ab6e8f69f74cf8b781fa18b72ce89, type: 2}
 --- !u!114 &1781932785
@@ -21535,7 +21601,6 @@ MonoBehaviour:
   selectDungRoom: 3
   dngDoor: {fileID: 1643002864}
   dnDoorCld: {fileID: 1643002867}
-  dngInventory: {fileID: 11400000, guid: e6450fceac526348caf3b7f1c4e5ed50, type: 2}
   doorOneSignal: {fileID: 11400000, guid: 78f67e1d455ea7131af7ed947c492ac8, type: 2}
   doorTwoSignal: {fileID: 11400000, guid: be9ab6e8f69f74cf8b781fa18b72ce89, type: 2}
   doorThreeSignal: {fileID: 0}
@@ -21829,7 +21894,7 @@ MonoBehaviour:
   enmSpeed: 1
   enemName: DungLog1
   dungDefeatSignal: {fileID: 11400000, guid: ac1f1231b3640a4b4b5d947215b8fe4a, type: 2}
-  lootTable: {fileID: 0}
+  lootTable: {fileID: 11400000, guid: 4816dde6029d14f598ef238ab1a0b556, type: 2}
   ptLogRigid: {fileID: 559039985095446602}
   testLoot: 0
   currentEnState: 0
@@ -22140,7 +22205,7 @@ MonoBehaviour:
   enmSpeed: 1
   enemName: DungLog
   dungDefeatSignal: {fileID: 11400000, guid: ac1f1231b3640a4b4b5d947215b8fe4a, type: 2}
-  lootTable: {fileID: 0}
+  lootTable: {fileID: 11400000, guid: 4816dde6029d14f598ef238ab1a0b556, type: 2}
   ptLogRigid: {fileID: 559039985101011637}
   testLoot: 0
   currentEnState: 0
@@ -22385,7 +22450,7 @@ MonoBehaviour:
   enmSpeed: 1
   enemName: DungLog2
   dungDefeatSignal: {fileID: 11400000, guid: ac1f1231b3640a4b4b5d947215b8fe4a, type: 2}
-  lootTable: {fileID: 0}
+  lootTable: {fileID: 11400000, guid: 4816dde6029d14f598ef238ab1a0b556, type: 2}
   ptLogRigid: {fileID: 559039985934633444}
   testLoot: 0
   currentEnState: 0
@@ -22532,7 +22597,6 @@ MonoBehaviour:
   selectDungRoom: 3
   dngDoor: {fileID: 849142594194078790}
   dnDoorCld: {fileID: 849142594194078789}
-  dngInventory: {fileID: 11400000, guid: e6450fceac526348caf3b7f1c4e5ed50, type: 2}
   doorOneSignal: {fileID: 11400000, guid: 78f67e1d455ea7131af7ed947c492ac8, type: 2}
   doorTwoSignal: {fileID: 11400000, guid: be9ab6e8f69f74cf8b781fa18b72ce89, type: 2}
   doorThreeSignal: {fileID: 0}

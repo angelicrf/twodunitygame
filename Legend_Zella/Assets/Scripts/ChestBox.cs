@@ -30,7 +30,7 @@ public class ChestBox : MonoBehaviour
         if(other.name == "Player" && ! gmItem.initialIsOpen && ! other.isTrigger){  
            otherPlRigid  = other.GetComponent<Rigidbody2D>();
        
-            if(Input.GetKey("right") || Input.GetKey("left") || Input.GetKey("up") || Input.GetKey("down")){
+            if(Input.GetButtonDown("attack")){
                //interObj.textMarkSignal.ReadSignals();
                animator.SetTrigger("TrBox");
                animator.SetBool("isActive", true);
