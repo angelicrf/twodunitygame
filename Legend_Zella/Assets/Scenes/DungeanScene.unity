@@ -21896,7 +21896,8 @@ MonoBehaviour:
   dungDefeatSignal: {fileID: 11400000, guid: ac1f1231b3640a4b4b5d947215b8fe4a, type: 2}
   lootTable: {fileID: 11400000, guid: 4816dde6029d14f598ef238ab1a0b556, type: 2}
   ptLogRigid: {fileID: 559039985095446602}
-  testLoot: 0
+  coindIdle: {fileID: 5983786210766596613, guid: b92f7f36dc06c7f18851d307c92d46fc, type: 3}
+  heartIdle: {fileID: 2116478421354733927, guid: 16d5026e01dc26c6eb659746efdb6448, type: 3}
   currentEnState: 0
   target: {fileID: 1342428976}
   chaseRad: 10
@@ -22207,7 +22208,8 @@ MonoBehaviour:
   dungDefeatSignal: {fileID: 11400000, guid: ac1f1231b3640a4b4b5d947215b8fe4a, type: 2}
   lootTable: {fileID: 11400000, guid: 4816dde6029d14f598ef238ab1a0b556, type: 2}
   ptLogRigid: {fileID: 559039985101011637}
-  testLoot: 0
+  coindIdle: {fileID: 0}
+  heartIdle: {fileID: 5983786210766596613, guid: b92f7f36dc06c7f18851d307c92d46fc, type: 3}
   currentEnState: 0
   target: {fileID: 1342428976}
   chaseRad: 10
@@ -22452,7 +22454,8 @@ MonoBehaviour:
   dungDefeatSignal: {fileID: 11400000, guid: ac1f1231b3640a4b4b5d947215b8fe4a, type: 2}
   lootTable: {fileID: 11400000, guid: 4816dde6029d14f598ef238ab1a0b556, type: 2}
   ptLogRigid: {fileID: 559039985934633444}
-  testLoot: 0
+  coindIdle: {fileID: 5983786210766596613, guid: b92f7f36dc06c7f18851d307c92d46fc, type: 3}
+  heartIdle: {fileID: 2116478421354733927, guid: 16d5026e01dc26c6eb659746efdb6448, type: 3}
   currentEnState: 0
   target: {fileID: 1342428976}
   chaseRad: 10

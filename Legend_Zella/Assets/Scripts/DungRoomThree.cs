@@ -49,10 +49,13 @@ public class DungRoomThree : MonoBehaviour
         if(other.CompareTag("Player") && other.isTrigger){
            
             virtualCamera.SetActive(true);
-            activateLogs(allDungLogs,true);
             if(TempAllDungLogs != null){
                 if(dungLogsSignal != null){
-                  removeElementPerSignal(TempAllDungLogs,dungLogsSignal.countSignals);
+                    if(dungLogsSignal.hasSignal){
+                      removeElementPerSignal(TempAllDungLogs,dungLogsSignal.countSignals);
+                    }else{
+                      activateLogs(allDungLogs,true);    
+                    }
                 }
             } 
             //if(cameBackThree){                            
@@ -70,6 +73,7 @@ public class DungRoomThree : MonoBehaviour
            for (int i = 0; i < numSignal; i++)
                 {
                     lgsT.RemoveAt(i);
+
                 }
     }
     private void addElements(List<Logs> lsLogs){
@@ -90,6 +94,8 @@ public class DungRoomThree : MonoBehaviour
         //cameBackThree = true;
         if(other.name == "Player" && other.isTrigger){  
              virtualCamera.SetActive(false);
+             dungLogsSignal.hasSignal = false;
+             dungLogsSignal.countSignals = 0;
              if(allDungLogs != null){
                 for (int i = 0; i < allDungLogs.Count; i++)
                 {
