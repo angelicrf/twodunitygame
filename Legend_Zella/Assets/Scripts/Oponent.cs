@@ -18,7 +18,9 @@ public class Oponent : MonoBehaviour
   public GameObject coindIdle;
   public GameObject heartIdle;
   private void Awake(){
-    healthOk = maxNum.numToUse;
+    if(maxNum != null){
+      healthOk = maxNum.numToUse;
+    }
   }
   public EnemStates currentEnState;
 
@@ -35,7 +37,7 @@ public class Oponent : MonoBehaviour
         //after condition
         // destroyAll();
         this.gameObject.SetActive(false);
-        
+        //problem after deleting log0
         StartCoroutine(destroyEnemy());
       }
     }
@@ -45,7 +47,7 @@ public class Oponent : MonoBehaviour
          Instantiate(gy, transform.position,Quaternion.identity);       
         }
     }
-    private IEnumerator destroyEnemy(){
+    public IEnumerator destroyEnemy(){
          //yield return new WaitForSeconds(1f);
          deathEffect.SetActive(false);
          heartIdle.SetActive(false);

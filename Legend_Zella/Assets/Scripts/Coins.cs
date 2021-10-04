@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 public class Coins : PowerUpHeart
 {
     public Inventory coinsInventory;
@@ -10,10 +11,13 @@ public class Coins : PowerUpHeart
     private int showAllItemsCount;
     public bool isCoin = false;
     public void FixedUpdate(){ 
-         if(!isCoin){
-           coinsText.text = "000";  
-         }else{
-            coinsText.text = "" + coinsInventory.itemsList.Count;
+         Scene scene = SceneManager.GetActiveScene();
+         if(scene.name == "Main Scene"){
+            if(!isCoin){
+            coinsText.text = "000";  
+            }else{
+                coinsText.text = "" + coinsInventory.itemsList.Count;
+            }
          }
     } 
 

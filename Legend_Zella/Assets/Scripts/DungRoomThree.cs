@@ -53,15 +53,17 @@ public class DungRoomThree : MonoBehaviour
                 if(dungLogsSignal != null){
                     if(dungLogsSignal.hasSignal){
                       removeElementPerSignal(TempAllDungLogs,dungLogsSignal.countSignals);
-                    }else{
+                      //call func
+                      //deactivateLootTable();
+                         }else{
                       activateLogs(allDungLogs,true);    
                     }
                 }
-            } 
-            //if(cameBackThree){                            
-                 //cameBackThree = false;
-            //}        
+            }        
         }    
+    }
+    private void deactivateLootTable(){
+       var ft = gameObject.GetComponent<Oponent>().destroyEnemy();
     }
     private void activateLogs(List<Logs> lgs, bool isActive){
         for (int i = 0; i < lgs.Count ; i++)
@@ -70,8 +72,10 @@ public class DungRoomThree : MonoBehaviour
                 }
     }
     private void removeElementPerSignal(List<Logs> lgsT,int numSignal){
+        //GameObject ft;
            for (int i = 0; i < numSignal; i++)
-                {
+                {   
+                    lgsT[i].gameObject.SetActive(false);
                     lgsT.RemoveAt(i);
 
                 }
