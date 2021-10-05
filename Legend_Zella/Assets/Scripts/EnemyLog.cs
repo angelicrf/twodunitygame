@@ -32,7 +32,7 @@ public class EnemyLog : Logs
         if(Vector3.Distance(target.position, transform.position) <= chaseRad
          & 
         Vector3.Distance(target.position , transform.position) > attackRad){
-           if(currentEnmState == EnemStates.idle || currentEnmState == EnemStates.walk && currentEnmState != EnemStates.stagger){ 
+           if(currentEnState == EnemStates.idle || currentEnState == EnemStates.walk && currentEnState != EnemStates.stagger){ 
             if(isPassed){
                 distanceBall = target.position - transform.position;
                 CalcAnimChange(distanceBall);

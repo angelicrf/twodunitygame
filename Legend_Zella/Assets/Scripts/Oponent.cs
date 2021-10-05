@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Oponent : MonoBehaviour
 {
-  public enum EnemStates{idle,walk,stagger};
+  public enum EnemStates{idle,walk,stagger, attack};
   public NumValues maxNum;
   public GameObject deathEffect;
   public float healthOk;

@@ -34,7 +34,10 @@ public class KnockBack : MonoBehaviour
                 if(enemRgdBody != null){
                 if(other.CompareTag("Log") && other.isTrigger){
                   enemRgdBody.GetComponent<Oponent>().currentEnState = Oponent.EnemStates.stagger;  
-                  other.GetComponent<Oponent>().callEnemyStart(enemRgdBody,knockTime, lossScore);
+                  //add more conditions
+                  if(other.gameObject.name != "Ogre"){
+                    other.GetComponent<Oponent>().callEnemyStart(enemRgdBody,knockTime, lossScore);
+                  }
                 }
                 if(other.CompareTag("Player") && other.GetComponent<PlayerMouvment>().currentPlState != PlayerMouvment.PlayerState.stagger ){
                   

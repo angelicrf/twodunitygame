@@ -18,7 +18,7 @@ public class PatrolLog : Logs
         if(Vector3.Distance(target.position, transform.position) <= chaseRad
          & 
         Vector3.Distance(target.position , transform.position) > attackRad){
-           if(currentEnmState == EnemStates.idle || currentEnmState == EnemStates.walk && currentEnmState != EnemStates.stagger){ 
+           if(currentEnState == EnemStates.idle || currentEnState == EnemStates.walk && currentEnState != EnemStates.stagger){ 
             Vector3 tmpPos = Vector3.MoveTowards(transform.position,target.position,enmSpeed * Time.deltaTime);
             CalcAnimChange(tmpPos -  transform.position);
             transform.position = Vector3.MoveTowards(transform.position,target.position,enmSpeed * Time.deltaTime);     

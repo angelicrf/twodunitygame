@@ -8,14 +8,14 @@ public class Logs : Oponent
     public float chaseRad;
     public float attackRad;
     public Animator enmAnim;
-    public EnemStates currentEnmState;
+    //public EnemStates currentEnmState;
     public Vector3 originalPos;
    
 
     void Start()
     {
         enmAnim = GetComponent<Animator>();
-        currentEnmState = EnemStates.idle;
+        currentEnState = EnemStates.idle;
         enmAnim.SetBool("isWokeUp", true);
         //target = GameObject.Find("Player").transform;
     }
@@ -24,13 +24,14 @@ public class Logs : Oponent
     } */
     void FixedUpdate()
     {
+        //currentEnmState = currentEnState;
         CheckDistance();
     }
     public virtual void CheckDistance(){
         if(Vector3.Distance(target.position, transform.position) <= chaseRad
          & 
         Vector3.Distance(target.position , transform.position) > attackRad){
-           if(currentEnmState == EnemStates.idle || currentEnmState == EnemStates.walk && currentEnmState != EnemStates.stagger){ 
+           if(currentEnState == EnemStates.idle || currentEnState == EnemStates.walk && currentEnState != EnemStates.stagger){ 
             Vector3 tmpPos = Vector3.MoveTowards(transform.position,target.position,enmSpeed * Time.deltaTime);
             CalcAnimChange(tmpPos -  transform.position);
             transform.position = Vector3.MoveTowards(transform.position,target.position,enmSpeed * Time.deltaTime);     
@@ -64,8 +65,8 @@ public class Logs : Oponent
         }
     }
     public void ChangeLgState(EnemStates newSt){
-        if(currentEnmState != newSt){
-            currentEnmState = newSt;
+        if(currentEnState != newSt){
+            currentEnState = newSt;
         }
     }
 
