@@ -44,13 +44,14 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 425190e92945d1efa85951bb23fe8d52, type: 3}
-    totalSpriteSurfaceArea: 834192
+    totalSpriteSurfaceArea: 834704
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 80d59d100dcedaf20bf4d2b8a1a3ee99, type: 3}
+  - {fileID: 21300000, guid: d010802088dbbdda6a10502dd5f0b20e, type: 3}
   - {fileID: 21300000, guid: b4c87c20c683706ff85b880836bd2503, type: 3}
   - {fileID: -464034680190023423, guid: fa4a7011af93f9c7f857daf3c9775e47, type: 3}
   - {fileID: -6069640938520168933, guid: fa4a7011af93f9c7f857daf3c9775e47, type: 3}
@@ -1733,8 +1734,10 @@ SpriteAtlas:
   - {fileID: 1777361459721282548, guid: 09a3118de39df0e7da844898fc713961, type: 3}
   - {fileID: 2670572250263382453, guid: 09a3118de39df0e7da844898fc713961, type: 3}
   - {fileID: 5700767193190630657, guid: 09a3118de39df0e7da844898fc713961, type: 3}
+  - {fileID: 21300000, guid: ed30164e400ec784d90e7a043f09b9ee, type: 3}
   m_PackedSpriteNamesToIndex:
   - door
+  - bow
   - Skeleton Key - Icon
   - Inner_48
   - Inner_49
@@ -3417,6 +3420,7 @@ SpriteAtlas:
   - orge attack sprites_13
   - orge attack sprites_10
   - orge attack sprites_11
+  - arrow
   m_RenderDataMap: {}
   m_Tag: Sprite_Atlas
   m_IsVariant: 0

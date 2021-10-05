@@ -21696,9 +21696,17 @@ PrefabInstance:
       propertyPath: enemRgdBody
       value: 
       objectReference: {fileID: 1545038494}
+    - target: {fileID: 3501738739508152119, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3501738739705116450, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501738739705116450, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3501738739705116473, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
       propertyPath: m_RootOrder
@@ -21784,18 +21792,34 @@ PrefabInstance:
       propertyPath: dspDialogBox
       value: 
       objectReference: {fileID: 1540851023}
+    - target: {fileID: 3501738739705116478, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
+      propertyPath: arrowInstance
+      value: 
+      objectReference: {fileID: 8296935218719276389, guid: 564b63f557f498e5e97445d2d6452728, type: 3}
     - target: {fileID: 3501738739949806882, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
       propertyPath: enemRgdBody
       value: 
       objectReference: {fileID: 1545038494}
+    - target: {fileID: 3501738739949806887, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3501738740386815500, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
       propertyPath: enemRgdBody
       value: 
       objectReference: {fileID: 1545038494}
+    - target: {fileID: 3501738740386815601, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 3501738740688215104, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
       propertyPath: enemRgdBody
       value: 
       objectReference: {fileID: 1545038494}
+    - target: {fileID: 3501738740688215109, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3501738739949806882, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
     - {fileID: 3501738740386815500, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
@@ -21964,6 +21988,10 @@ PrefabInstance:
       value: KeyItem
       objectReference: {fileID: 0}
     - target: {fileID: 4585218524296017897, guid: 0983de25f6131d274941bfe12d74c675, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4585218524296017897, guid: 0983de25f6131d274941bfe12d74c675, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -21979,6 +22007,10 @@ PrefabInstance:
     - target: {fileID: 4988567391116376976, guid: 3140b19cd5ded29e7961755a610f860f, type: 3}
       propertyPath: m_Name
       value: AskMark
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988567391116376976, guid: 3140b19cd5ded29e7961755a610f860f, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4988567391116376976, guid: 3140b19cd5ded29e7961755a610f860f, type: 3}
       propertyPath: m_IsActive

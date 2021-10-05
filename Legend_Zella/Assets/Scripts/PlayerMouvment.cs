@@ -19,7 +19,7 @@ public class PlayerMouvment : MonoBehaviour
     private DialogBoxMsg dlgMsg;
     public Animator enmCameraAnim;
     public Signal kickSignal;
-   
+    public GameObject arrowInstance;
       void Awake(){
         
         bc = GameObject.Find("Player").AddComponent<BoxCollider2D>() as BoxCollider2D;
@@ -53,6 +53,9 @@ public class PlayerMouvment : MonoBehaviour
         if(Input.GetButtonDown("attack") & currentPlState != PlayerState.attack && currentPlState != PlayerState.stagger){
                 StartCoroutine(AttackStart());
         }
+        else if(Input.GetButtonDown("arrow") & currentPlState != PlayerState.attack && currentPlState != PlayerState.stagger){
+          StartCoroutine(arrowAttck());
+        }
         else if(currentPlState == PlayerState.walk || currentPlState == PlayerState.idle && currentPlState != PlayerState.interact){
         walikngAnimator();
 
@@ -68,6 +71,17 @@ public class PlayerMouvment : MonoBehaviour
        animator.SetBool("attacking",false);
        yield return new WaitForSeconds(.3f);
        currentPlState = PlayerState.walk;
+    }
+    private IEnumerator arrowAttck(){   
+       currentPlState = PlayerState.attack;
+       yield return null;
+       arrowInstanceM();
+       yield return new WaitForSeconds(.3f);
+       currentPlState = PlayerState.walk;
+    }
+    private void arrowInstanceM(){
+      Arrow ar = Instantiate(arrowInstance,transform.position, Quaternion.identity).GetComponent<Arrow>();
+      ar.throwArrow(Vector2.right,Vector2.zero);
     }
       public IEnumerator kickAnimStart(){
       kickSignal.ReadSignals();
