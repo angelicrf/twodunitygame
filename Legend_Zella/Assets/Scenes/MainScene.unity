@@ -138,7 +138,6 @@ GameObject:
   - component: {fileID: 70601470}
   - component: {fileID: 70601471}
   - component: {fileID: 70601472}
-  - component: {fileID: 70601473}
   m_Layer: 0
   m_Name: Ogre
   m_TagString: Log
@@ -337,21 +336,6 @@ MonoBehaviour:
   enmAnim: {fileID: 70601471}
   originalPos: {x: 0, y: 0, z: 0}
   isHitMelee: 0
---- !u!114 &70601473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 70601465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02aff767cd8adfbcaa39304ef8bdbd0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: 1
-  knockTime: 0.1
-  lossScore: 1
 --- !u!4 &159132789 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3501738739705116473, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}

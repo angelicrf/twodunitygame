@@ -72,6 +72,7 @@ public class PlayerMouvment : MonoBehaviour
        yield return new WaitForSeconds(.3f);
        currentPlState = PlayerState.walk;
     }
+
     private IEnumerator arrowAttck(){   
        currentPlState = PlayerState.attack;
        yield return null;
@@ -80,8 +81,13 @@ public class PlayerMouvment : MonoBehaviour
        currentPlState = PlayerState.walk;
     }
     private void arrowInstanceM(){
+      Vector2 tmp = new Vector2(animator.GetFloat("moveX"), animator.GetFloat("moveY"));
       Arrow ar = Instantiate(arrowInstance,transform.position, Quaternion.identity).GetComponent<Arrow>();
-      ar.throwArrow(Vector2.right,Vector2.zero);
+      ar.throwArrow(tmp,createArrowDir());
+    }
+    private Vector3 createArrowDir(){
+       float tempDir = Mathf.Atan2(animator.GetFloat("moveY"),animator.GetFloat("moveX")) * Mathf.Rad2Deg;
+       return new Vector3(0,0,tempDir);
     }
       public IEnumerator kickAnimStart(){
       kickSignal.ReadSignals();

@@ -18,6 +18,7 @@ public class CameraMovement : MonoBehaviour
  
     void LateUpdate()
     { 
+      if(target != null){  
         // Camera cam = Camera.main;
        if(transform.position != target.position){
            Vector3 targetPst = new Vector3(target.position.x,
@@ -27,5 +28,6 @@ public class CameraMovement : MonoBehaviour
             //if(GameObject.Find("Main Camera").GetComponent<Camera>().transform.position.x < 8)
             transform.position = Vector3.Lerp(transform.position,targetPst,smoothing);     
        } 
+     }
     }
 }
