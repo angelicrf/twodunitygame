@@ -17,11 +17,10 @@ public class KnockBack : MonoBehaviour
    
     void OnTriggerEnter2D(Collider2D other){
       if(other != null){
-          if(other.gameObject.CompareTag("PotBreak")
-           //&& other.gameObject.CompareTag("Player")
-           ){     
+          if(other.gameObject.CompareTag("PotBreak")){     
            other.GetComponent<Pot>().SmashStart();
-         } 
+           }
+          
         if(other.gameObject.CompareTag("Log") || other.gameObject.CompareTag("Player")){     
              enemRgdBody = other.GetComponent<Rigidbody2D>();
              if(enemRgdBody.gameObject.CompareTag("Log") || enemRgdBody.gameObject.CompareTag("Player")){    
@@ -29,7 +28,6 @@ public class KnockBack : MonoBehaviour
                 Vector2 getDifference = enemRgdBody.transform.position - transform.position;
                 getDifference = getDifference.normalized * force;
                 enemRgdBody.AddForce(getDifference,ForceMode2D.Impulse);
-                 //call a func
                 StartCoroutine(changeVelocity(enemRgdBody));
                 if(enemRgdBody != null){
                 if(other.CompareTag("Log") && other.isTrigger){
@@ -50,6 +48,5 @@ public class KnockBack : MonoBehaviour
              }
            }
         }
+      }   
     }
-
-}

@@ -44,7 +44,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 425190e92945d1efa85951bb23fe8d52, type: 3}
-    totalSpriteSurfaceArea: 834704
+    totalSpriteSurfaceArea: 835216
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -1701,6 +1701,7 @@ SpriteAtlas:
   - {fileID: 4895647635923213618, guid: dca134196311037e39c2edfc41c77afa, type: 3}
   - {fileID: 977738448269427948, guid: dca134196311037e39c2edfc41c77afa, type: 3}
   - {fileID: 21300000, guid: 7fd52329fc4632d64a7cdf6cce03e919, type: 3}
+  - {fileID: 21300000, guid: 2eb7c179cbe81176ba3fc1b91d6c267b, type: 3}
   - {fileID: -872947984015748712, guid: ddea3bfbcde5bba978f304d5c7d720ea, type: 3}
   - {fileID: 4004008643541842471, guid: ddea3bfbcde5bba978f304d5c7d720ea, type: 3}
   - {fileID: 6703265110210787806, guid: ddea3bfbcde5bba978f304d5c7d720ea, type: 3}
@@ -1717,6 +1718,7 @@ SpriteAtlas:
   - {fileID: -8041784067552993899, guid: ddea3bfbcde5bba978f304d5c7d720ea, type: 3}
   - {fileID: 1532286108747742640, guid: ddea3bfbcde5bba978f304d5c7d720ea, type: 3}
   - {fileID: 147799070741053269, guid: ddea3bfbcde5bba978f304d5c7d720ea, type: 3}
+  - {fileID: 21300000, guid: 4b875d3cc1a6a58279341a45cd35455f, type: 3}
   - {fileID: 21300000, guid: fd829b2d82a700ef29ef9ae24f076979, type: 3}
   - {fileID: 9114078935630010517, guid: 09a3118de39df0e7da844898fc713961, type: 3}
   - {fileID: -8799995575176783795, guid: 09a3118de39df0e7da844898fc713961, type: 3}
@@ -3387,6 +3389,7 @@ SpriteAtlas:
   - character_120
   - character_121
   - cave
+  - magic bar
   - modified gfx melee sprites_15
   - modified gfx melee sprites_14
   - modified gfx melee sprites_13
@@ -3403,6 +3406,7 @@ SpriteAtlas:
   - modified gfx melee sprites_1
   - modified gfx melee sprites_2
   - modified gfx melee sprites_3
+  - magic bottle
   - NPC_test
   - orge attack sprites_9
   - orge attack sprites_8

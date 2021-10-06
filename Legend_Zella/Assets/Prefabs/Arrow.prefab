@@ -147,6 +147,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedArrow: 3
   arrowRgd: {fileID: 8296935218719276384}
+  isDestroyed: 0
+  deathEffect: {fileID: 8646047485631212281, guid: 024351ea02d16e900b90f4742853ae7b, type: 3}
+  magicSignal: {fileID: 11400000, guid: 58fd20d3d8de0ca5d859cc82ace70e33, type: 2}
 --- !u!114 &8930949629654993693
 MonoBehaviour:
   m_ObjectHideFlags: 0

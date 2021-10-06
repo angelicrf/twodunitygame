@@ -56,7 +56,10 @@ public class Oponent : MonoBehaviour
          yield return new WaitForSeconds(2f);
          dungDefeatSignal.ReadSignals();
     }
-    private void generateDeathEffect(){
+    public void destroyDeathEffect(){
+      deathEffect.SetActive(false);
+    }
+    public void generateDeathEffect(){
       GameObject dtObj = Instantiate(deathEffect, transform.position , Quaternion.identity);
     }
     private void destroyObjects(GameObject gmO){

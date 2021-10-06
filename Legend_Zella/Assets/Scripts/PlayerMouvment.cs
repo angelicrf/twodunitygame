@@ -20,6 +20,8 @@ public class PlayerMouvment : MonoBehaviour
     public Animator enmCameraAnim;
     public Signal kickSignal;
     public GameObject arrowInstance;
+    public Inventory magicInventory;
+    public Signal magicSignal;
       void Awake(){
         
         bc = GameObject.Find("Player").AddComponent<BoxCollider2D>() as BoxCollider2D;
@@ -81,9 +83,17 @@ public class PlayerMouvment : MonoBehaviour
        currentPlState = PlayerState.walk;
     }
     private void arrowInstanceM(){
-      Vector2 tmp = new Vector2(animator.GetFloat("moveX"), animator.GetFloat("moveY"));
-      Arrow ar = Instantiate(arrowInstance,transform.position, Quaternion.identity).GetComponent<Arrow>();
-      ar.throwArrow(tmp,createArrowDir());
+      if(magicInventory != null){
+        if(magicInventory.currentMagic > 0){
+          Vector2 tmp = new Vector2(animator.GetFloat("moveX"), animator.GetFloat("moveY"));
+          Arrow ar = Instantiate(arrowInstance,transform.position, Quaternion.identity).GetComponent<Arrow>();
+          ar.throwArrow(tmp,createArrowDir());
+          if(magicSignal != null){
+            magicSignal.hasSignal = true;
+            magicSignal.ReadSignals();
+          } 
+        }
+      }
     }
     private Vector3 createArrowDir(){
        float tempDir = Mathf.Atan2(animator.GetFloat("moveY"),animator.GetFloat("moveX")) * Mathf.Rad2Deg;
