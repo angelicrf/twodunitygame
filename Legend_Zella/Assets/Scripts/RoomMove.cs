@@ -18,7 +18,7 @@ public class RoomMove :  MonoBehaviour
     private Camera camera2;
     private Vector2 camPos;
     private int countPool = 0;
-    public Signal roomChangeSignal;
+    //public Signal roomChangeSignal;
   
     void Start()
     { 
@@ -37,7 +37,9 @@ public class RoomMove :  MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other){
             if (textNeeded ){
+                if(other.CompareTag("Player") && ! other.isTrigger){
                  StartCoroutine (areaChangeMSG());
+                }
             }     
     }
     private IEnumerator displayText(){
@@ -66,8 +68,8 @@ public class RoomMove :  MonoBehaviour
         } 
    }
    private IEnumerator areaChangeMSG(){
-            roomChangeSignal.ReadSignals();
-            roomChangeSignal.hasSignal = true;
+            //roomChangeSignal.ReadSignals();
+            //roomChangeSignal.hasSignal = true;
             newTextObj.SetActive(true);
               changeAllPos();
               chooseOptions();

@@ -10,7 +10,8 @@ public class ChestBox : MonoBehaviour
     private GameObject interObj;
     private Animator animator;
     private Rigidbody2D otherPlRigid;
-
+    private List<GameObject> allPrizes = new List<GameObject>();
+    private List<string> allFoundNames = new List<string>();
     
     void Start()
     {
@@ -18,33 +19,46 @@ public class ChestBox : MonoBehaviour
         animator = GetComponent<Animator>(); 
         //gmInventory.itemCount = 0;      
         gmInventory.isItem = false;
+        addAllItemsList();
+       
+        allFoundNames.Add("ItemKey"); 
+        allFoundNames.Add("Bow");
+       
         //gmItem.isOpen = false;
-    }
-
-    void Update()
-    {
-  
     }
      private void OnTriggerEnter2D(Collider2D other){
 
         if(other.name == "Player" && ! gmItem.initialIsOpen && ! other.isTrigger){  
+           
            otherPlRigid  = other.GetComponent<Rigidbody2D>();
-       
-            if(Input.GetButtonDown("attack")){
-               //interObj.textMarkSignal.ReadSignals();
-               animator.SetTrigger("TrBox");
-               animator.SetBool("isActive", true);
-               gmItem.isOpen = true;
-              
-               if(gmItem.items.CompareTag("KeyItem")){
-                   otherPlRigid.GetComponent<PlayerMouvment>().currentPlState = PlayerMouvment.PlayerState.interact;             
-                   interObj.SetActive(true);              
-                   gmInventory.isItem = true;
-                   gmInventory.getItems();
-               }
-             }
-        }    
+            if(Input.GetKey(KeyCode.UpArrow)){
+                        animator.SetTrigger("TrBox");
+                        animator.SetBool("isActive", true);
+                        gmItem.isOpen = true;
+                    for (int i = 0; i < allFoundNames.Count; i++)
+                    {
+                        if(gmItem.items.CompareTag(allFoundNames[i])){
+                            otherPlRigid.GetComponent<PlayerMouvment>().currentPlState = PlayerMouvment.PlayerState.interact;             
+                            //call func
+                            interObj = allPrizes[i];
+                            //allPrizes[1];
+                            interObj.SetActive(true);           
+                            gmInventory.isItem = true;
+                            gmInventory.getItems();
+                         }
+                       }                                           
+                     }
+                }
+               //interObj.textMarkSignal.ReadSignals();     
     }
+    private void addAllItemsList(){
+      GameObject gmOne = GameObject.Find("Player").transform.GetChild(5).gameObject;
+      GameObject gmTwo = GameObject.Find("Player").transform.GetChild(6).gameObject;
+      allPrizes.Add(gmOne);
+      allPrizes.Add(gmTwo);   
+            
+   }
+  
     private void OnTriggerExit2D(Collider2D other){
 
         if(other.name == "Player" && !other.isTrigger){

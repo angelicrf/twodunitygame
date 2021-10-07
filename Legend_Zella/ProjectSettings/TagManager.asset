@@ -13,6 +13,7 @@ TagManager:
   - AskMark
   - KeyItem
   - PatrolLog
+  - Bow
   layers:
   - Default
   - TransparentFX

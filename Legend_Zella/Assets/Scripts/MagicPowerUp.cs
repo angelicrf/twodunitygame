@@ -14,7 +14,7 @@ public class MagicPowerUp : PowerUpHeart
   private void OnTriggerEnter2D(Collider2D other){
       if(other.CompareTag("Player")){
        
-        if(magicInventory.currentMagic > 10){
+        if(magicInventory.currentMagic > 14){
           Destroy(this.gameObject);
         }
         else{
