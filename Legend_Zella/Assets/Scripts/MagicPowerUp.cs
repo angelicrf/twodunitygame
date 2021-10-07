@@ -5,6 +5,7 @@ using UnityEngine;
 public class MagicPowerUp : PowerUpHeart
 {
     public Inventory magicInventory;
+    public float magicValue;
     void Start()
     {
         
@@ -17,6 +18,7 @@ public class MagicPowerUp : PowerUpHeart
           Destroy(this.gameObject);
         }
         else{
+           magicInventory.currentMagic += magicValue;
            powerUpSignal.hasSignal = true;
            powerUpSignal.ReadSignals();
         }

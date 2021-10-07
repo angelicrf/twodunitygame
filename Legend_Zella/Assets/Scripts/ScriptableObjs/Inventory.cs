@@ -12,6 +12,12 @@ public class Inventory : ScriptableObject
     public float currentMagic;
     public List<GameObject> itemsList;
     
+    public void OnEnable(){
+        currentMagic = maxMagic;
+    }
+    public void setCurrentMagic(float thisMgc){
+        currentMagic -= thisMgc;
+    }
     public void getItems(){
         if(isItem){       
                 itemCount++;

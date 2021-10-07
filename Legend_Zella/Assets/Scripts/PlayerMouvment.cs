@@ -89,6 +89,7 @@ public class PlayerMouvment : MonoBehaviour
           Arrow ar = Instantiate(arrowInstance,transform.position, Quaternion.identity).GetComponent<Arrow>();
           ar.throwArrow(tmp,createArrowDir());
           if(magicSignal != null){
+            magicInventory.setCurrentMagic(ar.magicCost);
             magicSignal.hasSignal = true;
             magicSignal.ReadSignals();
           } 
