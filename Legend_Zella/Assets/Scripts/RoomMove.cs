@@ -71,10 +71,10 @@ public class RoomMove :  MonoBehaviour
             //roomChangeSignal.ReadSignals();
             //roomChangeSignal.hasSignal = true;
             newTextObj.SetActive(true);
-              changeAllPos();
-              chooseOptions();
-              yield return new WaitForSeconds(4f);
-              newTextObj.SetActive(false);
+            changeAllPos();
+            chooseOptions();
+            yield return new WaitForSeconds(4f);
+            newTextObj.SetActive(false);
    }
    private void chooseOptions(){
        if(textNeeded){

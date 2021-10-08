@@ -12,6 +12,7 @@ public class ChestBox : MonoBehaviour
     private Rigidbody2D otherPlRigid;
     private List<GameObject> allPrizes = new List<GameObject>();
     private List<string> allFoundNames = new List<string>();
+    public Signal arrowSignal;
     
     void Start()
     {
@@ -38,6 +39,12 @@ public class ChestBox : MonoBehaviour
                     for (int i = 0; i < allFoundNames.Count; i++)
                     {
                         if(gmItem.items.CompareTag(allFoundNames[i])){
+                            if(gmItem.items.CompareTag("Bow")){
+                                if(arrowSignal != null){
+                                    arrowSignal.hasSignal = true;
+                                    arrowSignal.ReadSignals();
+                                }
+                            }
                             otherPlRigid.GetComponent<PlayerMouvment>().currentPlState = PlayerMouvment.PlayerState.interact;             
                             //call func
                             interObj = allPrizes[i];
@@ -55,8 +62,7 @@ public class ChestBox : MonoBehaviour
       GameObject gmOne = GameObject.Find("Player").transform.GetChild(5).gameObject;
       GameObject gmTwo = GameObject.Find("Player").transform.GetChild(6).gameObject;
       allPrizes.Add(gmOne);
-      allPrizes.Add(gmTwo);   
-            
+      allPrizes.Add(gmTwo);    
    }
   
     private void OnTriggerExit2D(Collider2D other){

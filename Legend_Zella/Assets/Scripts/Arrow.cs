@@ -12,6 +12,7 @@ public class Arrow : MonoBehaviour
     public float lifeTime;
     private float lifeTimeCopy;
     public float magicCost;
+ 
     void Start()
     {
         lifeTimeCopy = lifeTime;

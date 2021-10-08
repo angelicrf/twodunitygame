@@ -22,6 +22,7 @@ public class PlayerMouvment : MonoBehaviour
     public GameObject arrowInstance;
     public Inventory magicInventory;
     public Signal magicSignal;
+    public Signal arrowSignal;
       void Awake(){
         
         bc = GameObject.Find("Player").AddComponent<BoxCollider2D>() as BoxCollider2D;
@@ -55,14 +56,14 @@ public class PlayerMouvment : MonoBehaviour
         if(Input.GetButtonDown("attack") & currentPlState != PlayerState.attack && currentPlState != PlayerState.stagger){
                 StartCoroutine(AttackStart());
         }
-        else if(Input.GetButtonDown("arrow") & currentPlState != PlayerState.attack && currentPlState != PlayerState.stagger){
-          StartCoroutine(arrowAttck());
+        else if(Input.GetButtonDown("arrow") & currentPlState != PlayerState.attack && currentPlState != PlayerState.stagger && arrowSignal.hasSignal){
+                StartCoroutine(arrowAttck());
         }
         else if(currentPlState == PlayerState.walk || currentPlState == PlayerState.idle && currentPlState != PlayerState.interact){
-        walikngAnimator();
+                walikngAnimator();
 
         }else if(currentPlState == PlayerState.interact){
-           StartCoroutine(onHoldHands());
+                StartCoroutine(onHoldHands());
         }
            
     }

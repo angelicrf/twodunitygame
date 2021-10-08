@@ -115,3 +115,4 @@ MonoBehaviour:
   powerUpSignal: {fileID: 11400000, guid: dfa72f195d83f9a9fa5b66b2c71a5d29, type: 2}
   magicInventory: {fileID: 11400000, guid: e6450fceac526348caf3b7f1c4e5ed50, type: 2}
   magicValue: 2
+  arrowSignal: {fileID: 11400000, guid: 75cba877e22f563a5a923c9107150ced, type: 2}
