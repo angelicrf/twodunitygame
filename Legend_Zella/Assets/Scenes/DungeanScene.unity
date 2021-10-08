@@ -21903,7 +21903,6 @@ MonoBehaviour:
   chaseRad: 10
   attackRad: 1.7
   enmAnim: {fileID: 559039985095446601}
-  currentEnmState: 0
   originalPos: {x: 0, y: 0, z: 0}
 --- !u!1 &559039985095446605
 GameObject:
@@ -22215,7 +22214,6 @@ MonoBehaviour:
   chaseRad: 10
   attackRad: 1.7
   enmAnim: {fileID: 559039985101011638}
-  currentEnmState: 0
   originalPos: {x: 0, y: 0, z: 0}
 --- !u!50 &559039985101011637
 Rigidbody2D:
@@ -22461,7 +22459,6 @@ MonoBehaviour:
   chaseRad: 10
   attackRad: 1.7
   enmAnim: {fileID: 559039985934633447}
-  currentEnmState: 0
   originalPos: {x: 0, y: 0, z: 0}
 --- !u!4 &559039985934633446
 Transform:
