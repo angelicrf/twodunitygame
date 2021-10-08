@@ -113,6 +113,8 @@ public class PlayerMouvment : MonoBehaviour
     void walikngAnimator(){
         
         if(plChange != Vector3.zero){
+            plChange.x = Mathf.Round(plChange.x);
+            plChange.y = Mathf.Round(plChange.y); 
             animator.SetFloat("moveX" , plChange.x);
             animator.SetFloat("moveY", plChange.y);
             animator.SetBool("waliked", true);
