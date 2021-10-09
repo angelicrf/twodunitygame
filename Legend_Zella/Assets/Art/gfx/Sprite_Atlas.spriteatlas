@@ -1391,6 +1391,22 @@ SpriteAtlas:
   - {fileID: 6469460937200175538, guid: c26555a2ceea33ea4b7270a91c705942, type: 3}
   - {fileID: 2924928888349640390, guid: c26555a2ceea33ea4b7270a91c705942, type: 3}
   - {fileID: 21300000, guid: 3cedb1b2291e86ef5b5c5db6501430bc, type: 3}
+  - {fileID: -3737374155566446903, guid: 4b290ca4e74e5f034af3307a713546b4, type: 3}
+  - {fileID: 6290198778915159655, guid: 4b290ca4e74e5f034af3307a713546b4, type: 3}
+  - {fileID: -8406919984183495473, guid: 4b290ca4e74e5f034af3307a713546b4, type: 3}
+  - {fileID: -556212791945430152, guid: 4b290ca4e74e5f034af3307a713546b4, type: 3}
+  - {fileID: -775664231487636603, guid: 4b290ca4e74e5f034af3307a713546b4, type: 3}
+  - {fileID: 8788737632195719396, guid: 4b290ca4e74e5f034af3307a713546b4, type: 3}
+  - {fileID: -5531830842194910261, guid: 4b290ca4e74e5f034af3307a713546b4, type: 3}
+  - {fileID: 8993085430425576564, guid: 4b290ca4e74e5f034af3307a713546b4, type: 3}
+  - {fileID: -176209929140483522, guid: 4b290ca4e74e5f034af3307a713546b4, type: 3}
+  - {fileID: -7532697824222312051, guid: 4b290ca4e74e5f034af3307a713546b4, type: 3}
+  - {fileID: -631312488042978510, guid: 4b290ca4e74e5f034af3307a713546b4, type: 3}
+  - {fileID: -3588515566731255661, guid: 4b290ca4e74e5f034af3307a713546b4, type: 3}
+  - {fileID: 3669450001878714213, guid: 4b290ca4e74e5f034af3307a713546b4, type: 3}
+  - {fileID: -2771041981093871165, guid: 4b290ca4e74e5f034af3307a713546b4, type: 3}
+  - {fileID: -3840961352258234200, guid: 4b290ca4e74e5f034af3307a713546b4, type: 3}
+  - {fileID: 3233556415378778855, guid: 4b290ca4e74e5f034af3307a713546b4, type: 3}
   - {fileID: -1898101141213099369, guid: 7d1b7115198b5b3faa8e18dd3f3e9878, type: 3}
   - {fileID: 7927429830950459127, guid: 7d1b7115198b5b3faa8e18dd3f3e9878, type: 3}
   - {fileID: 1571176116747660993, guid: 7d1b7115198b5b3faa8e18dd3f3e9878, type: 3}
@@ -1719,7 +1735,6 @@ SpriteAtlas:
   - {fileID: 1532286108747742640, guid: ddea3bfbcde5bba978f304d5c7d720ea, type: 3}
   - {fileID: 147799070741053269, guid: ddea3bfbcde5bba978f304d5c7d720ea, type: 3}
   - {fileID: 21300000, guid: 4b875d3cc1a6a58279341a45cd35455f, type: 3}
-  - {fileID: 21300000, guid: fd829b2d82a700ef29ef9ae24f076979, type: 3}
   - {fileID: 9114078935630010517, guid: 09a3118de39df0e7da844898fc713961, type: 3}
   - {fileID: -8799995575176783795, guid: 09a3118de39df0e7da844898fc713961, type: 3}
   - {fileID: -1469879329949605291, guid: 09a3118de39df0e7da844898fc713961, type: 3}
@@ -3079,6 +3094,22 @@ SpriteAtlas:
   - Overworld_673
   - Overworld_129
   - Skeleton Key - 2
+  - ZeldPL_9
+  - ZeldPL_8
+  - ZeldPL_1
+  - ZeldPL_0
+  - ZeldPL_3
+  - ZeldPL_2
+  - ZeldPL_5
+  - ZeldPL_4
+  - ZeldPL_7
+  - ZeldPL_6
+  - ZeldPL_10
+  - ZeldPL_11
+  - ZeldPL_12
+  - ZeldPL_13
+  - ZeldPL_14
+  - ZeldPL_15
   - orge_10
   - orge_11
   - orge_12
@@ -3407,7 +3438,6 @@ SpriteAtlas:
   - modified gfx melee sprites_2
   - modified gfx melee sprites_3
   - magic bottle
-  - NPC_test
   - orge attack sprites_9
   - orge attack sprites_8
   - orge attack sprites_3
