@@ -10,9 +10,18 @@ public class ZeldaPLMovement : MonoBehaviour
    public float zlSpeed;
    private Vector3 zlDirection;
    public Collider2D boundry;
+   public float minTimeLimit;
+   public float maxTimeLimit;
+   public float minTimeToWait;
+   public float maxTimeToWait;
+   private float timeLmtCopy;
+   private float timeToWtCopy;
+   public bool isWaited;
 
     void Start()
     {
+       timeToWtCopy = Random.Range(minTimeToWait, maxTimeToWait);
+       timeLmtCopy = Random.Range(minTimeLimit,maxTimeLimit); 
        zlAnim = GetComponent<Animator>();
        zlRgd = GetComponent<Rigidbody2D>();
        zlAnimMove();
@@ -20,7 +29,23 @@ public class ZeldaPLMovement : MonoBehaviour
 
     void Update()
     {
-        moveZl();
+        if(isWaited){
+           timeLmtCopy -= Time.deltaTime;
+            if(timeLmtCopy <= 0){     
+                timeLmtCopy = Random.Range(minTimeLimit,maxTimeLimit); 
+                isWaited = false;
+                
+            }
+            moveZl();
+        }else{
+            timeToWtCopy -= Time.deltaTime;
+            if(timeToWtCopy <= 0){  
+                changeCollisionDir();                  
+                timeToWtCopy = Random.Range(minTimeToWait,maxTimeToWait);
+                isWaited = true;
+            }
+        }
+       
     }
     private void zlAnimMove(){
         float direction = Random.Range(0,4);
@@ -52,14 +77,17 @@ public class ZeldaPLMovement : MonoBehaviour
         zlAnim.SetFloat("moveX", zlDirection.x);
         zlAnim.SetFloat("moveY", zlDirection.y);
     }
-    void OnCollisionEnter2D(Collision2D other){   
-           Vector3 tempPos = zlDirection;
-           zlAnimMove();
+    private void changeCollisionDir(){
+        Vector3 tempPos = zlDirection;
+        zlAnimMove();
            int numChange = 0;
            while (numChange < 20 && tempPos == zlDirection)
            {
               numChange++;
               zlAnimMove();   
            }
+    }
+    void OnCollisionEnter2D(Collision2D other){   
+        changeCollisionDir();         
         }
 }
