@@ -5,15 +5,6 @@ using UnityEngine.SceneManagement;
 public class StartMenu : MonoBehaviour
 {
    
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
     public void clickNewGameBtn(){
       SceneManager.LoadScene("MainScene");
     }

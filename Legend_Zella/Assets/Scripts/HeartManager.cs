@@ -34,7 +34,7 @@ public class HeartManager : MonoBehaviour
     }
     public void UpdateArray(){
      float getResTmpHealth = GetTmpHealth();
-     Debug.Log("TmpHealth is " + getResTmpHealth);
+    // Debug.Log("TmpHealth is " + getResTmpHealth);
         for (int i = 0; i < heartsContainer.numToUse; i++)
         {
                 hearts[i].gameObject.SetActive(true); 

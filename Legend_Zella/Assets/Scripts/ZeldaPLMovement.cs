@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ZeldaPLMovement : MonoBehaviour
+public class ZeldaPLMovement : DialogBoxMsg
 {
    public Animator zlAnim;
    public Rigidbody2D zlRgd;
@@ -17,7 +17,7 @@ public class ZeldaPLMovement : MonoBehaviour
    private float timeLmtCopy;
    private float timeToWtCopy;
    public bool isWaited;
-
+   public string boxMsg;
     void Start()
     {
        timeToWtCopy = Random.Range(minTimeToWait, maxTimeToWait);
@@ -33,10 +33,10 @@ public class ZeldaPLMovement : MonoBehaviour
            timeLmtCopy -= Time.deltaTime;
             if(timeLmtCopy <= 0){     
                 timeLmtCopy = Random.Range(minTimeLimit,maxTimeLimit); 
-                isWaited = false;
-                
-            }
+                isWaited = false;            
+            }else{ 
             moveZl();
+            }
         }else{
             timeToWtCopy -= Time.deltaTime;
             if(timeToWtCopy <= 0){  
@@ -45,7 +45,6 @@ public class ZeldaPLMovement : MonoBehaviour
                 isWaited = true;
             }
         }
-       
     }
     private void zlAnimMove(){
         float direction = Random.Range(0,4);
@@ -87,7 +86,20 @@ public class ZeldaPLMovement : MonoBehaviour
               zlAnimMove();   
            }
     }
-    void OnCollisionEnter2D(Collision2D other){   
-        changeCollisionDir();         
+    IEnumerator changeBoxAppearance(){
+        yield return new WaitForSeconds(2.1f);
+        disappearBox(); 
+    }
+    void OnCollisionEnter2D(Collision2D other){ 
+         if(other.gameObject.name == "Player"){
+             other.gameObject.GetComponent<PlayerMouvment>().plRigid.velocity = Vector2.zero;
+             changeCollisionDir();  
+             appearBox();
+             other.gameObject.GetComponent<PlayerMouvment>().plRigid.isKinematic = true;
+         }        
         }
+    void OnCollisionExit2D(Collision2D other){
+       other.gameObject.GetComponent<PlayerMouvment>().plRigid.isKinematic = false;
+       StartCoroutine(changeBoxAppearance());
+    }    
 }
