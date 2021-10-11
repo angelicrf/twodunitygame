@@ -78,7 +78,6 @@ MonoBehaviour:
   force: 2
   knockTime: 0.2
   lossScore: 2
-  enemRgdBody: {fileID: 0}
 --- !u!1 &3501738739705116450
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,6 +207,13 @@ MonoBehaviour:
   plRigid: {fileID: 3501738739705116472}
   waliked: 0
   plSignal: {fileID: 11400000, guid: d45889e25d8b8bfe0a159428c44225ad, type: 2}
+  plStartPos: {fileID: 0}
+  enmCameraAnim: {fileID: 0}
+  kickSignal: {fileID: 0}
+  arrowInstance: {fileID: 0}
+  magicInventory: {fileID: 0}
+  magicSignal: {fileID: 0}
+  arrowSignal: {fileID: 0}
 --- !u!95 &3501738739705116477
 Animator:
   serializedVersion: 3
@@ -331,7 +337,6 @@ MonoBehaviour:
   force: 2
   knockTime: 0.2
   lossScore: 2
-  enemRgdBody: {fileID: 0}
 --- !u!1 &3501738740386815601
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,7 +415,6 @@ MonoBehaviour:
   force: 2
   knockTime: 0.2
   lossScore: 2
-  enemRgdBody: {fileID: 0}
 --- !u!1 &3501738740688215109
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,4 +493,3 @@ MonoBehaviour:
   force: 2
   knockTime: 0.2
   lossScore: 2
-  enemRgdBody: {fileID: 0}

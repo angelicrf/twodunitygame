@@ -27,7 +27,7 @@ TagManager:
   - Projectile
   - Player Projectile
   - Player
-  - 
+  - MiniMap
   - 
   - 
   - 
@@ -53,4 +53,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 4172251471
+    locked: 0
+  - name: MiniMap
+    uniqueID: 791711057
     locked: 0

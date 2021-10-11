@@ -44,7 +44,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 425190e92945d1efa85951bb23fe8d52, type: 3}
-    totalSpriteSurfaceArea: 835216
+    totalSpriteSurfaceArea: 837520
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -316,6 +316,7 @@ SpriteAtlas:
   - {fileID: 536419509007563539, guid: fa4a7011af93f9c7f857daf3c9775e47, type: 3}
   - {fileID: 1036803682579554421, guid: fa4a7011af93f9c7f857daf3c9775e47, type: 3}
   - {fileID: 5559694988392259305, guid: fa4a7011af93f9c7f857daf3c9775e47, type: 3}
+  - {fileID: 21300000, guid: d197067100cceef349a6a8073da2c35f, type: 3}
   - {fileID: 21300000, guid: f5e8bb62f129561449297ef70e6043be, type: 3}
   - {fileID: 136123638574666257, guid: c26555a2ceea33ea4b7270a91c705942, type: 3}
   - {fileID: 293919518158258091, guid: c26555a2ceea33ea4b7270a91c705942, type: 3}
@@ -1446,6 +1447,7 @@ SpriteAtlas:
   - {fileID: -2086765476746818828, guid: 3778be85d753e3dd8922b698e7dfd66d, type: 3}
   - {fileID: 5566842953363755866, guid: 3778be85d753e3dd8922b698e7dfd66d, type: 3}
   - {fileID: -7445369939883215787, guid: 3778be85d753e3dd8922b698e7dfd66d, type: 3}
+  - {fileID: 21300000, guid: 90eaece77ad038ce3aed2f596ed475e0, type: 3}
   - {fileID: -1986772863260763996, guid: 90d427c8597be51728c84601aaf41543, type: 3}
   - {fileID: 5760800594879907098, guid: 90d427c8597be51728c84601aaf41543, type: 3}
   - {fileID: 7597474578557255370, guid: 90d427c8597be51728c84601aaf41543, type: 3}
@@ -1751,6 +1753,7 @@ SpriteAtlas:
   - {fileID: 1777361459721282548, guid: 09a3118de39df0e7da844898fc713961, type: 3}
   - {fileID: 2670572250263382453, guid: 09a3118de39df0e7da844898fc713961, type: 3}
   - {fileID: 5700767193190630657, guid: 09a3118de39df0e7da844898fc713961, type: 3}
+  - {fileID: 21300000, guid: 8fd0081e4035748a2965ebb84cf90cf9, type: 3}
   - {fileID: 21300000, guid: ed30164e400ec784d90e7a043f09b9ee, type: 3}
   m_PackedSpriteNamesToIndex:
   - door
@@ -2019,6 +2022,7 @@ SpriteAtlas:
   - Inner_38
   - Inner_42
   - Inner_43
+  - Minimap mask
   - font
   - Overworld_827
   - Overworld_837
@@ -3149,6 +3153,7 @@ SpriteAtlas:
   - log_20
   - log_21
   - log_22
+  - PlayerMarker
   - objects_71
   - objects_70
   - objects_73
@@ -3454,6 +3459,7 @@ SpriteAtlas:
   - orge attack sprites_13
   - orge attack sprites_10
   - orge attack sprites_11
+  - Minimap Overlay
   - arrow
   m_RenderDataMap: {}
   m_Tag: Sprite_Atlas
