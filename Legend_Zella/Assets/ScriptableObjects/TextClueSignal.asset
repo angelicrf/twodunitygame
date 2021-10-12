@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: TextClueSignal
   m_EditorClassIdentifier: 
   allSignals: []
+  hasSignal: 0
+  countSignals: 0

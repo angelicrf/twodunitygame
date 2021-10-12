@@ -5,7 +5,6 @@ using UnityEngine;
 public class GeneralProjectile : BallProjectile
 {
     private float extendedTime;
-    // Start is called before the first frame update
     void Start()
     {
         extendedTime = durationTime;
@@ -13,12 +12,14 @@ public class GeneralProjectile : BallProjectile
     void Update()
     {
         extendedTime -= Time.deltaTime;
-        if(extendedTime <= 0){
+        if (extendedTime <= 0)
+        {
             Destroy(this.gameObject);
         }
-        
+
     }
-    public void checkBallVelocity(Vector2 newVelocity){
+    public void CheckBallVelocity(Vector2 newVelocity)
+    {
         ballRidgid.velocity = newVelocity * timeSpeed;
     }
 }

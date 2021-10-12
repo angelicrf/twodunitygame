@@ -6,18 +6,17 @@ public class PlayerTextClue : MonoBehaviour
 {
     public GameObject textToAsk;
     public bool isAskedText = false;
-    
-    /* public void Enable(){
-        textToAsk.SetActive(true);
-    }
-    public void Disable(){
-        textToAsk.SetActive(false);
-    } */
-    public void ChangeAskText(){
+
+    public void ChangeAskText()
+    {
         isAskedText = !isAskedText;
-        if(isAskedText){
+
+        if (isAskedText)
+        {
             textToAsk.SetActive(true);
-        }else{
+        }
+        else
+        {
             textToAsk.SetActive(false);
         }
     }

@@ -9,14 +9,13 @@ public class Pot : MonoBehaviour
     {
         animator = GetComponent<Animator>();
     }
-    void Update()
+
+    public void SmashStart()
     {
-        
-    }
-    public void SmashStart(){
         StartCoroutine(BreakStart());
     }
-    IEnumerator BreakStart(){
+    IEnumerator BreakStart()
+    {
         animator.SetBool("isSmashed", true);
         yield return null;
         animator.SetBool("isSmashed", false);

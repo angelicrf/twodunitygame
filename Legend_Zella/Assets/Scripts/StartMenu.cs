@@ -4,11 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class StartMenu : MonoBehaviour
 {
-   
-    public void clickNewGameBtn(){
-      SceneManager.LoadScene("MainScene");
+
+    public void ClickNewGameBtn()
+    {
+
+        SceneManager.LoadScene("MainScene");
     }
-    public void clickQuitGameBtn(){
+    public void ClickQuitGameBtn()
+    {
         Application.Quit();
     }
 }

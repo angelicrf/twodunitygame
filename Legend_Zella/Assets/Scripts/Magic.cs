@@ -14,20 +14,25 @@ public class Magic : MonoBehaviour
         magicSlider.value = invMagic.maxMagic;
         invMagic.currentMagic = invMagic.maxMagic;
     }
-    void FixedUpdate(){
-         magicSlider.value = invMagic.currentMagic;
+    void FixedUpdate()
+    {
+        magicSlider.value = invMagic.currentMagic;
     }
 
-    public void decreaseMagic(){
-        if(magicSlider.value > magicSlider.maxValue){
+    public void DecreaseMagic()
+    {
+        if (magicSlider.value > magicSlider.maxValue)
+        {
             magicSlider.value = magicSlider.maxValue;
             invMagic.currentMagic = invMagic.maxMagic;
         }
     }
-    public void increaseMagic(){
-      if(magicSlider.value < magicSlider.minValue){
-          magicSlider.value = magicSlider.minValue;
-          invMagic.currentMagic = 0;
-      }
+    public void IncreaseMagic()
+    {
+        if (magicSlider.value < magicSlider.minValue)
+        {
+            magicSlider.value = magicSlider.minValue;
+            invMagic.currentMagic = 0;
+        }
     }
 }

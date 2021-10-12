@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: SignalHealth
   m_EditorClassIdentifier: 
   allSignals: []
+  hasSignal: 1
+  countSignals: 3

@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class DungRoomThree : MonoBehaviour
 {
-    //public Logs[] allDungLogs;
+
     public bool isDefeated;
-    private int countDungLogs;
     public Signal dungLogsSignal;
     public int getAllCounts;
     public static DungRoomThree isDungRoomThreeClass;
@@ -14,109 +13,133 @@ public class DungRoomThree : MonoBehaviour
     public bool isEntered = false;
     public List<Logs> allDungLogs;
     public List<Logs> TempAllDungLogs;
-    public bool cameBackThree = false;
-   public static DungRoomThree Instance(){ 
-         if (!isDungRoomThreeClass)
-         {
-             isDungRoomThreeClass = FindObjectOfType(typeof(DungRoomThree)) as DungRoomThree;
-         }
-         return isDungRoomThreeClass;
-         }
-   void Start(){ 
-     addElements(TempAllDungLogs);
-   }      
+    public static DungRoomThree Instance()
+    {
+        if (!isDungRoomThreeClass)
+        {
+            isDungRoomThreeClass = FindObjectOfType(typeof(DungRoomThree)) as DungRoomThree;
+        }
+        return isDungRoomThreeClass;
+    }
+    void Start()
+    {
+        AddElements(TempAllDungLogs);
+    }
     void Update()
     {
-       if(dungLogsSignal != null){
+        if (dungLogsSignal != null)
+        {
             isEntered = true;
-            if(dungLogsSignal.hasSignal){
-            destroyDungLogs();
-          }
-       }
+            if (dungLogsSignal.hasSignal)
+            {
+                DestroyDungLogs();
+            }
+        }
     }
-    private int destroyDungLogs(){    
-        getAllCounts = dungLogsSignal.countSignals;   
-        if(getAllCounts >= 3){
+    private int DestroyDungLogs()
+    {
+        getAllCounts = dungLogsSignal.countSignals;
+        if (getAllCounts >= 3)
+        {
             isDefeated = true;
             return getAllCounts;
-        }else{
+        }
+        else
+        {
             isDefeated = false;
         }
-       return getAllCounts;
+        return getAllCounts;
     }
 
-     private void OnTriggerEnter2D(Collider2D other){
-        if(other.CompareTag("Player") && other.isTrigger){
-           
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player") && other.isTrigger)
+        {
+
             virtualCamera.SetActive(true);
-            if(TempAllDungLogs != null){
-                if(dungLogsSignal != null){
-                    if(dungLogsSignal.hasSignal){
-                      removeElementPerSignal(TempAllDungLogs,dungLogsSignal.countSignals);
-                      //call func
-                      //deactivateLootTable();
-                         }else{
-                      activateLogs(allDungLogs,true);    
+            if (TempAllDungLogs != null)
+            {
+                if (dungLogsSignal != null)
+                {
+                    if (dungLogsSignal.hasSignal)
+                    {
+                        RemoveElementPerSignal(TempAllDungLogs, dungLogsSignal.countSignals);
+                        //call func
+                        //deactivateLootTable();
+                    }
+                    else
+                    {
+                        ActivateLogs(allDungLogs, true);
                     }
                 }
-            }        
-        }    
+            }
+        }
     }
-    private void deactivateLootTable(){
-       var ft = gameObject.GetComponent<Oponent>().destroyEnemy();
+    private void DeactivateLootTable()
+    {
+        var ft = gameObject.GetComponent<Oponent>().DestroyEnemy();
     }
-    private void activateLogs(List<Logs> lgs, bool isActive){
-        for (int i = 0; i < lgs.Count ; i++)
-                {
-                    logsStats(lgs[i], isActive);
-                }
-    }
-    private void removeElementPerSignal(List<Logs> lgsT,int numSignal){
-        //GameObject ft;
-           for (int i = 0; i < numSignal; i++)
-                {   
-                    lgsT[i].gameObject.SetActive(false);
-                    lgsT.RemoveAt(i);
-
-                }
-    }
-    private void addElements(List<Logs> lsLogs){
-         for (int i = 0; i < 3; i++)
-      {
-
-           lsLogs.Add(new Logs());
-           //TempAllDungLogs[i] = GameObject.Find($"LogDung{i}").AddComponent<Logs>();
-      }
-      if(lsLogs.Count > 0){
-         for (int i = 0; i < lsLogs.Count; i++)
+    private void ActivateLogs(List<Logs> lgs, bool isActive)
+    {
+        for (int i = 0; i < lgs.Count; i++)
         {
-          lsLogs[i] = GameObject.Find($"LogDung{i}").AddComponent<Logs>();  
-        } 
-      }
+            LogsStats(lgs[i], isActive);
+        }
     }
-    private void OnTriggerExit2D(Collider2D other){
-        //cameBackThree = true;
-        if(other.name == "Player" && other.isTrigger){  
-             virtualCamera.SetActive(false);
-             dungLogsSignal.hasSignal = false;
-             dungLogsSignal.countSignals = 0;
-             if(allDungLogs != null){
+    private void RemoveElementPerSignal(List<Logs> lgsT, int numSignal)
+    {
+
+        for (int i = 0; i < numSignal; i++)
+        {
+            lgsT[i].gameObject.SetActive(false);
+            lgsT.RemoveAt(i);
+
+        }
+    }
+    private void AddElements(List<Logs> lsLogs)
+    {
+        for (int i = 0; i < 3; i++)
+        {
+
+            lsLogs.Add(new Logs());
+
+        }
+        if (lsLogs.Count > 0)
+        {
+            for (int i = 0; i < lsLogs.Count; i++)
+            {
+                lsLogs[i] = GameObject.Find($"LogDung{i}").AddComponent<Logs>();
+            }
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.name == "Player" && other.isTrigger)
+        {
+            virtualCamera.SetActive(false);
+            dungLogsSignal.hasSignal = false;
+            dungLogsSignal.countSignals = 0;
+            if (allDungLogs != null)
+            {
                 for (int i = 0; i < allDungLogs.Count; i++)
                 {
-                    logsStats(allDungLogs[i], false);
-                    if(TempAllDungLogs != null){
-                        if(TempAllDungLogs.Count > 0){
-                         activateLogs(TempAllDungLogs, false);
-                         //destroy animation       
+                    LogsStats(allDungLogs[i], false);
+                    if (TempAllDungLogs != null)
+                    {
+                        if (TempAllDungLogs.Count > 0)
+                        {
+                            ActivateLogs(TempAllDungLogs, false);
+                            //destroy animation       
                         }
                     }
 
                 }
-             }
+            }
         }
     }
-    private void logsStats(Component allLogs, bool isSet){
-      allLogs.gameObject.SetActive(isSet);
-    } 
+    private void LogsStats(Component allLogs, bool isSet)
+    {
+        allLogs.gameObject.SetActive(isSet);
+    }
 
 }

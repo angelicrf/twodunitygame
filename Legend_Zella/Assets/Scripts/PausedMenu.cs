@@ -10,21 +10,28 @@ public class PausedMenu : MonoBehaviour
 
     void Update()
     {
-       putPauseGame();             
+        PutPauseGame();
     }
-    public void putPauseGame(){
+    public void PutPauseGame()
+    {
         isPaused = !isPaused;
-         if(Input.GetButtonDown("pause")){  
-            if(isPaused){
-            pausedPanel.SetActive(true);
-            Time.timeScale = 0f;
-            }else{
+
+        if (Input.GetButtonDown("pause"))
+        {
+            if (isPaused)
+            {
+                pausedPanel.SetActive(true);
+                Time.timeScale = 0f;
+            }
+            else
+            {
                 pausedPanel.SetActive(false);
                 Time.timeScale = 1.5f;
             }
-        }  
+        }
     }
-    public void toQuiteGame(){
+    public void ToQuiteGame()
+    {
         SceneManager.LoadScene("MainScene");
         Time.timeScale = 1.5f;
     }

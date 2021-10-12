@@ -4,19 +4,13 @@ using UnityEngine;
 
 public class PlayerHit : MonoBehaviour
 {
-    
-    void Start()
+
+    void OnTriggerEnter2D(Collider2D other)
     {
-        
-    }
-    void Update()
-    {
-        
-    }
-    void OnTriggerEnter2D(Collider2D other){
-         Debug.Log("SmashedOut...");
-       if(other.CompareTag("PotBreak")){     
-           other.GetComponent<Pot>().SmashStart();
-       }
+        Debug.Log("SmashedOut...");
+        if (other.CompareTag("PotBreak"))
+        {
+            other.GetComponent<Pot>().SmashStart();
+        }
     }
 }

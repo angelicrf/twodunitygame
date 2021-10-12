@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class PlayerColider : MonoBehaviour
 {
-     public Rigidbody2D plRigid;
+    public Rigidbody2D plRigid;
 
     void Start()
     {
-        
+
         plRigid = GetComponent<Rigidbody2D>();
     }
-    
-    void FixedUpdate(){
-        tryCamera();
-    }
-    void tryCamera()
+
+    void FixedUpdate()
     {
-         Debug.Log("col happened..");
-          //  collision.gameObject.SendMessage("ApplyDamage", 10);
-        
+        TryCamera();
+    }
+    void TryCamera()
+    {
+        Debug.Log("col happened..");
+
     }
 }

@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: kickSignal
   m_EditorClassIdentifier: 
   allSignals: []
-  hasSignal: 0
+  hasSignal: 1
+  countSignals: 3

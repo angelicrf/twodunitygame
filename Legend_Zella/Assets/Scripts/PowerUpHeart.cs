@@ -5,5 +5,4 @@ using UnityEngine;
 public class PowerUpHeart : MonoBehaviour
 {
     public Signal powerUpSignal;
-    
 }

@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Threading.Tasks;
 
 public class ConditionalRoomMove : MonoBehaviour
 {
@@ -12,133 +12,140 @@ public class ConditionalRoomMove : MonoBehaviour
     public Text placeText;
     public GameObject newTextObj;
     private PlayerMouvment playerMouvement;
-    private int countPool = 0;
     public Rigidbody2D mvRigid;
     public Signal roomChangeSignal;
     public Signal roomThreeSignal;
     private DungRoomThree dngThree;
     private DungDoor dngGeneral;
-    public bool firstStep = false;
     private bool isInRoomThree = false;
     private bool isEnteredRThree = false;
-    private int getCounts;
-    
+
+
     void Start()
-    { 
-        playerMouvement = GameObject.Find("Player").GetComponent<PlayerMouvment>();        
-        mvRigid = playerMouvement.plRigid; 
+    {
+        playerMouvement = GameObject.Find("Player").GetComponent<PlayerMouvment>();
+        mvRigid = playerMouvement.plRigid;
         dngThree = DungRoomThree.Instance();
-        dngGeneral = DungDoor.Instance(); 
-         if(dngThree.dungLogsSignal != null){
+        dngGeneral = DungDoor.Instance();
+        if (dngThree.dungLogsSignal != null)
+        {
             dngThree.dungLogsSignal.hasSignal = false;
             dngThree.getAllCounts = 0;
         }
     }
 
-     void FixedUpdate()
-    { 
-        if(Input.GetButtonDown("attack")){      
-         if(roomThreeSignal != null){
-            isInRoomThree = (roomThreeSignal.countSignals >= 3);
-            if(isInRoomThree){
-                Debug.Log("isInRoomThree " + isInRoomThree);
-                mvRigid.isKinematic = true;
-            }
-            /*  else{
-                mvRigid.isKinematic = false;
-            }
-            */
+    void FixedUpdate()
+    {
+        if (Input.GetButtonDown("attack"))
+        {
+            if (roomThreeSignal != null)
+            {
+                isInRoomThree = (roomThreeSignal.countSignals >= 3);
+                if (isInRoomThree)
+                {
+                    Debug.Log("isInRoomThree " + isInRoomThree);
+                    mvRigid.isKinematic = true;
+                }
+
             }
         }
         isEnteredRThree = dngThree.isEntered;
-        
-    } 
 
-    private void OnTriggerEnter2D(Collider2D other){
-            if (textNeeded){
-                StartCoroutine(lastStep());
-            }     
     }
-  
-   private void execSomeConds(){     
-      bool roomTwoApproval = dngGeneral.doorTwoSignal.hasSignal;
-      bool roomOneApproval = dngGeneral.doorOneSignal.hasSignal;
-      bool roomFourApproval = dngGeneral.doorFourSignal.hasSignal;
-      
-       if(roomOneApproval || roomTwoApproval || isInRoomThree || roomFourApproval ){
-             partTwoSteps();
-       }             
-   }
-  private void partTwoSteps(){  
-       newTextObj.SetActive(true);  
-       changeAllPos();
-       chooseOptions();
-  } 
-  private bool areaChangeRooms(){
-       bool hlSignal = false;
-            roomChangeSignal.ReadSignals();
-            roomChangeSignal.hasSignal = true;
-            hlSignal = roomChangeSignal.hasSignal;
-            return hlSignal;
-  }
-  private IEnumerator lastStep(){ 
-      bool resultSignalConds = areaChangeRooms();
 
-      if(resultSignalConds){
-        execSomeConds();
-        yield return new WaitForSeconds(2f);
-        newTextObj.SetActive(false); 
-        //change signal to off
-        roomChangeSignal.hasSignal = false;
-        roomChangeSignal.countSignals = 0;
-       
-         if(roomThreeSignal != null){
-             roomThreeSignal.hasSignal = false;
-             roomThreeSignal.countSignals = 0;
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (textNeeded)
+        {
+            StartCoroutine(LastStep());
+        }
+    }
+
+    private void ExecSomeConds()
+    {
+        bool roomTwoApproval = dngGeneral.doorTwoSignal.hasSignal;
+        bool roomOneApproval = dngGeneral.doorOneSignal.hasSignal;
+        bool roomFourApproval = dngGeneral.doorFourSignal.hasSignal;
+
+        if (roomOneApproval || roomTwoApproval || isInRoomThree || roomFourApproval)
+        {
+            PartTwoSteps();
+        }
+    }
+    private void PartTwoSteps()
+    {
+        newTextObj.SetActive(true);
+        ChangeAllPos();
+        ChooseOptions();
+    }
+    private bool AreaChangeRooms()
+    {
+        bool hlSignal = false;
+        roomChangeSignal.ReadSignals();
+        roomChangeSignal.hasSignal = true;
+        hlSignal = roomChangeSignal.hasSignal;
+        return hlSignal;
+    }
+    private IEnumerator LastStep()
+    {
+        bool resultSignalConds = AreaChangeRooms();
+
+        if (resultSignalConds)
+        {
+            ExecSomeConds();
+            yield return new WaitForSeconds(2f);
+            newTextObj.SetActive(false);
+            roomChangeSignal.hasSignal = false;
+            roomChangeSignal.countSignals = 0;
+
+            if (roomThreeSignal != null)
+            {
+                roomThreeSignal.hasSignal = false;
+                roomThreeSignal.countSignals = 0;
+            }
         }
 
-      }
-           
-   } 
-  /* private async void stepsTask(){
-        //await Task.Run(() => areaChangeMSG());
-        areaChangeMSG();
-        await Task.Run(() => execSomeConds());
-        StartCoroutine(lastStep());
-        //await Task.Run(() => StartCoroutine(lastStep()));
-   } */
-   private void chooseOptions(){
-       if(textNeeded){
-        placeText.text = replaceText;
-          switch(replaceText) {
+    }
+    private void ChooseOptions()
+    {
+        if (textNeeded)
+        {
+            placeText.text = replaceText;
+            switch (replaceText)
+            {
                 case "Pool Area":
-                        changeColor(255, 0, 0, 1);
+                    ChangeColor(255, 0, 0, 1);
                     break;
                 case "Home Area":
-                        changeColor(0, 0, 128, 1);
+                    ChangeColor(0, 0, 128, 1);
                     break;
                 case "HomeStead":
-                        changeColor(0, 255, 255, 1);
+                    ChangeColor(0, 255, 255, 1);
                     break;
                 case "BackYard":
-                        changeColor(128, 128, 128, 1);
-                    break;       
+                    ChangeColor(128, 128, 128, 1);
+                    break;
                 default:
-                        changeColor(255, 255, 0, 1);
-                     break;
-                }
-         }           
-   }
-   private void changeColor(byte a, byte b, byte c, byte d){
-        placeText.color = new Color(a,b,c,d);
-   }
-
-   private void changeAllPos(){         
-        playerMouvement.plRigid.transform.position = playerChange;
-        if(!isEnteredRThree){
-        playerMouvement.plRigid.isKinematic = true;
-        }else{
-            playerMouvement.plRigid.isKinematic = false; 
+                    ChangeColor(255, 255, 0, 1);
+                    break;
+            }
         }
-   }
+    }
+    private void ChangeColor(byte a, byte b, byte c, byte d)
+    {
+        placeText.color = new Color(a, b, c, d);
+    }
+
+    private void ChangeAllPos()
+    {
+        playerMouvement.plRigid.transform.position = playerChange;
+        if (!isEnteredRThree)
+        {
+            playerMouvement.plRigid.isKinematic = true;
+        }
+        else
+        {
+            playerMouvement.plRigid.isKinematic = false;
+        }
+    }
 }

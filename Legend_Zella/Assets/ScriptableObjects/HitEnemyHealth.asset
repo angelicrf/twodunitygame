@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: HitEnemyHealth
   m_EditorClassIdentifier: 
   numToUse: 2
+  runTime: 2
