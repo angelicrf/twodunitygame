@@ -21,7 +21,6 @@ public class Oponent : MonoBehaviour
 
     private void Awake()
     {
-        //lootObj = new GameObject();
         if (maxNum != null)
         {
             healthOk = maxNum.numToUse;
@@ -60,18 +59,9 @@ public class Oponent : MonoBehaviour
     public IEnumerator DestroyEnemy()
     {
         yield return new WaitForSeconds(1f);
-        //deathEffect.SetActive(false);
-        if (heartIdle != null)
-        {
-            heartIdle.SetActive(false);
-        }
-        if (coindIdle != null)
-        {
-            coindIdle.SetActive(false);
-        }
-        //lootObj.SetActive(false);
+        // destroy obj of DeatEffect
         yield return new WaitForSeconds(2f);
-
+        // destroy obj of lootTable
         dungDefeatSignal.ReadSignals();
         this.gameObject.SetActive(false);
     }
