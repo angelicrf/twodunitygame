@@ -10,33 +10,39 @@ public class MainRoomOne : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-
-        if (other.CompareTag("Player") && !other.isTrigger)
+        if (other.gameObject.activeSelf)
         {
-            insidePolygon = true;
 
-            for (int i = 0; i < allOponents.Length; i++)
+            if (other.CompareTag("Player") && !other.isTrigger)
             {
-                ChangeGameObjectStat(allOponents[i], true);
-            }
-            for (int i = 0; i < allPots.Length; i++)
-            {
-                ChangeGameObjectStat(allPots[i], true);
+                insidePolygon = true;
+
+                for (int i = 0; i < allOponents.Length; i++)
+                {
+                    ChangeGameObjectStat(allOponents[i], true);
+                }
+                for (int i = 0; i < allPots.Length; i++)
+                {
+                    ChangeGameObjectStat(allPots[i], true);
+                }
             }
         }
     }
     public void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && !other.isTrigger)
+        if (other.gameObject.activeSelf)
         {
-            insidePolygon = false;
-            for (int i = 0; i < allOponents.Length; i++)
+            if (other.CompareTag("Player") && !other.isTrigger)
             {
-                ChangeGameObjectStat(allOponents[i], false);
-            }
-            for (int i = 0; i < allPots.Length; i++)
-            {
-                ChangeGameObjectStat(allPots[i], false);
+                insidePolygon = false;
+                for (int i = 0; i < allOponents.Length; i++)
+                {
+                    ChangeGameObjectStat(allOponents[i], false);
+                }
+                for (int i = 0; i < allPots.Length; i++)
+                {
+                    ChangeGameObjectStat(allPots[i], false);
+                }
             }
         }
     }

@@ -18,7 +18,8 @@ public class Oponent : MonoBehaviour
     public GameObject coindIdle;
     public GameObject heartIdle;
     private Vector3 storeTrPos;
-
+    public EnemStates currentEnState;
+    public Oponent() { }
     private void Awake()
     {
         if (maxNum != null)
@@ -26,20 +27,18 @@ public class Oponent : MonoBehaviour
             healthOk = maxNum.numToUse;
         }
     }
-    public EnemStates currentEnState;
-
-    public void CallEnemyStart(Rigidbody2D enmRigid, float timeBack, float damage)
+    public void CallEnemyStart(Rigidbody2D enmRigid, float timeBack, float damage, Collider2D other)
     {
 
-        StartCoroutine(EnemyStart(enmRigid, timeBack, damage));
+        StartCoroutine(EnemyStart(enmRigid, timeBack, damage, other));
     }
-    private void ChangeHealthScore(float damage)
+    private void ChangeHealthScore(float damage, Collider2D other)
     {
         storeTrPos = transform.position;
         healthOk -= damage;
         if (healthOk <= 0)
         {
-            CallStepsToKill(storeTrPos);
+            CallStepsToKill(storeTrPos, other);
         }
     }
     private IEnumerator CallLootTable(Vector3 trF)
@@ -81,7 +80,7 @@ public class Oponent : MonoBehaviour
     {
         Destroy(gmO, 3f);
     }
-    IEnumerator EnemyStart(Rigidbody2D enmRigid, float timeBack, float damage)
+    IEnumerator EnemyStart(Rigidbody2D enmRigid, float timeBack, float damage, Collider2D other)
     {
         if (enmRigid != null)
         {
@@ -92,13 +91,15 @@ public class Oponent : MonoBehaviour
             enmRigid.isKinematic = true;
             currentEnState = EnemStates.idle;
             enmRigid.velocity = Vector2.zero;
-            ChangeHealthScore(damage);
+            ChangeHealthScore(damage, other);
 
         }
     }
-    private void CallStepsToKill(Vector3 storeTrPos)
+    private void CallStepsToKill(Vector3 storeTrPos, Collider2D other)
     {
-        this.gameObject.SetActive(false);
+        Debug.Log("enemy bakc to sleep");
+        other.gameObject.SetActive(false);
+
         StartCoroutine(GenerateDeathEffect(storeTrPos));
         StartCoroutine(CallLootTable(storeTrPos));
     }

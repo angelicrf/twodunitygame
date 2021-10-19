@@ -23,6 +23,13 @@ public class PlayerMouvment : MonoBehaviour
     public Inventory magicInventory;
     public Signal magicSignal;
     public Signal arrowSignal;
+    public Collider2D opColider;
+    public Color plChangeCl;
+    public Color plOriginalCl;
+    public float flashDuration;
+    public int flashNumbers;
+    public SpriteRenderer trgSprtRend;
+    private Oponent oponent;
 
     void Awake()
     {
@@ -33,6 +40,7 @@ public class PlayerMouvment : MonoBehaviour
     }
     void Start()
     {
+        oponent = new Oponent();
         dlgMsg = DialogBoxMsg.Instance();
         enmCameraAnim = GameObject.Find("Main Camera").GetComponent<Animator>();
         animator = GetComponent<Animator>();
@@ -152,7 +160,7 @@ public class PlayerMouvment : MonoBehaviour
         plChange.Normalize();
         plRigid.MovePosition(transform.position + plChange * speed * Time.deltaTime);
     }
-    public void CallPlayerStart(float timeBack, float dmg)
+    public void CallPlayerStart(float timeBack, float dmg, Collider2D other)
     {
 
         plHealth.runTime -= dmg;
@@ -164,7 +172,9 @@ public class PlayerMouvment : MonoBehaviour
         }
         else
         {
-            this.gameObject.SetActive(false);
+            oponent.currentEnState = Oponent.EnemStates.idle;
+            other.gameObject.SetActive(false);
+
         }
     }
     IEnumerator PlayerStart(float timeBack)
@@ -186,6 +196,24 @@ public class PlayerMouvment : MonoBehaviour
         animator.SetBool("waliked", true);
         currentPlState = PlayerState.walk;
         dlgMsg.DisappearBox();
+    }
+    public IEnumerator FlashEffect()
+    {
+        Debug.Log("plColorChanged..");
+        int counttFl = 0;
+        opColider.enabled = false;
+        while (counttFl < flashNumbers)
+        {
+            Debug.Log("plColorChanged2..");
+            trgSprtRend.color = plChangeCl;
+            Debug.Log("plColorChanged3..");
+            yield return new WaitForSeconds(flashDuration);
+
+            trgSprtRend.color = plOriginalCl;
+            yield return new WaitForSeconds(flashDuration);
+            counttFl++;
+        }
+        opColider.enabled = true;
     }
 
 }

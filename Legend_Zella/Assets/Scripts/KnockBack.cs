@@ -9,7 +9,7 @@ public class KnockBack : MonoBehaviour
     public float lossScore;
     private Rigidbody2D enemRgdBody;
     private PlayerMouvment playerMouvement;
-    private Oponent oponent;
+
     void Start()
     {
         playerMouvement = GameObject.Find("Player").GetComponent<PlayerMouvment>();
@@ -23,7 +23,7 @@ public class KnockBack : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other != null)
+        if (other != null && other.gameObject.activeSelf)
         {
             if (other.gameObject.CompareTag("PotBreak"))
             {
@@ -33,7 +33,7 @@ public class KnockBack : MonoBehaviour
             if (other.gameObject.CompareTag("Log") || other.gameObject.CompareTag("Player"))
             {
                 enemRgdBody = other.GetComponent<Rigidbody2D>();
-                if (enemRgdBody == null || !enemRgdBody.gameObject.CompareTag("Log"))
+                if (enemRgdBody == null && !enemRgdBody.gameObject.CompareTag("Log"))
                 {
                     enemRgdBody = playerMouvement.plRigid;
                 }
@@ -46,26 +46,39 @@ public class KnockBack : MonoBehaviour
                     getDifference = getDifference.normalized * force;
 
                     enemRgdBody.AddForce(getDifference, ForceMode2D.Impulse);
-                    StartCoroutine(ChangeVelocity(enemRgdBody));
-
-                    if (enemRgdBody != null)
+                    if (other != null)
                     {
-                        if (other.CompareTag("Log") && other.isTrigger)
+                        GameObject newPlayerObj = GameObject.Find("Player");
+                        if (newPlayerObj != null)
                         {
-                            Debug.Log("PlayerkillLog....");
-                            enemRgdBody.GetComponent<Oponent>().currentEnState = Oponent.EnemStates.stagger;
-                            if (other.gameObject.name != "Ogre")
+                            if (newPlayerObj.activeSelf)
                             {
-                                other.GetComponent<Oponent>().CallEnemyStart(enemRgdBody, knockTime, lossScore);
+                                StartCoroutine(ChangeVelocity(enemRgdBody));
                             }
                         }
-                        if (other.CompareTag("Player") && playerMouvement.currentPlState != PlayerMouvment.PlayerState.stagger)
+                    }
+
+                    if (enemRgdBody != null && other.gameObject.activeSelf)
+                    {
+
+                        /*  if (other.gameObject.CompareTag("Log") && other.isTrigger && playerMouvement.currentPlState != PlayerMouvment.PlayerState.stagger && playerMouvement.currentPlState == PlayerMouvment.PlayerState.attack)
+                         {
+                             //Debug.Log("PlayerKillLog...");
+                             playerMouvement.FlashEffect();
+                             enemRgdBody.GetComponent<Oponent>().currentEnState = Oponent.EnemStates.stagger;
+                             if (other.gameObject.name != "Ogre")
+                             {
+                                 other.GetComponent<Oponent>().CallEnemyStart(enemRgdBody, knockTime, lossScore, other);
+                             }
+
+                         } */
+                        if (other.gameObject.CompareTag("Player") && !other.isTrigger && playerMouvement.currentPlState != PlayerMouvment.PlayerState.attack)
                         {
                             Debug.Log("LogKillPlayer...");
+                            playerMouvement.FlashEffect();
                             playerMouvement.currentPlState = PlayerMouvment.PlayerState.stagger;
-                            playerMouvement.CallPlayerStart(knockTime, lossScore);
-                            StartCoroutine(playerMouvement.KickAnimStart());
-
+                            playerMouvement.CallPlayerStart(knockTime, lossScore, other);
+                            //StartCoroutine(playerMouvement.KickAnimStart());
                         }
                     }
                 }
