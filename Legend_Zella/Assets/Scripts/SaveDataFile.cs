@@ -22,9 +22,9 @@ public class SaveDataFile : MonoBehaviour
         SaveTofile();
     }
 
-    private void SaveTofile()
+    public void SaveTofile()
     {
-
+        Debug.Log("saveFileHit");
         for (int i = 0; i < allObjects.Count; i++)
         {
             FileStream file = File.Create(Application.persistentDataPath + string.Format("/{0}.data", i));
@@ -46,6 +46,17 @@ public class SaveDataFile : MonoBehaviour
                 JsonUtility.FromJsonOverwrite((string)binaryDta.Deserialize(file), allObjects[i]);
                 file.Close();
 
+            }
+        }
+    }
+    public void ToResetData()
+    {
+        Debug.Log("toResetCalled..");
+        for (int i = 0; i < allObjects.Count; i++)
+        {
+            if (File.Exists(Application.persistentDataPath + string.Format("/{0}.data", i)))
+            {
+                File.Delete(Application.persistentDataPath + string.Format("/{0}.data", i));
             }
         }
     }

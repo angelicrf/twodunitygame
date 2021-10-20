@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8e8b5703d710b51e91d6ebf291781b7, type: 3}
   m_Name: AllInventory
   m_EditorClassIdentifier: 
-  itemCount: 0
+  itemCount: 21
   isItem: 0
   trItem: {fileID: 11400000, guid: 6296a237a12f9faedbec51c63f808309, type: 2}
   maxMagic: 10

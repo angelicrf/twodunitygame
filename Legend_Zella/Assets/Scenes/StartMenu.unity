@@ -565,7 +565,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 361434935}
         m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
-        m_MethodName: clickNewGameBtn
+        m_MethodName: ClickNewGameBtn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -973,7 +973,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 361434935}
         m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
-        m_MethodName: clickQuitGameBtn
+        m_MethodName: ClickQuitGameBtn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

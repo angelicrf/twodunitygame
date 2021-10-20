@@ -32,7 +32,15 @@ public class PausedMenu : MonoBehaviour
     }
     public void ToQuiteGame()
     {
-        SceneManager.LoadScene("MainScene");
+        Scene currentScene = SceneManager.GetActiveScene();
+        if (currentScene.name == "MainScene")
+        {
+            SceneManager.LoadScene("StartMenu");
+        }
+        else if (currentScene.name == "StartMenu")
+        {
+            SceneManager.LoadScene("MainScene");
+        }
         Time.timeScale = 1.5f;
     }
 
