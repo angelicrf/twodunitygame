@@ -53,7 +53,7 @@ public class ChestBox : MonoBehaviour
                         interObj = allPrizes[i];
                         interObj.SetActive(true);
                         gmInventory.isItem = true;
-                        gmInventory.getItems();
+                        gmInventory.GetItems();
                     }
                 }
             }

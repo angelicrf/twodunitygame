@@ -36,7 +36,7 @@ public class DungObjectAnim : MonoBehaviour
                 StartCoroutine(DungObjChange());
                 //add item
                 dngInventory.isItem = true;
-                dngInventory.getItems();
+                dngInventory.GetItems();
             }
             else if (isPlayed && isFDoorOpen)
             {

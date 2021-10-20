@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
+[System.Serializable]
 public class Inventory : ScriptableObject
 {
     public int itemCount;
@@ -11,18 +12,22 @@ public class Inventory : ScriptableObject
     public float maxMagic = 10;
     public float currentMagic;
     public List<GameObject> itemsList;
-    
-    public void OnEnable(){
+
+    public void OnEnable()
+    {
         currentMagic = maxMagic;
     }
-    public void setCurrentMagic(float thisMgc){
+    public void SetCurrentMagic(float thisMgc)
+    {
         currentMagic -= thisMgc;
     }
-    public void getItems(){
-        if(isItem){       
-                itemCount++;
-                itemsList.Add(trItem.items);             
-        }      
+    public void GetItems()
+    {
+        if (isItem)
+        {
+            itemCount++;
+            itemsList.Add(trItem.items);
+        }
     }
 
 }

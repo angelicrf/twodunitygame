@@ -34,7 +34,7 @@ public class Coins : PowerUpHeart
             if (powerUpSignal.hasSignal)
             {
                 coinsInventory.isItem = true;
-                coinsInventory.getItems();
+                coinsInventory.GetItems();
                 StartCoroutine(DoCreateObj());
             }
         }

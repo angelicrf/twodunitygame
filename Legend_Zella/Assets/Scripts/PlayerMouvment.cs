@@ -113,7 +113,7 @@ public class PlayerMouvment : MonoBehaviour
                 ar.ThrowArrow(tmp, CreateArrowDir());
                 if (magicSignal != null)
                 {
-                    magicInventory.setCurrentMagic(ar.magicCost);
+                    magicInventory.SetCurrentMagic(ar.magicCost);
                     magicSignal.hasSignal = true;
                     magicSignal.ReadSignals();
                 }

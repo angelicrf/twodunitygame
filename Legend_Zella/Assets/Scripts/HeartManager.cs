@@ -26,8 +26,11 @@ public class HeartManager : MonoBehaviour
         {
             if (!hearts[i].gameObject.activeSelf)
             {
-                hearts[i].gameObject.SetActive(true);
-                hearts[i].sprite = fullHeart;
+                if (i < hearts.Length)
+                {
+                    hearts[i].gameObject.SetActive(true);
+                    hearts[i].sprite = fullHeart;
+                }
             }
         }
     }
@@ -39,21 +42,23 @@ public class HeartManager : MonoBehaviour
     public void UpdateArray()
     {
         float getResTmpHealth = GetTmpHealth();
-
         for (int i = 0; i < heartsContainer.numToUse; i++)
         {
-            hearts[i].gameObject.SetActive(true);
-            if (i <= getResTmpHealth - 1)
+            if (i <= hearts.Length)
             {
-                hearts[i].sprite = fullHeart;
-            }
-            else if (i > getResTmpHealth || getResTmpHealth == 0)
-            {
-                hearts[i].sprite = emptyHeart;
-            }
-            else if (getResTmpHealth != 0)
-            {
-                hearts[i].sprite = halfHeart;
+                hearts[i].gameObject.SetActive(true);
+                if (i <= getResTmpHealth - 1)
+                {
+                    hearts[i].sprite = fullHeart;
+                }
+                else if (i > getResTmpHealth || getResTmpHealth == 0)
+                {
+                    hearts[i].sprite = emptyHeart;
+                }
+                else if (getResTmpHealth != 0)
+                {
+                    hearts[i].sprite = halfHeart;
+                }
             }
         }
     }
