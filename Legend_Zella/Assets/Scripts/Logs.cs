@@ -10,9 +10,14 @@ public class Logs : Oponent
     public Animator enmAnim;
     public Vector3 originalPos;
     private float newPos;
-
+    public Signal kickSignal;
     void Start()
     {
+        if (kickSignal != null)
+        {
+            kickSignal.hasSignal = false;
+            kickSignal.countSignals = 0;
+        }
         enmAnim = GetComponent<Animator>();
         currentEnState = EnemStates.idle;
         enmAnim.SetBool("isWokeUp", true);
@@ -34,6 +39,14 @@ public class Logs : Oponent
                 CalcAnimChange(tmpPos - transform.position);
                 transform.position = Vector3.MoveTowards(transform.position, target.position, enmSpeed * Time.deltaTime);
                 ChangeLgState(EnemStates.walk);
+            }
+            if (kickSignal != null)
+            {
+                if (kickSignal.hasSignal && kickSignal.countSignals > 5)
+                {
+                    enmAnim.SetBool("isWokeUp", false);
+                    ChangeLgState(EnemStates.idle);
+                }
             }
         }
         else if (newPos > chaseRad)

@@ -74,11 +74,12 @@ public class KnockBack : MonoBehaviour
                          } */
                         if (other.gameObject.CompareTag("Player") && !other.isTrigger && playerMouvement.currentPlState != PlayerMouvment.PlayerState.attack)
                         {
-                            Debug.Log("LogKillPlayer...");
+                            //Debug.Log("LogKillPlayer...");
                             playerMouvement.FlashEffect();
                             playerMouvement.currentPlState = PlayerMouvment.PlayerState.stagger;
                             playerMouvement.CallPlayerStart(knockTime, lossScore, other);
-                            //StartCoroutine(playerMouvement.KickAnimStart());
+                            StartCoroutine(playerMouvement.KickAnimStart());
+
                         }
                     }
                 }

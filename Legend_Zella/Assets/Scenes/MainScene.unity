@@ -410,6 +410,7 @@ MonoBehaviour:
   attackRad: 1.7
   enmAnim: {fileID: 70601471}
   originalPos: {x: 0, y: 0, z: 0}
+  kickSignal: {fileID: 0}
   isHitMelee: 0
 --- !u!1001 &155202588
 PrefabInstance:
@@ -1784,6 +1785,7 @@ MonoBehaviour:
   attackRad: 1.7
   enmAnim: {fileID: 427624670}
   originalPos: {x: 11.48, y: 1.2, z: 514.05}
+  kickSignal: {fileID: 11400000, guid: 33a85067fc24f6277810c852a0623365, type: 2}
 --- !u!50 &427624669
 Rigidbody2D:
   serializedVersion: 4
@@ -2450,6 +2452,7 @@ MonoBehaviour:
   attackRad: 1.7
   enmAnim: {fileID: 574309755}
   originalPos: {x: 0, y: 0, z: 0}
+  kickSignal: {fileID: 0}
   allPaths:
   - {fileID: 443122791}
   - {fileID: 1479560336}
@@ -23274,6 +23277,7 @@ MonoBehaviour:
   attackRad: 1.7
   enmAnim: {fileID: 1960893441}
   originalPos: {x: 0, y: 0, z: 0}
+  kickSignal: {fileID: 11400000, guid: 33a85067fc24f6277810c852a0623365, type: 2}
   isPassed: 0
   ballRidgid2: {fileID: 4614425761158682356, guid: 61368fbefe73a2d83af30d7310560be1, type: 3}
   distanceBall: {x: 0, y: 0}

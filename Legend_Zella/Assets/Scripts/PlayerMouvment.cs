@@ -29,7 +29,7 @@ public class PlayerMouvment : MonoBehaviour
     public float flashDuration;
     public int flashNumbers;
     public SpriteRenderer trgSprtRend;
-    private Oponent oponent;
+
 
     void Awake()
     {
@@ -40,7 +40,7 @@ public class PlayerMouvment : MonoBehaviour
     }
     void Start()
     {
-        oponent = new Oponent();
+
         dlgMsg = DialogBoxMsg.Instance();
         enmCameraAnim = GameObject.Find("Main Camera").GetComponent<Animator>();
         animator = GetComponent<Animator>();
@@ -172,7 +172,6 @@ public class PlayerMouvment : MonoBehaviour
         }
         else
         {
-            oponent.currentEnState = Oponent.EnemStates.idle;
             other.gameObject.SetActive(false);
 
         }

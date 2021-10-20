@@ -272,7 +272,6 @@ MonoBehaviour:
   mvRigid: {fileID: 0}
   roomChangeSignal: {fileID: 11400000, guid: b70eeadeaff601ee58e0b43530d0ab4f, type: 2}
   roomThreeSignal: {fileID: 0}
-  firstStep: 0
 --- !u!61 &130894602
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -429,7 +428,6 @@ MonoBehaviour:
   mvRigid: {fileID: 0}
   roomChangeSignal: {fileID: 11400000, guid: 78f67e1d455ea7131af7ed947c492ac8, type: 2}
   roomThreeSignal: {fileID: 0}
-  firstStep: 0
 --- !u!1 &201667348
 GameObject:
   m_ObjectHideFlags: 0
@@ -4750,7 +4748,6 @@ MonoBehaviour:
   isEntered: 0
   allDungLogs: []
   TempAllDungLogs: []
-  cameBackThree: 0
 --- !u!1 &480885296
 GameObject:
   m_ObjectHideFlags: 0
@@ -5323,7 +5320,6 @@ MonoBehaviour:
   - {fileID: 559039985095446603}
   - {fileID: 559039985934633445}
   TempAllDungLogs: []
-  cameBackThree: 0
 --- !u!1 &1033121468
 GameObject:
   m_ObjectHideFlags: 0
@@ -5643,7 +5639,6 @@ MonoBehaviour:
   mvRigid: {fileID: 0}
   roomChangeSignal: {fileID: 11400000, guid: 53ebf3bb82d3e5303b4ff9739a95b94e, type: 2}
   roomThreeSignal: {fileID: 11400000, guid: ac1f1231b3640a4b4b5d947215b8fe4a, type: 2}
-  firstStep: 0
 --- !u!1 &1141335368
 GameObject:
   m_ObjectHideFlags: 3
@@ -5816,7 +5811,6 @@ MonoBehaviour:
   mvRigid: {fileID: 0}
   roomChangeSignal: {fileID: 11400000, guid: 53ebf3bb82d3e5303b4ff9739a95b94e, type: 2}
   roomThreeSignal: {fileID: 0}
-  firstStep: 0
 --- !u!1 &1262350305
 GameObject:
   m_ObjectHideFlags: 0
@@ -5869,7 +5863,6 @@ MonoBehaviour:
   mvRigid: {fileID: 0}
   roomChangeSignal: {fileID: 11400000, guid: b70eeadeaff601ee58e0b43530d0ab4f, type: 2}
   roomThreeSignal: {fileID: 0}
-  firstStep: 0
 --- !u!61 &1262350308
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6099,11 +6092,47 @@ PrefabInstance:
     - target: {fileID: 3501738739705116478, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
       propertyPath: kickSignal
       value: 
-      objectReference: {fileID: 11400000, guid: ac1f1231b3640a4b4b5d947215b8fe4a, type: 2}
+      objectReference: {fileID: 11400000, guid: 33a85067fc24f6277810c852a0623365, type: 2}
     - target: {fileID: 3501738739705116478, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
       propertyPath: plStartPos
       value: 
       objectReference: {fileID: 11400000, guid: 04ec5d124b7ae1e6cb20957ec8ebb752, type: 2}
+    - target: {fileID: 3501738739705116478, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
+      propertyPath: flashNumbers
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501738739705116478, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
+      propertyPath: plChangeCl.b
+      value: 0.2256141
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501738739705116478, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
+      propertyPath: plChangeCl.g
+      value: 0.2256141
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501738739705116478, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
+      propertyPath: plChangeCl.r
+      value: 0.735849
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501738739705116478, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
+      propertyPath: enmCameraAnim
+      value: 
+      objectReference: {fileID: 2075875716}
+    - target: {fileID: 3501738739705116478, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
+      propertyPath: flashDuration
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501738739705116478, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
+      propertyPath: plOriginalCl.b
+      value: 0.94864726
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501738739705116478, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
+      propertyPath: plOriginalCl.g
+      value: 0.94864726
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501738739705116478, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
+      propertyPath: plOriginalCl.r
+      value: 0.9622642
+      objectReference: {fileID: 0}
     - target: {fileID: 3501738739949806882, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
       propertyPath: enemRgdBody
       value: 
@@ -6625,7 +6654,6 @@ MonoBehaviour:
   mvRigid: {fileID: 0}
   roomChangeSignal: {fileID: 11400000, guid: 78f67e1d455ea7131af7ed947c492ac8, type: 2}
   roomThreeSignal: {fileID: 0}
-  firstStep: 0
 --- !u!1 &1613826245
 GameObject:
   m_ObjectHideFlags: 0
@@ -6707,7 +6735,6 @@ MonoBehaviour:
   isEntered: 0
   allDungLogs: []
   TempAllDungLogs: []
-  cameBackThree: 0
 --- !u!1 &1643002864
 GameObject:
   m_ObjectHideFlags: 0
@@ -21364,7 +21391,6 @@ MonoBehaviour:
   isEntered: 0
   allDungLogs: []
   TempAllDungLogs: []
-  cameBackThree: 0
 --- !u!60 &2018338139
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -21904,6 +21930,7 @@ MonoBehaviour:
   attackRad: 1.7
   enmAnim: {fileID: 559039985095446601}
   originalPos: {x: 0, y: 0, z: 0}
+  kickSignal: {fileID: 11400000, guid: 33a85067fc24f6277810c852a0623365, type: 2}
 --- !u!1 &559039985095446605
 GameObject:
   m_ObjectHideFlags: 0
@@ -22215,6 +22242,7 @@ MonoBehaviour:
   attackRad: 1.7
   enmAnim: {fileID: 559039985101011638}
   originalPos: {x: 0, y: 0, z: 0}
+  kickSignal: {fileID: 11400000, guid: 33a85067fc24f6277810c852a0623365, type: 2}
 --- !u!50 &559039985101011637
 Rigidbody2D:
   serializedVersion: 4
@@ -22460,6 +22488,7 @@ MonoBehaviour:
   attackRad: 1.7
   enmAnim: {fileID: 559039985934633447}
   originalPos: {x: 0, y: 0, z: 0}
+  kickSignal: {fileID: 11400000, guid: 33a85067fc24f6277810c852a0623365, type: 2}
 --- !u!4 &559039985934633446
 Transform:
   m_ObjectHideFlags: 0
@@ -22768,7 +22797,6 @@ MonoBehaviour:
   mvRigid: {fileID: 0}
   roomChangeSignal: {fileID: 11400000, guid: be9ab6e8f69f74cf8b781fa18b72ce89, type: 2}
   roomThreeSignal: {fileID: 0}
-  firstStep: 0
 --- !u!61 &2856570869373922399
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22873,4 +22901,3 @@ MonoBehaviour:
   mvRigid: {fileID: 0}
   roomChangeSignal: {fileID: 11400000, guid: be9ab6e8f69f74cf8b781fa18b72ce89, type: 2}
   roomThreeSignal: {fileID: 0}
-  firstStep: 0
