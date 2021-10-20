@@ -61,21 +61,17 @@ public class KnockBack : MonoBehaviour
                     if (enemRgdBody != null && other.gameObject.activeSelf)
                     {
 
-                        /*  if (other.gameObject.CompareTag("Log") && other.isTrigger && playerMouvement.currentPlState != PlayerMouvment.PlayerState.stagger && playerMouvement.currentPlState == PlayerMouvment.PlayerState.attack)
-                         {
-                             //Debug.Log("PlayerKillLog...");
-                             playerMouvement.FlashEffect();
-                             enemRgdBody.GetComponent<Oponent>().currentEnState = Oponent.EnemStates.stagger;
-                             if (other.gameObject.name != "Ogre")
-                             {
-                                 other.GetComponent<Oponent>().CallEnemyStart(enemRgdBody, knockTime, lossScore, other);
-                             }
+                        if (other.gameObject.CompareTag("Log") && other.isTrigger && playerMouvement.currentPlState != PlayerMouvment.PlayerState.stagger && playerMouvement.currentPlState == PlayerMouvment.PlayerState.attack)
+                        {
+                            enemRgdBody.GetComponent<Oponent>().currentEnState = Oponent.EnemStates.stagger;
+                            if (other.gameObject.name != "Ogre")
+                            {
+                                other.GetComponent<Oponent>().CallEnemyStart(enemRgdBody, knockTime, lossScore, other);
+                            }
 
-                         } */
+                        }
                         if (other.gameObject.CompareTag("Player") && !other.isTrigger && playerMouvement.currentPlState != PlayerMouvment.PlayerState.attack)
                         {
-                            //Debug.Log("LogKillPlayer...");
-                            playerMouvement.FlashEffect();
                             playerMouvement.currentPlState = PlayerMouvment.PlayerState.stagger;
                             playerMouvement.CallPlayerStart(knockTime, lossScore, other);
                             StartCoroutine(playerMouvement.KickAnimStart());

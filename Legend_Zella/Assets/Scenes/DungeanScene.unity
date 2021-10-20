@@ -6102,16 +6102,20 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3501738739705116478, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
+      propertyPath: plChangeCl.a
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501738739705116478, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
       propertyPath: plChangeCl.b
-      value: 0.2256141
+      value: 0.048949808
       objectReference: {fileID: 0}
     - target: {fileID: 3501738739705116478, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
       propertyPath: plChangeCl.g
-      value: 0.2256141
+      value: 0.048949808
       objectReference: {fileID: 0}
     - target: {fileID: 3501738739705116478, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
       propertyPath: plChangeCl.r
-      value: 0.735849
+      value: 0.9433962
       objectReference: {fileID: 0}
     - target: {fileID: 3501738739705116478, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
       propertyPath: enmCameraAnim
@@ -6122,16 +6126,20 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3501738739705116478, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
+      propertyPath: plOriginalCl.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3501738739705116478, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
       propertyPath: plOriginalCl.b
-      value: 0.94864726
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3501738739705116478, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
       propertyPath: plOriginalCl.g
-      value: 0.94864726
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3501738739705116478, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
       propertyPath: plOriginalCl.r
-      value: 0.9622642
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3501738739949806882, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
       propertyPath: enemRgdBody

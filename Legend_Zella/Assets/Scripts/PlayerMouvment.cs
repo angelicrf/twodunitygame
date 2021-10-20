@@ -44,6 +44,7 @@ public class PlayerMouvment : MonoBehaviour
         dlgMsg = DialogBoxMsg.Instance();
         enmCameraAnim = GameObject.Find("Main Camera").GetComponent<Animator>();
         animator = GetComponent<Animator>();
+        trgSprtRend = GetComponent<SpriteRenderer>();
         //plHealth.numToUse = 6;
         if (plStartPos.isTransited)
         {
@@ -130,6 +131,7 @@ public class PlayerMouvment : MonoBehaviour
 
         if (kickSignal.hasSignal)
         {
+            StartCoroutine(FlashEffect());
             enmCameraAnim.SetBool("isCkicked", true);
             yield return null;
             enmCameraAnim.SetBool("isCkicked", false);
@@ -198,16 +200,13 @@ public class PlayerMouvment : MonoBehaviour
     }
     public IEnumerator FlashEffect()
     {
-        Debug.Log("plColorChanged..");
         int counttFl = 0;
         opColider.enabled = false;
         while (counttFl < flashNumbers)
         {
-            Debug.Log("plColorChanged2..");
-            trgSprtRend.color = plChangeCl;
-            Debug.Log("plColorChanged3..");
-            yield return new WaitForSeconds(flashDuration);
 
+            trgSprtRend.color = plChangeCl;
+            yield return new WaitForSeconds(flashDuration);
             trgSprtRend.color = plOriginalCl;
             yield return new WaitForSeconds(flashDuration);
             counttFl++;
