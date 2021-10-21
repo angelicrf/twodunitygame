@@ -12,4 +12,5 @@ public class MagicReceived : MonoBehaviour
         magicSignal.hasSignal = true;
         magicSignal.ReadSignals();
     }
+
 }

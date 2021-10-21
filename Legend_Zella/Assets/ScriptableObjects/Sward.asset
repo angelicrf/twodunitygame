@@ -17,4 +17,7 @@ MonoBehaviour:
   itemDescription: Soldier 's old sward to help you win
   isUnique: 1
   isUsable: 0
-  numberCount: 1
+  numberCount: 7
+  ev:
+    m_PersistentCalls:
+      m_Calls: []

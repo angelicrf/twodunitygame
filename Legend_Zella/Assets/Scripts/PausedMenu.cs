@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PausedMenu : MonoBehaviour
 {
     public GameObject pausedPanel;
+    public GameObject inventoryPanel;
     public bool isPaused = false;
 
     void Update()
@@ -26,6 +27,19 @@ public class PausedMenu : MonoBehaviour
             else
             {
                 pausedPanel.SetActive(false);
+                Time.timeScale = 1.5f;
+            }
+        }
+        if (Input.GetButtonDown("invPanel"))
+        {
+            if (isPaused)
+            {
+                inventoryPanel.SetActive(true);
+                Time.timeScale = 0f;
+            }
+            else
+            {
+                inventoryPanel.SetActive(false);
                 Time.timeScale = 1.5f;
             }
         }

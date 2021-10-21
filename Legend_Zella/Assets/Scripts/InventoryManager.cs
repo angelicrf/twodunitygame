@@ -17,6 +17,7 @@ public class InventoryManager : MonoBehaviour
     {
         itemDescript.text = newTxt;
         currentItem = newItem;
+
         if (isActive)
         {
             buttonUse.SetActive(true);
@@ -32,6 +33,13 @@ public class InventoryManager : MonoBehaviour
         {
             Debug.Log("there is newItem");
             currentItem.UseEvent();
+
+            ResetInventory();
+            CreateNewSlots();
+            if (currentItem.numberCount == 0)
+            {
+                SetBtn_itemDesc("", false, null);
+            }
         }
     }
     void Start()
@@ -39,24 +47,35 @@ public class InventoryManager : MonoBehaviour
         SetBtn_itemDesc("", false, null);
         CreateNewSlots();
     }
-
+    private void ResetInventory()
+    {
+        for (int i = 0; i < inventoryConent.transform.childCount; i++)
+        {
+            Destroy(inventoryConent.transform.GetChild(i).gameObject);
+        }
+    }
     public void CreateNewSlots()
     {
         for (int i = 0; i < playerInventory.plInventory.Count; i++)
         {
-            GameObject tempItem = Instantiate(specificSlot, inventoryConent.transform.position, Quaternion.identity);
-            if (tempItem)
-
+            if (playerInventory.plInventory[i].numberCount > 0)
             {
-                tempItem.transform.SetParent(inventoryConent.transform);
-                SlotInventory newSlot = tempItem.GetComponent<SlotInventory>();
+                GameObject tempItem = Instantiate(specificSlot, inventoryConent.transform.position, Quaternion.identity);
+                if (tempItem)
 
-                if (newSlot)
                 {
-                    newSlot.SetMAnager_Inventory(this, playerInventory.plInventory[i]);
+                    tempItem.transform.SetParent(inventoryConent.transform);
+                    SlotInventory newSlot = tempItem.GetComponent<SlotInventory>();
+
+                    if (newSlot)
+                    {
+                        newSlot.SetMAnager_Inventory(this, playerInventory.plInventory[i]);
+                    }
                 }
             }
+
         }
 
     }
+
 }

@@ -17,4 +17,15 @@ public class InventoryItem : ScriptableObject
     {
         ev.Invoke();
     }
+    public void DecreaseInvItem(int numToDecrease)
+    {
+        if (numberCount != 0)
+        {
+            numberCount -= numToDecrease;
+        }
+        else
+        {
+            numberCount = 0;
+        }
+    }
 }

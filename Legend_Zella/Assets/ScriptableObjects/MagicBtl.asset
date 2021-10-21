@@ -17,7 +17,7 @@ MonoBehaviour:
   itemDescription: MagicBottle will increase your point
   isUnique: 0
   isUsable: 1
-  numberCount: 2
+  numberCount: 6
   ev:
     m_PersistentCalls:
       m_Calls:

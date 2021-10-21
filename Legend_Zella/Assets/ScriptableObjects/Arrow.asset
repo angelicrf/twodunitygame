@@ -17,4 +17,7 @@ MonoBehaviour:
   itemDescription: Cut eneny with this sharp arrow
   isUnique: 0
   isUsable: 1
-  numberCount: 2
+  numberCount: 5
+  ev:
+    m_PersistentCalls:
+      m_Calls: []
