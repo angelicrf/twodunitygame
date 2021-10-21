@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [CreateAssetMenu(fileName = "NewItem", menuName = "Inventory/Items")]
 public class InventoryItem : ScriptableObject
@@ -11,4 +12,9 @@ public class InventoryItem : ScriptableObject
     public bool isUnique;
     public bool isUsable;
     public int numberCount;
+    public UnityEvent ev;
+    public void UseEvent()
+    {
+        ev.Invoke();
+    }
 }

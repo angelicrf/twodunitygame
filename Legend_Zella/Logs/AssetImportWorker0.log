@@ -13,11 +13,11 @@ AssetImportWorker0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-33823
+45373
 Successfully changed project path to: /home/bcuser/Git/twodunitygame/Legend_Zella
 /home/bcuser/Git/twodunitygame/Legend_Zella
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 221.58 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 202.81 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.13f1 (71691879b7f5)
 [Subsystems] Discovering subsystems at path /home/bcuser/Unity_Prjs/2020.3.13f1/Editor/Data/Resources/UnitySubsystems
@@ -32,42 +32,42 @@ ion GL_ARB_fragment_coord_conventions GL_ARB_fragment_layer_viewport GL_ARB_frag
 l_texturing GL_ARB_sync GL_ARB_texture_buffer_object GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_buffer_range GL_ARB_texture_compression_bptc GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map_array GL_ARB_texture_float GL_ARB_texture_gather GL_ARB_texture_mirror_clamp_to_edge GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_query_levels GL_ARB_texture_query_lod GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_stencil8 GL_ARB_texture_storage GL_ARB_texture_storage_multisample GL_ARB_texture_swizzle GL_ARB_texture_view GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_transform_feedback_instanced GL_ARB_transform_feedback_overflow_query GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_attrib_64bit GL_ARB_vertex_attrib_binding GL_ARB_vertex_buffer_object GL_ARB_vertex_shader GL_ARB_vertex_type_10f_11f_11f_rev GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_viewport_array G
 L_ATI_blend_equation_separate GL_ATI_texture_float GL_ATI_texture_mirror_once GL_EXT_abgr GL_EXT_blend_equation_separate GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_pixel_buffer_object GL_EXT_polygon_offset_clamp GL_EXT_provoking_vertex GL_EXT_shader_integer_mix GL_EXT_texture_array GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_integer GL_EXT_texture_mirror_clamp GL_EXT_texture_sRGB GL_EXT_texture_sRGB_decode GL_EXT_texture_shared_exponent GL_EXT_texture_snorm GL_EXT_texture_swizzle GL_EXT_timer_query GL_EXT_transform_feedback GL_EXT_vertex_array_bgra GL_EXT_vertex_attrib_64bit GL_IBM_multimode_draw_arrays GL_KHR_context_flush_control GL_KHR_debug GL_KHR_no_error GL_KHR_texture_compression_astc_ldr GL_KHR_texture_compression_astc_sliced_3d GL_MES
 A_pack_invert GL_MESA_shader_integer_functions GL_MESA_texture_signed_rgba GL_MESA_ycbcr_texture GL_NV_conditional_render GL_NV_depth_clamp GL_NV_packed_depth_stencil GL_OES_EGL_image GL_S3_s3tc
-OPENGL LOG: Creating OpenGL 3.3 graphics device ; Context level  <OpenGL 3.3> ; Context handle -448196176
+OPENGL LOG: Creating OpenGL 3.3 graphics device ; Context level  <OpenGL 3.3> ; Context handle -1903275120
 Initialize mono
 Mono path[0] = '/home/bcuser/Unity_Prjs/2020.3.13f1/Editor/Data/Managed'
 Mono path[1] = '/home/bcuser/Unity_Prjs/2020.3.13f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = '/home/bcuser/Unity_Prjs/2020.3.13f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56670
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56512
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /home/bcuser/Unity_Prjs/2020.3.13f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0.002815 seconds.
+Registered in 0.002044 seconds.
 Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 321.28 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 159.71 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.257 seconds
+- Completed reload, in  2.670 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.006860 seconds.
+Registered in 0.005940 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 697.50 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 155.92 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in 10.783 seconds
+- Completed reload, in  3.165 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler after 0.10 seconds
-Refreshing native plugins compatible for Editor in 1.96 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler after 0.01 seconds
+Refreshing native plugins compatible for Editor in 1.10 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2672 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 127.0 MB.
-System memory in use after: 126.2 MB.
+Unloading 2677 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 127.1 MB.
+System memory in use after: 126.4 MB.
 
-Unloading 143 unused Assets to reduce memory usage. Loaded Objects now: 3112.
-Total: 26.860251 ms (FindLiveObjects: 0.765125 ms CreateObjectMapping: 0.456462 ms MarkObjects: 24.221465 ms  DeleteObjects: 1.409099 ms)
+Unloading 143 unused Assets to reduce memory usage. Loaded Objects now: 3117.
+Total: 14.663655 ms (FindLiveObjects: 0.795657 ms CreateObjectMapping: 0.348233 ms MarkObjects: 12.360121 ms  DeleteObjects: 1.153863 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -80,108 +80,73 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Scripts/InventoryItem.cs
-  artifactKey: Guid(656e81c6e5936611986d109264e54cd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/InventoryItem.cs using Guid(656e81c6e5936611986d109264e54cd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '031d9471ae94dd6ef1c2634c14b52329') in 0.017435 seconds 
-  Import took 0.046543 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.012724 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 1.40 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs:593)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (at /home/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs:114)
-
-[/home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs line 37]
-
-Mono: successfully reloaded assembly
-- Completed reload, in  8.084 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 6.72 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2621 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 122.7 MB.
-System memory in use after: 122.7 MB.
-
-Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 3116.
-Total: 30.524092 ms (FindLiveObjects: 0.653325 ms CreateObjectMapping: 0.338396 ms MarkObjects: 29.151329 ms  DeleteObjects: 0.372516 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 679.724809 seconds.
-  path: Assets/Scripts/InventoryItem.cs
-  artifactKey: Guid(656e81c6e5936611986d109264e54cd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/InventoryItem.cs using Guid(656e81c6e5936611986d109264e54cd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09cdad75b8b8e41880ba5aa9c3cb6316') in 0.030718 seconds 
-  Import took 0.058454 seconds .
+  path: Assets/ScriptableObjects/GreenPotion.asset
+  artifactKey: Guid(006ed9f44c0519feaa96aeccc84bd2e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/GreenPotion.asset using Guid(006ed9f44c0519feaa96aeccc84bd2e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '015c95e74dc82ac499a57b0717599f3d') in 0.019504 seconds 
+  Import took 0.029687 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 25.332653 seconds.
-  path: Assets/ScriptableObjects/Sward.asset
-  artifactKey: Guid(d466ed282bc725df9a1fa5e80748ef03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ScriptableObjects/Sward.asset using Guid(d466ed282bc725df9a1fa5e80748ef03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2904fa60e283c9f4848d3e0ae9a91b8b') in 0.030608 seconds 
-  Import took 0.073560 seconds .
+  Time since last request: 0.394679 seconds.
+  path: Assets/Art/gfx/Green_Potion.png
+  artifactKey: Guid(b303b2a87a5bf66c5a5e3a140f1852f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/gfx/Green_Potion.png using Guid(b303b2a87a5bf66c5a5e3a140f1852f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54b4712f257c17b43aabd0392ecaaf48') in 0.451931 seconds 
+  Import took 0.460176 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 193.833246 seconds.
-  path: Assets/ScriptableObjects/Sward.asset
-  artifactKey: Guid(d466ed282bc725df9a1fa5e80748ef03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ScriptableObjects/Sward.asset using Guid(d466ed282bc725df9a1fa5e80748ef03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b77a1c9c952ce2b79f4639ebfebeddc5') in 0.093489 seconds 
-  Import took 0.157694 seconds .
+  Time since last request: 83.602198 seconds.
+  path: Assets/ScriptableObjects/GreenPotion.asset
+  artifactKey: Guid(006ed9f44c0519feaa96aeccc84bd2e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/GreenPotion.asset using Guid(006ed9f44c0519feaa96aeccc84bd2e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41a294f2940ddaf9dbf555dd541951af') in 0.007385 seconds 
+  Import took 0.017171 seconds .
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.022997 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Refreshing native plugins compatible for Editor in 1.19 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/EditorUtility.cs:593)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@4.5.0/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[]) (at /home/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs:114)
+Received Import Request.
+  Time since last request: 20.011511 seconds.
+  path: Assets/ScriptableObjects/RedPotion.asset
+  artifactKey: Guid(dee8c5da17c325f1385db781ea7f83b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/RedPotion.asset using Guid(dee8c5da17c325f1385db781ea7f83b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aee499e6effd0dd91e5f888591de95d2') in 0.002139 seconds 
+  Import took 0.011290 seconds .
 
-[/home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs line 37]
+========================================================================
+Received Import Request.
+  Time since last request: 0.152233 seconds.
+  path: Assets/ScriptableObjects/RedPotion.asset
+  artifactKey: Guid(dee8c5da17c325f1385db781ea7f83b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/RedPotion.asset using Guid(dee8c5da17c325f1385db781ea7f83b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aee499e6effd0dd91e5f888591de95d2') in 0.002913 seconds 
+  Import took 0.022407 seconds .
 
-Mono: successfully reloaded assembly
-- Completed reload, in  5.861 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.11 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2621 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 123.3 MB.
-System memory in use after: 122.7 MB.
+========================================================================
+Received Import Request.
+  Time since last request: 101.540123 seconds.
+  path: Assets/ScriptableObjects/PlayerInventory.asset
+  artifactKey: Guid(5dcae2377f45e1c5bb3697d13cc1e330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/PlayerInventory.asset using Guid(5dcae2377f45e1c5bb3697d13cc1e330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f41532e0f0aa0618e225ca7ddf44c63a') in 0.019111 seconds 
+  Import took 0.028703 seconds .
 
-Unloading 26 unused Assets to reduce memory usage. Loaded Objects now: 3120.
-Total: 35.505297 ms (FindLiveObjects: 0.707559 ms CreateObjectMapping: 0.279613 ms MarkObjects: 34.079561 ms  DeleteObjects: 0.429623 ms)
+========================================================================
+Received Import Request.
+  Time since last request: 0.061344 seconds.
+  path: Assets/ScriptableObjects/PlayerInventory.asset
+  artifactKey: Guid(5dcae2377f45e1c5bb3697d13cc1e330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/PlayerInventory.asset using Guid(5dcae2377f45e1c5bb3697d13cc1e330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f41532e0f0aa0618e225ca7ddf44c63a') in 0.006678 seconds 
+  Import took 0.023297 seconds .
 
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 187.469331 seconds.
+  path: Assets/ScriptableObjects/PlayerInventory.asset
+  artifactKey: Guid(5dcae2377f45e1c5bb3697d13cc1e330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/PlayerInventory.asset using Guid(5dcae2377f45e1c5bb3697d13cc1e330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd625c7c3a932b9c84b0f5176ba86c5b0') in 0.008492 seconds 
+  Import took 0.017532 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 332.595203 seconds.
+  path: Assets/ScriptableObjects/PlayerInventory.asset
+  artifactKey: Guid(5dcae2377f45e1c5bb3697d13cc1e330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/PlayerInventory.asset using Guid(5dcae2377f45e1c5bb3697d13cc1e330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6732f50e3fd6ab696720875a75b174a9') in 0.015128 seconds 
+  Import took 0.024464 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
