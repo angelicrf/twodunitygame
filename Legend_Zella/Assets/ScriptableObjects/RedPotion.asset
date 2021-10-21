@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 656e81c6e5936611986d109264e54cd7, type: 3}
   m_Name: RedPotion
   m_EditorClassIdentifier: 
-  itemImg: {fileID: 0}
+  itemImg: {fileID: 21300000, guid: 7c4cc5ce66695275aabd1f905a1f8ca1, type: 3}
   itemName: Red Potion
   itemDescription: RedPotion gives you enough health to survive
   isUnique: 1

@@ -44,7 +44,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 425190e92945d1efa85951bb23fe8d52, type: 3}
-    totalSpriteSurfaceArea: 837520
+    totalSpriteSurfaceArea: 838032
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -1448,6 +1448,7 @@ SpriteAtlas:
   - {fileID: 5566842953363755866, guid: 3778be85d753e3dd8922b698e7dfd66d, type: 3}
   - {fileID: -7445369939883215787, guid: 3778be85d753e3dd8922b698e7dfd66d, type: 3}
   - {fileID: 21300000, guid: 90eaece77ad038ce3aed2f596ed475e0, type: 3}
+  - {fileID: 21300000, guid: b303b2a87a5bf66c5a5e3a140f1852f3, type: 3}
   - {fileID: -1986772863260763996, guid: 90d427c8597be51728c84601aaf41543, type: 3}
   - {fileID: 5760800594879907098, guid: 90d427c8597be51728c84601aaf41543, type: 3}
   - {fileID: 7597474578557255370, guid: 90d427c8597be51728c84601aaf41543, type: 3}
@@ -1755,6 +1756,7 @@ SpriteAtlas:
   - {fileID: 5700767193190630657, guid: 09a3118de39df0e7da844898fc713961, type: 3}
   - {fileID: 21300000, guid: 8fd0081e4035748a2965ebb84cf90cf9, type: 3}
   - {fileID: 21300000, guid: ed30164e400ec784d90e7a043f09b9ee, type: 3}
+  - {fileID: 21300000, guid: 7c4cc5ce66695275aabd1f905a1f8ca1, type: 3}
   m_PackedSpriteNamesToIndex:
   - door
   - bow
@@ -3154,6 +3156,7 @@ SpriteAtlas:
   - log_21
   - log_22
   - PlayerMarker
+  - Green_Potion
   - objects_71
   - objects_70
   - objects_73
@@ -3461,6 +3464,7 @@ SpriteAtlas:
   - orge attack sprites_11
   - Minimap Overlay
   - arrow
+  - Red_Potion
   m_RenderDataMap: {}
   m_Tag: Sprite_Atlas
   m_IsVariant: 0
