@@ -42,12 +42,13 @@ public class InventoryManager : MonoBehaviour
             }
         }
     }
-    void Start()
+    void OnEnable()
     {
+        ResetInventory();
         SetBtn_itemDesc("", false, null);
         CreateNewSlots();
     }
-    private void ResetInventory()
+    public void ResetInventory()
     {
         for (int i = 0; i < inventoryConent.transform.childCount; i++)
         {

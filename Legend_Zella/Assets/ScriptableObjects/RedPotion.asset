@@ -17,7 +17,7 @@ MonoBehaviour:
   itemDescription: RedPotion gives you enough health to survive
   isUnique: 1
   isUsable: 1
-  numberCount: 5
+  numberCount: 0
   ev:
     m_PersistentCalls:
       m_Calls:
