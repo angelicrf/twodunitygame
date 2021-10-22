@@ -6,14 +6,11 @@ using UnityEngine;
 
 public class SaveDataFile : MonoBehaviour
 {
-    public List<ScriptableObject> allObjects;
-    void Start()
-    {
-        allObjects = new List<ScriptableObject>();
-    }
+    public List<ScriptableObject> allObjects = new List<ScriptableObject>();
 
     void OnEnable()
     {
+        ToResetData();
         LoadFile();
     }
     void OnDisable()
@@ -24,10 +21,9 @@ public class SaveDataFile : MonoBehaviour
 
     public void SaveTofile()
     {
-        Debug.Log("saveFileHit");
         for (int i = 0; i < allObjects.Count; i++)
         {
-            FileStream file = File.Create(Application.persistentDataPath + string.Format("/{0}.data", i));
+            FileStream file = File.Create(Application.persistentDataPath + string.Format("/{0}.dat", i));
             BinaryFormatter binaryData = new BinaryFormatter();
             var jsonData = JsonUtility.ToJson(allObjects[i]);
             binaryData.Serialize(file, jsonData);
@@ -39,9 +35,9 @@ public class SaveDataFile : MonoBehaviour
     {
         for (int i = 0; i < allObjects.Count; i++)
         {
-            if (File.Exists(Application.persistentDataPath + string.Format("/{0}.data", i)))
+            if (File.Exists(Application.persistentDataPath + string.Format("/{0}.dat", i)))
             {
-                FileStream file = File.Open(Application.persistentDataPath + string.Format("/{0}.data", i), FileMode.Open);
+                FileStream file = File.Open(Application.persistentDataPath + string.Format("/{0}.dat", i), FileMode.Open);
                 BinaryFormatter binaryDta = new BinaryFormatter();
                 JsonUtility.FromJsonOverwrite((string)binaryDta.Deserialize(file), allObjects[i]);
                 file.Close();
@@ -54,9 +50,9 @@ public class SaveDataFile : MonoBehaviour
         Debug.Log("toResetCalled..");
         for (int i = 0; i < allObjects.Count; i++)
         {
-            if (File.Exists(Application.persistentDataPath + string.Format("/{0}.data", i)))
+            if (File.Exists(Application.persistentDataPath + string.Format("/{0}.dat", i)))
             {
-                File.Delete(Application.persistentDataPath + string.Format("/{0}.data", i));
+                File.Delete(Application.persistentDataPath + string.Format("/{0}.dat", i));
             }
         }
     }

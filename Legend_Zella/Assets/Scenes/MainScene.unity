@@ -764,7 +764,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryItem: {fileID: 11400000, guid: dee8c5da17c325f1385db781ea7f83b9, type: 2}
   playerInventory: {fileID: 11400000, guid: 5dcae2377f45e1c5bb3697d13cc1e330, type: 2}
-  inventoryManager: {fileID: 0}
 --- !u!70 &143168231
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -21294,6 +21293,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1688769176}
   - component: {fileID: 1688769177}
+  - component: {fileID: 1688769175}
   m_Layer: 0
   m_Name: SaveObjectsmanager
   m_TagString: Untagged
@@ -21301,6 +21301,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1688769175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688769174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373d3d9e15af0473eb48be67b696939b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInventory: {fileID: 11400000, guid: 5dcae2377f45e1c5bb3697d13cc1e330, type: 2}
 --- !u!4 &1688769176
 Transform:
   m_ObjectHideFlags: 0
