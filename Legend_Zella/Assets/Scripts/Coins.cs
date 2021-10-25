@@ -28,8 +28,11 @@ public class Coins : PowerUpHeart
     {
         if (other.CompareTag("Player") && !other.isTrigger)
         {
-            powerUpSignal.ReadSignals();
-            isCoin = true;
+            if (powerUpSignal)
+            {
+                powerUpSignal.ReadSignals();
+                isCoin = true;
+            }
 
             if (powerUpSignal.hasSignal)
             {

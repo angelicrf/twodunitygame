@@ -22,42 +22,58 @@ public class HeartManager : MonoBehaviour
     }
     private void ShowHearts()
     {
-        for (int i = 0; i < heartsContainer.numToUse; i++)
+        if (heartsContainer)
         {
-            if (!hearts[i].gameObject.activeSelf)
+            for (int i = 0; i < heartsContainer.numToUse; i++)
             {
-                if (i < hearts.Length)
+                if (hearts != null)
                 {
-                    hearts[i].gameObject.SetActive(true);
-                    hearts[i].sprite = fullHeart;
+                    if (!hearts[i].gameObject.activeSelf)
+                    {
+                        if (i < hearts.Length)
+                        {
+                            hearts[i].gameObject.SetActive(true);
+                            hearts[i].sprite = fullHeart;
+                        }
+                    }
                 }
             }
         }
     }
     private float GetTmpHealth()
     {
-        tmpHealth = playerHealth.runTime / 2;
+        if (playerHealth)
+        {
+            tmpHealth = playerHealth.runTime / 2;
+        }
         return tmpHealth;
+
     }
     public void UpdateArray()
     {
         float getResTmpHealth = GetTmpHealth();
-        for (int i = 0; i < heartsContainer.numToUse; i++)
+        if (heartsContainer)
         {
-            if (i <= hearts.Length)
+            for (int i = 0; i < heartsContainer.numToUse; i++)
             {
-                hearts[i].gameObject.SetActive(true);
-                if (i <= getResTmpHealth - 1)
+                if (hearts != null)
                 {
-                    hearts[i].sprite = fullHeart;
-                }
-                else if (i > getResTmpHealth || getResTmpHealth == 0)
-                {
-                    hearts[i].sprite = emptyHeart;
-                }
-                else if (getResTmpHealth != 0)
-                {
-                    hearts[i].sprite = halfHeart;
+                    if (i <= hearts.Length)
+                    {
+                        hearts[i].gameObject.SetActive(true);
+                        if (i <= getResTmpHealth - 1)
+                        {
+                            hearts[i].sprite = fullHeart;
+                        }
+                        else if (i > getResTmpHealth || getResTmpHealth == 0)
+                        {
+                            hearts[i].sprite = emptyHeart;
+                        }
+                        else if (getResTmpHealth != 0)
+                        {
+                            hearts[i].sprite = halfHeart;
+                        }
+                    }
                 }
             }
         }

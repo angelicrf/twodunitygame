@@ -16,14 +16,17 @@ public class MainRoomOne : MonoBehaviour
             if (other.CompareTag("Player") && !other.isTrigger)
             {
                 insidePolygon = true;
+                if (allOponents != null && allPots != null)
+                {
 
-                for (int i = 0; i < allOponents.Length; i++)
-                {
-                    ChangeGameObjectStat(allOponents[i], true);
-                }
-                for (int i = 0; i < allPots.Length; i++)
-                {
-                    ChangeGameObjectStat(allPots[i], true);
+                    for (int i = 0; i < allOponents.Length; i++)
+                    {
+                        ChangeGameObjectStat(allOponents[i], true);
+                    }
+                    for (int i = 0; i < allPots.Length; i++)
+                    {
+                        ChangeGameObjectStat(allPots[i], true);
+                    }
                 }
             }
         }
@@ -35,13 +38,16 @@ public class MainRoomOne : MonoBehaviour
             if (other.CompareTag("Player") && !other.isTrigger)
             {
                 insidePolygon = false;
-                for (int i = 0; i < allOponents.Length; i++)
+                if (allOponents != null && allPots != null)
                 {
-                    ChangeGameObjectStat(allOponents[i], false);
-                }
-                for (int i = 0; i < allPots.Length; i++)
-                {
-                    ChangeGameObjectStat(allPots[i], false);
+                    for (int i = 0; i < allOponents.Length; i++)
+                    {
+                        ChangeGameObjectStat(allOponents[i], false);
+                    }
+                    for (int i = 0; i < allPots.Length; i++)
+                    {
+                        ChangeGameObjectStat(allPots[i], false);
+                    }
                 }
             }
         }

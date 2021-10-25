@@ -12,16 +12,23 @@ public class Hearts : PowerUpHeart
     {
         if (other.CompareTag("Player") && !other.isTrigger)
         {
-            powerUpSignal.ReadSignals();
-            if (powerUpSignal.hasSignal)
+            if (powerUpSignal)
             {
-                heartValue.runTime += maxHearts;
-                if (heartValue.numToUse > heartValue.runTime * 2f)
+                powerUpSignal.ReadSignals();
+                if (powerUpSignal.hasSignal)
                 {
-                    plHealthValue.numToUse = heartValue.runTime * 2f;
+                    if (heartValue)
+                    {
+                        heartValue.runTime += maxHearts;
+                        if (heartValue.numToUse > heartValue.runTime * 2f)
+                        {
+                            plHealthValue.numToUse = heartValue.runTime * 2f;
+                        }
+                    }
+                    this.gameObject.SetActive(false);
+                    Destroy(this.gameObject);
+
                 }
-                this.gameObject.SetActive(false);
-                Destroy(this.gameObject);
             }
         }
     }

@@ -13,7 +13,7 @@ public class Logs : Oponent
     public Signal kickSignal;
     void Start()
     {
-        if (kickSignal != null)
+        if (kickSignal)
         {
             kickSignal.hasSignal = false;
             kickSignal.countSignals = 0;
@@ -40,7 +40,7 @@ public class Logs : Oponent
                 transform.position = Vector3.MoveTowards(transform.position, target.position, enmSpeed * Time.deltaTime);
                 ChangeLgState(EnemStates.walk);
             }
-            if (kickSignal != null)
+            if (kickSignal)
             {
                 if (kickSignal.hasSignal && kickSignal.countSignals > 5)
                 {

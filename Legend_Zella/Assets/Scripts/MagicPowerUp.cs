@@ -8,18 +8,22 @@ public class MagicPowerUp : PowerUpHeart
     public float magicValue;
     public Signal arrowSignal;
 
-  private void OnTriggerEnter2D(Collider2D other){
-      if(other.CompareTag("Player") && arrowSignal.hasSignal){
-       
-        if(magicInventory.currentMagic > 14){
-           Destroy(this.gameObject);
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player") && arrowSignal && arrowSignal.hasSignal)
+        {
+
+            if (magicInventory.currentMagic > 14)
+            {
+                Destroy(this.gameObject);
+            }
+            else
+            {
+                magicInventory.currentMagic += magicValue;
+                powerUpSignal.hasSignal = true;
+                powerUpSignal.ReadSignals();
+            }
         }
-        else{
-           magicInventory.currentMagic += magicValue;
-           powerUpSignal.hasSignal = true;
-           powerUpSignal.ReadSignals();
-        }
-      }
-  }
-  
+    }
+
 }

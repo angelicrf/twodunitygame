@@ -57,24 +57,27 @@ public class InventoryManager : MonoBehaviour
     }
     public void CreateNewSlots()
     {
-        for (int i = 0; i < playerInventory.plInventory.Count; i++)
+        if (playerInventory)
         {
-            if (playerInventory.plInventory[i].numberCount > 0)
+            for (int i = 0; i < playerInventory.plInventory.Count; i++)
             {
-                GameObject tempItem = Instantiate(specificSlot, inventoryConent.transform.position, Quaternion.identity);
-                if (tempItem)
-
+                if (playerInventory.plInventory[i].numberCount > 0)
                 {
-                    tempItem.transform.SetParent(inventoryConent.transform);
-                    SlotInventory newSlot = tempItem.GetComponent<SlotInventory>();
+                    GameObject tempItem = Instantiate(specificSlot, inventoryConent.transform.position, Quaternion.identity);
+                    if (tempItem)
 
-                    if (newSlot)
                     {
-                        newSlot.SetMAnager_Inventory(this, playerInventory.plInventory[i]);
+                        tempItem.transform.SetParent(inventoryConent.transform);
+                        SlotInventory newSlot = tempItem.GetComponent<SlotInventory>();
+
+                        if (newSlot)
+                        {
+                            newSlot.SetMAnager_Inventory(this, playerInventory.plInventory[i]);
+                        }
                     }
                 }
-            }
 
+            }
         }
 
     }

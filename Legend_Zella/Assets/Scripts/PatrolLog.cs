@@ -31,14 +31,16 @@ public class PatrolLog : Logs
         else
         if (Vector3.Distance(target.position, transform.position) > chaseRad)
         {
-
-            if (Vector3.Distance(transform.position, allPaths[currentPoint].position) > accurateDistance)
+            if (allPaths != null)
             {
-                RegMoveptLog();
-            }
-            else
-            {
-                IdentifyPoint();
+                if (Vector3.Distance(transform.position, allPaths[currentPoint].position) > accurateDistance)
+                {
+                    RegMoveptLog();
+                }
+                else
+                {
+                    IdentifyPoint();
+                }
             }
 
         }
@@ -47,34 +49,41 @@ public class PatrolLog : Logs
     {
         pOne = GameObject.Find("PointOne");
         pTwo = GameObject.Find("PointTwo");
-
-        if (!pOne.GetComponent<Renderer>().enabled || !pTwo.GetComponent<Renderer>().enabled)
+        if (pOne && pTwo)
         {
-            pOne.GetComponent<Renderer>().enabled = true;
-            pTwo.GetComponent<Renderer>().enabled = true;
-            pOne.SetActive(true);
-            pTwo.SetActive(true);
+            if (!pOne.GetComponent<Renderer>().enabled || !pTwo.GetComponent<Renderer>().enabled)
+            {
+                pOne.GetComponent<Renderer>().enabled = true;
+                pTwo.GetComponent<Renderer>().enabled = true;
+                pOne.SetActive(true);
+                pTwo.SetActive(true);
+            }
         }
     }
     private void RegMoveptLog()
     {
-        Vector3 tmpPos = Vector3.MoveTowards(transform.position, allPaths[currentPoint].position, enmSpeed * Time.deltaTime);
-        CalcAnimChange(tmpPos - transform.position);
-        ptLogRigid.MovePosition(tmpPos);
+        if (allPaths != null)
+        {
+            Vector3 tmpPos = Vector3.MoveTowards(transform.position, allPaths[currentPoint].position, enmSpeed * Time.deltaTime);
+            CalcAnimChange(tmpPos - transform.position);
+            ptLogRigid.MovePosition(tmpPos);
+        }
     }
     private void IdentifyPoint()
     {
-
-        if (currentPoint == allPaths.Length - 1)
+        if (allPaths != null)
         {
-            currentPoint = 0;
-            currentGoal = allPaths[0];
-        }
-        else
-        {
-            updatedPoint = currentPoint++;
-            currentGoal = allPaths[updatedPoint];
-        }
+            if (currentPoint == allPaths.Length - 1)
+            {
+                currentPoint = 0;
+                currentGoal = allPaths[0];
+            }
+            else
+            {
+                updatedPoint = currentPoint++;
+                currentGoal = allPaths[updatedPoint];
+            }
 
+        }
     }
 }

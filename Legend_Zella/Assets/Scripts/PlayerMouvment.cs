@@ -69,7 +69,7 @@ public class PlayerMouvment : MonoBehaviour
         {
             StartCoroutine(AttackStart());
         }
-        else if (Input.GetButtonDown("arrow") & currentPlState != PlayerState.attack && currentPlState != PlayerState.stagger && arrowSignal.hasSignal)
+        else if (Input.GetButtonDown("arrow") & currentPlState != PlayerState.attack && currentPlState != PlayerState.stagger && arrowSignal && arrowSignal.hasSignal)
         {
             StartCoroutine(ArrowAttck());
         }
@@ -166,7 +166,10 @@ public class PlayerMouvment : MonoBehaviour
     {
 
         plHealth.runTime -= dmg;
-        plSignal.ReadSignals();
+        if (plSignal)
+        {
+            plSignal.ReadSignals();
+        }
 
         if (plHealth.runTime > 0)
         {

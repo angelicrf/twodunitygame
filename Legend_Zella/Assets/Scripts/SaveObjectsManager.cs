@@ -21,7 +21,10 @@ public class SaveObjectsManager : MonoBehaviour
     }
     void Start()
     {
-        allObjects = new List<ScriptableObject>();
+        if (allObjects != null)
+        {
+            allObjects = new List<ScriptableObject>();
+        }
     }
 
 }

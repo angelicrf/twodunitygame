@@ -13,15 +13,21 @@ public class InteractableObjs : MonoBehaviour
 
         if (other.name == "Player" && !other.isTrigger)
         {
-            textMarkSignal.ReadSignals();
-            hasSignal = true;
+            if (textMarkSignal)
+            {
+                textMarkSignal.ReadSignals();
+                hasSignal = true;
+            }
         }
     }
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.name == "Player" && !other.isTrigger)
         {
-            textMarkSignal.ReadSignals();
+            if (textMarkSignal)
+            {
+                textMarkSignal.ReadSignals();
+            }
 
         }
     }

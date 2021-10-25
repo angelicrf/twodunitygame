@@ -61,7 +61,10 @@ public class Oponent : MonoBehaviour
         // destroy obj of DeatEffect
         yield return new WaitForSeconds(2f);
         // destroy obj of lootTable
-        dungDefeatSignal.ReadSignals();
+        if (dungDefeatSignal)
+        {
+            dungDefeatSignal.ReadSignals();
+        }
         this.gameObject.SetActive(false);
     }
     public void DestroyDeathEffect()

@@ -7,7 +7,6 @@ public class PlayerHit : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("SmashedOut...");
         if (other.CompareTag("PotBreak"))
         {
             other.GetComponent<Pot>().SmashStart();

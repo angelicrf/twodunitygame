@@ -14,6 +14,7 @@ public class SlotInventory : MonoBehaviour
 
     public void SetMAnager_Inventory(InventoryManager newInvMng, InventoryItem newInvItm)
     {
+
         inventoryManager = newInvMng;
         inventoryItem = newInvItm;
         if (inventoryItem)

@@ -12,7 +12,10 @@ public class Magic : MonoBehaviour
         magicSlider.maxValue = invMagic.maxMagic;
         magicSlider.minValue = 0;
         magicSlider.value = invMagic.maxMagic;
-        invMagic.currentMagic = invMagic.maxMagic;
+        if (invMagic)
+        {
+            invMagic.currentMagic = invMagic.maxMagic;
+        }
     }
     void FixedUpdate()
     {
@@ -24,7 +27,10 @@ public class Magic : MonoBehaviour
         if (magicSlider.value > magicSlider.maxValue)
         {
             magicSlider.value = magicSlider.maxValue;
-            invMagic.currentMagic = invMagic.maxMagic;
+            if (invMagic)
+            {
+                invMagic.currentMagic = invMagic.maxMagic;
+            }
         }
     }
     public void IncreaseMagic()
