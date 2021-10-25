@@ -7,13 +7,13 @@ public class Coins : PowerUpHeart
 {
     public Inventory coinsInventory;
     public TextMeshProUGUI coinsText;
-    public bool isCoin = false;
+    private bool isEntered = false;
     public void FixedUpdate()
     {
         Scene scene = SceneManager.GetActiveScene();
-        if (scene.name == "Main Scene")
+        if (scene.name == "MainScene")
         {
-            if (!isCoin)
+            if (coinsInventory.itemsList.Count == 0)
             {
                 coinsText.text = "000";
             }
@@ -26,16 +26,18 @@ public class Coins : PowerUpHeart
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && !other.isTrigger)
+        if (!isEntered && this.gameObject.name == "CoinsIdle" && other.CompareTag("Player") && !other.isTrigger)
         {
+            isEntered = true;
+
             if (powerUpSignal)
             {
                 powerUpSignal.ReadSignals();
-                isCoin = true;
             }
 
             if (powerUpSignal.hasSignal)
             {
+
                 coinsInventory.isItem = true;
                 coinsInventory.GetItems();
                 StartCoroutine(DoCreateObj());
@@ -51,7 +53,7 @@ public class Coins : PowerUpHeart
     {
         if (other.CompareTag("Player") && !other.isTrigger)
         {
-            isCoin = false;
+            isEntered = false;
             coinsInventory.isItem = false;
             powerUpSignal.hasSignal = false;
         }

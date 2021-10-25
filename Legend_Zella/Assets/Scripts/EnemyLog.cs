@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyLog : Logs
@@ -9,13 +7,15 @@ public class EnemyLog : Logs
     public Vector2 distanceBall;
     public float setTimer;
     private float newSetTimer;
+    public NumValues playerHealthValue;
     void Start()
     {
         isPassed = true;
+        playerHealthValue.runTime = playerHealthValue.numToUse;
         if (!ballRidgid2.activeSelf)
         {
-            ballRidgid2.SetActive(true);
             ballRidgid2 = GameObject.Find("BouncingBall");
+            ballRidgid2.SetActive(true);
         }
 
     }
@@ -38,7 +38,7 @@ public class EnemyLog : Logs
         {
             if (currentEnState == EnemStates.idle || currentEnState == EnemStates.walk && currentEnState != EnemStates.stagger)
             {
-                if (isPassed)
+                if (isPassed && playerHealthValue.runTime != 0)
                 {
                     distanceBall = target.position - transform.position;
                     CalcAnimChange(distanceBall);
@@ -46,13 +46,20 @@ public class EnemyLog : Logs
                     isPassed = false;
                     instanceBall.GetComponent<GeneralProjectile>().CheckBallVelocity(distanceBall);
                     ChangeLgState(EnemStates.walk);
-                    enmAnim.SetBool("isWokeUp", true);
+
+                    SetBoolAnim("isWokeUp", enmAnim, true);
+                }
+                else if (playerHealthValue.runTime == 0)
+                {
+
+                    SetBoolAnim("isWokeUp", enmAnim, false);
                 }
             }
         }
         else if (Vector3.Distance(target.position, transform.position) > chaseRad)
         {
-            enmAnim.SetBool("isWokeUp", false);
+
+            SetBoolAnim("isWokeUp", enmAnim, false);
         }
     }
 }

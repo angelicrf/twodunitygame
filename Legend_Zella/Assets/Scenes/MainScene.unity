@@ -1443,6 +1443,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5983786210766596613, guid: b92f7f36dc06c7f18851d307c92d46fc, type: 3}
   m_PrefabInstance: {fileID: 5983786209058324780}
   m_PrefabAsset: {fileID: 0}
+--- !u!58 &213464865
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213464864}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.03814745, y: -0.19073796}
+  serializedVersion: 2
+  m_Radius: 0.37629533
 --- !u!1 &217839598
 GameObject:
   m_ObjectHideFlags: 0
@@ -24855,6 +24871,7 @@ MonoBehaviour:
   ballRidgid2: {fileID: 4614425761158682356, guid: 61368fbefe73a2d83af30d7310560be1, type: 3}
   distanceBall: {x: 0, y: 0}
   setTimer: 0.5
+  playerHealthValue: {fileID: 11400000, guid: 558a133a6d3a5c73da1a2aebd511ea06, type: 2}
 --- !u!95 &1960893441 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 559039985360292374, guid: d37c3f7013e0d16e1b7cae87552896f5, type: 3}
@@ -25992,6 +26009,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5983786210766596608, guid: b92f7f36dc06c7f18851d307c92d46fc, type: 3}
+      propertyPath: m_DrawMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5983786210766596608, guid: b92f7f36dc06c7f18851d307c92d46fc, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5983786210766596609, guid: b92f7f36dc06c7f18851d307c92d46fc, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -26006,11 +26031,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5983786210766596609, guid: b92f7f36dc06c7f18851d307c92d46fc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 5983786210766596609, guid: b92f7f36dc06c7f18851d307c92d46fc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6
+      value: -6.15
       objectReference: {fileID: 0}
     - target: {fileID: 5983786210766596609, guid: b92f7f36dc06c7f18851d307c92d46fc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -26052,7 +26077,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinsIdle
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5983786210766596614, guid: b92f7f36dc06c7f18851d307c92d46fc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b92f7f36dc06c7f18851d307c92d46fc, type: 3}
 --- !u!1001 &8565112525722276260
 PrefabInstance:

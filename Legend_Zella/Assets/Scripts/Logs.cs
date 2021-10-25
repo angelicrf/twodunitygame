@@ -92,5 +92,9 @@ public class Logs : Oponent
             currentEnState = newSt;
         }
     }
+    public void SetBoolAnim(string thisBool, Animator anim, bool thisValue)
+    {
+        anim.SetBool(thisBool, thisValue);
+    }
 
 }
