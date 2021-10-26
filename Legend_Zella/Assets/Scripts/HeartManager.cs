@@ -1,20 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class HeartManager : MonoBehaviour
 {
-    public Image[] hearts;
+    //public Image[] hearts;
+    public Image oneHeart;
     public Sprite fullHeart;
     public Sprite halfHeart;
     public Sprite emptyHeart;
     public NumValues heartsContainer;
     public NumValues playerHealth;
     private float tmpHealth;
+    public List<Image> hearts = new List<Image>();
+    public GameObject mainHeartContainer;
+    public GameObject addChildObject;
     public void Start()
     {
-        ShowHearts();
+        //ShowHearts();
     }
     public void FixedUpdate()
     {
@@ -24,17 +29,15 @@ public class HeartManager : MonoBehaviour
     {
         if (heartsContainer)
         {
-            for (int i = 0; i < heartsContainer.numToUse; i++)
+            for (int i = 0; i < hearts.Count; i++)
             {
                 if (hearts != null)
                 {
                     if (!hearts[i].gameObject.activeSelf)
                     {
-                        if (i < hearts.Length)
-                        {
-                            hearts[i].gameObject.SetActive(true);
-                            hearts[i].sprite = fullHeart;
-                        }
+
+                        hearts[i].gameObject.SetActive(true);
+                        hearts[i].sprite = fullHeart;
                     }
                 }
             }
@@ -54,14 +57,15 @@ public class HeartManager : MonoBehaviour
         float getResTmpHealth = GetTmpHealth();
         if (heartsContainer)
         {
-            for (int i = 0; i < heartsContainer.numToUse; i++)
+            if (hearts != null)
             {
-                if (hearts != null)
+                for (int i = 0; i < heartsContainer.runTime; i++)
                 {
-                    if (i <= hearts.Length)
+
+                    if (i <= hearts.Count - 1)
                     {
                         hearts[i].gameObject.SetActive(true);
-                        if (i <= getResTmpHealth - 1)
+                        /* if (i <= getResTmpHealth - 1)
                         {
                             hearts[i].sprite = fullHeart;
                         }
@@ -72,11 +76,22 @@ public class HeartManager : MonoBehaviour
                         else if (getResTmpHealth != 0)
                         {
                             hearts[i].sprite = halfHeart;
-                        }
+                        } */
                     }
+                    else
+                    {
+                        AddHearts();
+                        hearts[i].gameObject.SetActive(true);
+                    }
+
                 }
             }
         }
     }
-
+    private void AddHearts()
+    {
+        GameObject duplicateHeart = Instantiate(addChildObject);
+        duplicateHeart.transform.SetParent(mainHeartContainer.transform);
+        hearts.Add(oneHeart);
+    }
 }

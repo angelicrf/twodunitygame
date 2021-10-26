@@ -7,11 +7,13 @@ public class Hearts : PowerUpHeart
     public NumValues heartValue;
     public float maxHearts;
     public NumValues plHealthValue;
+    private bool isEntered = false;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && !other.isTrigger)
+        if (!isEntered && other.CompareTag("Player") && !other.isTrigger)
         {
+            isEntered = true;
             if (powerUpSignal)
             {
                 powerUpSignal.ReadSignals();
@@ -30,6 +32,13 @@ public class Hearts : PowerUpHeart
 
                 }
             }
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player") && !other.isTrigger)
+        {
+            isEntered = false;
         }
     }
 }
