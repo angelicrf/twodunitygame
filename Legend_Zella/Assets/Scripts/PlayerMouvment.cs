@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerMouvment : MonoBehaviour
 {
-    public enum PlayerState { walk, attack, interact, idle, stagger }
+    public enum PlayerState { walk, attack, interact, idle, stagger, move }
     public float speed;
     public NumValues plHealth;
     public PlayerState currentPlState;
@@ -29,7 +29,8 @@ public class PlayerMouvment : MonoBehaviour
     public float flashDuration;
     public int flashNumbers;
     public SpriteRenderer trgSprtRend;
-
+    [SerializeField] private AutoPlayerDirection autoPlayerDirection;
+    private Vector2 changeAnimDir;
 
     void Awake()
     {
@@ -45,7 +46,7 @@ public class PlayerMouvment : MonoBehaviour
         enmCameraAnim = GameObject.Find("Main Camera").GetComponent<Animator>();
         animator = GetComponent<Animator>();
         trgSprtRend = GetComponent<SpriteRenderer>();
-        //plHealth.numToUse = 6;
+
         if (plStartPos.isTransited)
         {
             transform.position = plStartPos.transitionValue;
@@ -72,6 +73,13 @@ public class PlayerMouvment : MonoBehaviour
         else if (Input.GetButtonDown("arrow") & currentPlState != PlayerState.attack && currentPlState != PlayerState.stagger && arrowSignal && arrowSignal.hasSignal)
         {
             StartCoroutine(ArrowAttck());
+        }
+        else if (Input.GetButtonDown("AutoMove") & currentPlState != PlayerState.attack && currentPlState != PlayerState.stagger)
+        {
+            if (autoPlayerDirection)
+            {
+                StartCoroutine(RunMove(autoPlayerDirection.durationChange));
+            }
         }
         else if (currentPlState == PlayerState.walk || currentPlState == PlayerState.idle && currentPlState != PlayerState.interact)
         {
@@ -140,7 +148,7 @@ public class PlayerMouvment : MonoBehaviour
     void WalikngAnimator()
     {
 
-        if (plChange != Vector3.zero)
+        if (plChange != Vector3.zero && currentPlState != PlayerState.move)
         {
             plChange.x = Mathf.Round(plChange.x);
             plChange.y = Mathf.Round(plChange.y);
@@ -148,6 +156,16 @@ public class PlayerMouvment : MonoBehaviour
             animator.SetFloat("moveY", plChange.y);
             animator.SetBool("waliked", true);
             MoveCharacters();
+            waliked = true;
+
+        }
+        else if (currentPlState == PlayerState.move)
+        {
+            changeAnimDir = Vector2.down;
+            animator.SetFloat("moveX", changeAnimDir.x);
+            animator.SetFloat("moveY", changeAnimDir.y);
+            animator.SetBool("waliked", true);
+            autoPlayerDirection.ChangePlDirection(transform.position, changeAnimDir, animator, plRigid);
             waliked = true;
         }
         else
@@ -215,6 +233,19 @@ public class PlayerMouvment : MonoBehaviour
             counttFl++;
         }
         opColider.enabled = true;
+    }
+    public IEnumerator RunMove(float durationMv)
+    {
+        if (currentPlState != PlayerState.move)
+        {
+            currentPlState = PlayerState.move;
+            //decrease current Magic
+            magicInventory.currentMagic--;
+            WalikngAnimator();
+        }
+
+        yield return new WaitForSeconds(durationMv);
+        currentPlState = PlayerState.idle;
     }
 
 }

@@ -24,6 +24,7 @@ public class Magic : MonoBehaviour
 
     public void DecreaseMagic()
     {
+
         if (magicSlider.value > magicSlider.maxValue)
         {
             magicSlider.value = magicSlider.maxValue;
@@ -35,6 +36,7 @@ public class Magic : MonoBehaviour
     }
     public void IncreaseMagic()
     {
+
         if (magicSlider.value < magicSlider.minValue)
         {
             magicSlider.value = magicSlider.minValue;

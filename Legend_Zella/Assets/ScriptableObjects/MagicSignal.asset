@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: MagicSignal
   m_EditorClassIdentifier: 
   allSignals: []
-  hasSignal: 0
-  countSignals: 0
+  hasSignal: 1
+  countSignals: 5

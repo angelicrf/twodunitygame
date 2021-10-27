@@ -1362,9 +1362,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 10
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 10
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1400,7 +1400,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 208260337}
         m_TargetAssemblyTypeName: Magic, Assembly-CSharp
-        m_MethodName: increaseMagic
+        m_MethodName: IncreaseMagic
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1428,7 +1428,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 208260337}
         m_TargetAssemblyTypeName: Magic, Assembly-CSharp
-        m_MethodName: decreaseMagic
+        m_MethodName: DecreaseMagic
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25813,6 +25813,10 @@ PrefabInstance:
       propertyPath: plOriginalCl.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3501738739705116478, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
+      propertyPath: autoPlayerDirection
+      value: 
+      objectReference: {fileID: 11400000, guid: 1eaae6750eb163a9bbd7b8d4ecceae93, type: 2}
     - target: {fileID: 3501738739949806882, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
       propertyPath: enemRgdBody
       value: 
