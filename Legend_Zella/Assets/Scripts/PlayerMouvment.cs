@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerMouvment : MonoBehaviour
 {
-    public enum PlayerState { walk, attack, interact, idle, stagger, move }
+    public enum PlayerState { walk, attack, interact, idle, stagger, move, arrow }
     public float speed;
     public NumValues plHealth;
     public PlayerState currentPlState;
@@ -30,6 +30,7 @@ public class PlayerMouvment : MonoBehaviour
     public int flashNumbers;
     public SpriteRenderer trgSprtRend;
     [SerializeField] private AutoPlayerDirection autoPlayerDirection;
+    [SerializeField] private AutoArrowThrowing autoArrowThrowing;
     private Vector2 changeAnimDir;
 
     void Awake()
@@ -79,6 +80,13 @@ public class PlayerMouvment : MonoBehaviour
             if (autoPlayerDirection)
             {
                 StartCoroutine(RunMove(autoPlayerDirection.durationChange));
+            }
+        }
+        else if (Input.GetButtonDown("AutoArrow") & currentPlState != PlayerState.attack && currentPlState != PlayerState.stagger)
+        {
+            if (autoArrowThrowing)
+            {
+                StartCoroutine(ThrowArrow(autoArrowThrowing.durationChange));
             }
         }
         else if (currentPlState == PlayerState.walk || currentPlState == PlayerState.idle && currentPlState != PlayerState.interact)
@@ -168,6 +176,11 @@ public class PlayerMouvment : MonoBehaviour
             autoPlayerDirection.ChangePlDirection(transform.position, changeAnimDir, animator, plRigid);
             waliked = true;
         }
+        else if (currentPlState == PlayerState.arrow)
+        {
+
+            autoArrowThrowing.ChangePlDirection(transform.position, plChange, animator, plRigid);
+        }
         else
         {
             animator.SetBool("waliked", false);
@@ -239,7 +252,6 @@ public class PlayerMouvment : MonoBehaviour
         if (currentPlState != PlayerState.move)
         {
             currentPlState = PlayerState.move;
-            //decrease current Magic
             magicInventory.currentMagic--;
             WalikngAnimator();
         }
@@ -247,5 +259,16 @@ public class PlayerMouvment : MonoBehaviour
         yield return new WaitForSeconds(durationMv);
         currentPlState = PlayerState.idle;
     }
+    public IEnumerator ThrowArrow(float durationMv)
+    {
+        if (currentPlState != PlayerState.arrow)
+        {
+            currentPlState = PlayerState.arrow;
+            magicInventory.currentMagic--;
+            WalikngAnimator();
+        }
 
+        yield return new WaitForSeconds(durationMv);
+        currentPlState = PlayerState.idle;
+    }
 }
