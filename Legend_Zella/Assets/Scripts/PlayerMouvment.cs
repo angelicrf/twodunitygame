@@ -179,7 +179,7 @@ public class PlayerMouvment : MonoBehaviour
         else if (currentPlState == PlayerState.arrow)
         {
 
-            autoArrowThrowing.ChangePlDirection(transform.position, plChange, animator, plRigid);
+            autoArrowThrowing.ChangePlDirection(transform.position, transform.position, animator, plRigid);
         }
         else
         {

@@ -35,10 +35,10 @@ public class Arrow : MonoBehaviour
     {
         if (other.CompareTag("Log"))
         {
-            SetpsArrow(other);
+            StepsArrow(other);
         }
     }
-    private void SetpsArrow(Collider2D other)
+    private void StepsArrow(Collider2D other)
     {
         Destroy(other.gameObject);
         deathEffect.SetActive(true);
