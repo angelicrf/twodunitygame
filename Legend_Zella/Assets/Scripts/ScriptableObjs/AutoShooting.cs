@@ -17,13 +17,14 @@ public class AutoShooting : GenericChangeDirection
         float calcPos = Mathf.Atan2(newAnim.GetFloat("moveY"), newAnim.GetFloat("moveX")) * Mathf.Rad2Deg;
         float startItemRot = ((calcPos + angleshoot) / 2f);
         float angleIncrease = (calcPos / (numberShoot - 1f));
+
         for (int i = 0; i < numberShoot; i++)
         {
             GameObject newBallObj = Instantiate(ballObject, plPosition, Quaternion.identity);
             GenericThrowableItem thrItm = newBallObj.GetComponent<GenericThrowableItem>();
             if (thrItm)
             {
-                float tempRot = (startItemRot + angleIncrease) * i;
+                float tempRot = (startItemRot - angleIncrease) * i;
                 Vector3 tmpDirection = new Vector3(0f, 0f, tempRot);
                 thrItm.ThrowItem(new Vector2(Mathf.Cos(tempRot * Mathf.Deg2Rad), Mathf.Sin(tempRot * Mathf.Deg2Rad)), tmpDirection);
             }

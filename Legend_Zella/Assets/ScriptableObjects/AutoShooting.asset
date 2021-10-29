@@ -18,4 +18,4 @@ MonoBehaviour:
   plMagicSignal: {fileID: 11400000, guid: dfa72f195d83f9a9fa5b66b2c71a5d29, type: 2}
   ballObject: {fileID: 3686333663595077951, guid: 77df5777b142278d3bc1ab250e2600c1, type: 3}
   numberShoot: 4
-  angleshoot: 15.2
+  angleshoot: 82
