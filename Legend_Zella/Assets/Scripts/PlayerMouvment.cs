@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerMouvment : MonoBehaviour
 {
-    public enum PlayerState { walk, attack, interact, idle, stagger, move, arrow }
+    public enum PlayerState { walk, attack, interact, idle, stagger, move, arrow, shoot }
     public float speed;
     public NumValues plHealth;
     public PlayerState currentPlState;
@@ -31,6 +31,7 @@ public class PlayerMouvment : MonoBehaviour
     public SpriteRenderer trgSprtRend;
     [SerializeField] private AutoPlayerDirection autoPlayerDirection;
     [SerializeField] private AutoArrowThrowing autoArrowThrowing;
+    [SerializeField] private AutoShooting autoShooting;
     private Vector2 changeAnimDir;
 
     void Awake()
@@ -87,6 +88,13 @@ public class PlayerMouvment : MonoBehaviour
             if (autoArrowThrowing)
             {
                 StartCoroutine(ThrowArrow(autoArrowThrowing.durationChange));
+            }
+        }
+        else if (Input.GetButtonDown("AutoShoot") & currentPlState != PlayerState.attack && currentPlState != PlayerState.stagger)
+        {
+            if (autoShooting)
+            {
+                StartCoroutine(AutoShoot(autoShooting.durationChange));
             }
         }
         else if (currentPlState == PlayerState.walk || currentPlState == PlayerState.idle && currentPlState != PlayerState.interact)
@@ -156,7 +164,7 @@ public class PlayerMouvment : MonoBehaviour
     void WalikngAnimator()
     {
 
-        if (plChange != Vector3.zero && currentPlState != PlayerState.move)
+        if (plChange != Vector3.zero && currentPlState != PlayerState.move && currentPlState != PlayerState.arrow && currentPlState != PlayerState.shoot)
         {
             plChange.x = Mathf.Round(plChange.x);
             plChange.y = Mathf.Round(plChange.y);
@@ -180,6 +188,11 @@ public class PlayerMouvment : MonoBehaviour
         {
 
             autoArrowThrowing.ChangePlDirection(transform.position, transform.position, animator, plRigid);
+        }
+        else if (currentPlState == PlayerState.shoot)
+        {
+
+            autoShooting.ChangePlDirection(transform.position, transform.position, animator, plRigid);
         }
         else
         {
@@ -264,6 +277,18 @@ public class PlayerMouvment : MonoBehaviour
         if (currentPlState != PlayerState.arrow)
         {
             currentPlState = PlayerState.arrow;
+            magicInventory.currentMagic--;
+            WalikngAnimator();
+        }
+
+        yield return new WaitForSeconds(durationMv);
+        currentPlState = PlayerState.idle;
+    }
+    private IEnumerator AutoShoot(float durationMv)
+    {
+        if (currentPlState != PlayerState.shoot)
+        {
+            currentPlState = PlayerState.shoot;
             magicInventory.currentMagic--;
             WalikngAnimator();
         }

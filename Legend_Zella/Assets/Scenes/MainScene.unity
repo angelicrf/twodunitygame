@@ -25683,6 +25683,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1519633004}
     - target: {fileID: 3501738739705116478, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
+      propertyPath: autoShooting
+      value: 
+      objectReference: {fileID: 11400000, guid: 7e2a2f8d5bd054669b032d65dc5cf4e2, type: 2}
+    - target: {fileID: 3501738739705116478, guid: 2cdc94079d28e4d0788a8340f6e01f0c, type: 3}
       propertyPath: dspDialogBox
       value: 
       objectReference: {fileID: 1540851023}
