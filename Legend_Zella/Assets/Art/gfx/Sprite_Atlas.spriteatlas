@@ -44,7 +44,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 425190e92945d1efa85951bb23fe8d52, type: 3}
-    totalSpriteSurfaceArea: 837971
+    totalSpriteSurfaceArea: 1067081
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -53,6 +53,36 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 80d59d100dcedaf20bf4d2b8a1a3ee99, type: 3}
   - {fileID: 21300000, guid: d010802088dbbdda6a10502dd5f0b20e, type: 3}
   - {fileID: 21300000, guid: b4c87c20c683706ff85b880836bd2503, type: 3}
+  - {fileID: 2941223241447806785, guid: c2b606a04c9d61135a390f6604532bbc, type: 3}
+  - {fileID: 6820419671717645171, guid: c2b606a04c9d61135a390f6604532bbc, type: 3}
+  - {fileID: -8386929455091384078, guid: c2b606a04c9d61135a390f6604532bbc, type: 3}
+  - {fileID: 6547260172170790973, guid: c2b606a04c9d61135a390f6604532bbc, type: 3}
+  - {fileID: -7423288875602915175, guid: c2b606a04c9d61135a390f6604532bbc, type: 3}
+  - {fileID: 7051932668790233799, guid: c2b606a04c9d61135a390f6604532bbc, type: 3}
+  - {fileID: 2019844000305895506, guid: c2b606a04c9d61135a390f6604532bbc, type: 3}
+  - {fileID: -745165995140420042, guid: c2b606a04c9d61135a390f6604532bbc, type: 3}
+  - {fileID: -751588611725310326, guid: c2b606a04c9d61135a390f6604532bbc, type: 3}
+  - {fileID: -8411194824969068520, guid: c2b606a04c9d61135a390f6604532bbc, type: 3}
+  - {fileID: 1443287908385225688, guid: c2b606a04c9d61135a390f6604532bbc, type: 3}
+  - {fileID: 617940740860357089, guid: c2b606a04c9d61135a390f6604532bbc, type: 3}
+  - {fileID: 8389727968876253234, guid: c2b606a04c9d61135a390f6604532bbc, type: 3}
+  - {fileID: 1524300342367201367, guid: c2b606a04c9d61135a390f6604532bbc, type: 3}
+  - {fileID: -8196808608872866769, guid: c2b606a04c9d61135a390f6604532bbc, type: 3}
+  - {fileID: 9219008077947084721, guid: c2b606a04c9d61135a390f6604532bbc, type: 3}
+  - {fileID: -4322293819254042340, guid: c2b606a04c9d61135a390f6604532bbc, type: 3}
+  - {fileID: 5216713964280527693, guid: c2b606a04c9d61135a390f6604532bbc, type: 3}
+  - {fileID: -1970834924543632695, guid: c2b606a04c9d61135a390f6604532bbc, type: 3}
+  - {fileID: -5059740155697597289, guid: c2b606a04c9d61135a390f6604532bbc, type: 3}
+  - {fileID: -6844983359939016168, guid: c2b606a04c9d61135a390f6604532bbc, type: 3}
+  - {fileID: 4408004798802069666, guid: c2b606a04c9d61135a390f6604532bbc, type: 3}
+  - {fileID: 6100975466924437984, guid: c2b606a04c9d61135a390f6604532bbc, type: 3}
+  - {fileID: -5563597657849341824, guid: c2b606a04c9d61135a390f6604532bbc, type: 3}
+  - {fileID: 6359273027757436660, guid: c2b606a04c9d61135a390f6604532bbc, type: 3}
+  - {fileID: 5647483563723225417, guid: c2b606a04c9d61135a390f6604532bbc, type: 3}
+  - {fileID: -6768044818946543642, guid: c2b606a04c9d61135a390f6604532bbc, type: 3}
+  - {fileID: 6866464857702916786, guid: c2b606a04c9d61135a390f6604532bbc, type: 3}
+  - {fileID: 1948117334319197221, guid: c2b606a04c9d61135a390f6604532bbc, type: 3}
+  - {fileID: -6905922259874023411, guid: c2b606a04c9d61135a390f6604532bbc, type: 3}
   - {fileID: -464034680190023423, guid: fa4a7011af93f9c7f857daf3c9775e47, type: 3}
   - {fileID: -6069640938520168933, guid: fa4a7011af93f9c7f857daf3c9775e47, type: 3}
   - {fileID: 1999647984331235364, guid: fa4a7011af93f9c7f857daf3c9775e47, type: 3}
@@ -1761,6 +1791,36 @@ SpriteAtlas:
   - door
   - bow
   - Skeleton Key - Icon
+  - uipack_rpg_sheet_27
+  - uipack_rpg_sheet_26
+  - uipack_rpg_sheet_25
+  - uipack_rpg_sheet_24
+  - uipack_rpg_sheet_23
+  - uipack_rpg_sheet_22
+  - uipack_rpg_sheet_21
+  - uipack_rpg_sheet_20
+  - uipack_rpg_sheet_29
+  - uipack_rpg_sheet_28
+  - uipack_rpg_sheet_18
+  - uipack_rpg_sheet_19
+  - uipack_rpg_sheet_12
+  - uipack_rpg_sheet_13
+  - uipack_rpg_sheet_10
+  - uipack_rpg_sheet_11
+  - uipack_rpg_sheet_9
+  - uipack_rpg_sheet_16
+  - uipack_rpg_sheet_8
+  - uipack_rpg_sheet_17
+  - uipack_rpg_sheet_7
+  - uipack_rpg_sheet_14
+  - uipack_rpg_sheet_6
+  - uipack_rpg_sheet_15
+  - uipack_rpg_sheet_5
+  - uipack_rpg_sheet_4
+  - uipack_rpg_sheet_3
+  - uipack_rpg_sheet_2
+  - uipack_rpg_sheet_1
+  - uipack_rpg_sheet_0
   - Inner_48
   - Inner_49
   - Inner_28
