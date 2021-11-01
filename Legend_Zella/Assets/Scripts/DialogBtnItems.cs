@@ -7,11 +7,13 @@ using UnityEngine;
 public class DialogBtnItems : MonoBehaviour
 {
     public TextMeshProUGUI thisBtnOptions;
-    void SetBtnOptions(string thisStr)
+    public int thisBtnInt;
+    public void SetBtnOptions(string thisStr, int thisInt)
     {
         if (thisBtnOptions)
         {
             thisBtnOptions.text = thisStr;
+            thisBtnInt = thisInt;
         }
     }
 }
