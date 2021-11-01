@@ -4431,6 +4431,7 @@ MonoBehaviour:
   dialogPanel: {fileID: 920860738}
   textSlider: {fileID: 875252633}
   btnSlider: {fileID: 1988000381}
+  nestTextPrefab: {fileID: 6065575909231452612, guid: 9716bef8c3d8494a38e4e1191bb4ad4a, type: 3}
   textAsset: {fileID: 4900000, guid: ff40950d50d695cd6b8e23269d941000, type: 3}
 --- !u!1 &928903955
 GameObject:

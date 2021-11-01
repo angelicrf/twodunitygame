@@ -10,10 +10,11 @@ public class DialogTextItems : MonoBehaviour
     public int thisTextInt;
     public void SetDialogText(string thisStr, int thisInt)
     {
-        if (thisDialogText)
-        {
-            thisDialogText.text = thisStr;
-            thisTextInt = thisInt;
-        }
+
+        thisDialogText.text = thisStr;
+        thisDialogText.color = Color.black;
+        thisDialogText.maskable = false;
+        thisTextInt = thisInt;
+
     }
 }

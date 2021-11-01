@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Ink.Runtime;
 using TMPro;
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,12 +26,13 @@ public class DialogStoryManager : MonoBehaviour
         dialogPanel.SetActive(true);
         dialogTxtPrefab.SetActive(true);
         dialogBtnPrefab.SetActive(true);
+        RefreshValues();
+
     }
     void Update()
     {
         //if (Input.GetButtonDown("DialogCheck"))
         //{
-        RefreshValues();
         //}
     }
     void RefreshValues()
@@ -60,8 +62,8 @@ public class DialogStoryManager : MonoBehaviour
         foreach (Choice choice in story.currentChoices)
         {
 
-            dialogBtnItems = Instantiate(dialogBtnPrefab).GetComponent<DialogBtnItems>();
-            Button newChoiceBtn = dialogBtnItems.GetComponent<Button>();
+            DialogBtnItems dglBtnItm = Instantiate(dialogBtnPrefab, btnSlider.transform).GetComponent<DialogBtnItems>();
+            Button newChoiceBtn = dglBtnItm.GetComponent<Button>();
             newChoiceBtn.transform.SetParent(btnSlider.transform);
 
 
@@ -76,13 +78,12 @@ public class DialogStoryManager : MonoBehaviour
     }
     public void GetNextStoryBlock()
     {
-        while (story.canContinue)
+        do
         {
-            dialogTextItems = Instantiate(dialogTxtPrefab, textSlider.transform).GetComponent<DialogTextItems>();
-            if (dialogTextItems)
-            {
-                dialogTextItems.SetDialogText(story.Continue(), 1);
-            }
-        }
+
+            //dialogTxtPrefab.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = story.Continue();
+            DialogTextItems txtItem = Instantiate(dialogTxtPrefab, textSlider.transform).GetComponent<DialogTextItems>();
+            txtItem.SetDialogText(story.Continue(), 1);
+        } while (story.canContinue);
     }
 }
