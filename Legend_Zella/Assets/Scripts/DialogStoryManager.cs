@@ -38,7 +38,8 @@ public class DialogStoryManager : MonoBehaviour
     public void OnClickChoiceButton(Choice choice)
     {
         story.ChooseChoiceIndex(choice.index);
-        ResetList();
+        //ResetList();
+        Debug.Log("btn clicked..");
         RefreshValue();
     }
     void ResetList()
@@ -53,6 +54,10 @@ public class DialogStoryManager : MonoBehaviour
             Destroy(btnSlider.transform.GetChild(i).gameObject);
         }
     }
+    public void TestClick()
+    {
+        Debug.Log("clickedd..");
+    }
     public void GetBtnAllChoices()
     {
         if (story.currentChoices.Count > 0)
@@ -61,19 +66,18 @@ public class DialogStoryManager : MonoBehaviour
             foreach (Choice choice in story.currentChoices)
             {
 
-                DialogBtnItems dglBtnItm = Instantiate(dialogBtnPrefab, btnSlider.transform).GetComponent<DialogBtnItems>();
-                Button newChoiceBtn = dglBtnItm.GetComponent<Button>();
-                dglBtnItm.SetBtnOptions(choice.text, choice.index);
-                newChoiceBtn.onClick.AddListener(delegate
-                {
-                    OnClickChoiceButton(choice);
-                });
-                instanceBtns.Add(dglBtnItm);
-                if (instanceBtns.Count > 0)
-                {
-                    ElementsOfChoicInstances();
 
-                }
+                DialogBtnItems dglBtnItm = Instantiate(dialogBtnPrefab, btnSlider.transform).GetComponent<DialogBtnItems>();
+                dglBtnItm.SetBtnOptions(choice.text, choice.index);
+                Button newChoiceBtn = dglBtnItm.GetComponentInChildren<Button>();
+                newChoiceBtn.onClick.AddListener(() => OnClickChoiceButton(choice));
+
+                //newChoiceBtn.onClick.Invoke();
+                /*  .AddListener(delegate
+                 {
+                     Debug.Log("btn clickedd...");
+                     OnClickChoiceButton(choice);
+                 }); */
             }
         }
         else
@@ -93,10 +97,7 @@ public class DialogStoryManager : MonoBehaviour
             txtItem.SetDialogText(story.Continue(), 1);
 
         } while (story.canContinue);
-        if (instanceItems != null && instanceItems.Count > 0)
-        {
-            ElementsOfItemsInstances();
-        }
+
     }
     private void ElementsOfItemsInstances()
     {
