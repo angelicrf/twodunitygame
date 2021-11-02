@@ -42,6 +42,7 @@ public class DialogStoryManager : MonoBehaviour
         Debug.Log("btn clicked..");
         RefreshValue();
     }
+
     void ResetList()
     {
         instanceBtns.Clear();
@@ -65,13 +66,10 @@ public class DialogStoryManager : MonoBehaviour
             //ClearUI();
             foreach (Choice choice in story.currentChoices)
             {
-
-
-                DialogBtnItems dglBtnItm = Instantiate(dialogBtnPrefab, btnSlider.transform).GetComponent<DialogBtnItems>();
+                DialogBtnItems dglBtnItm = Instantiate(dialogBtnPrefab, btnSlider.transform, false).GetComponent<DialogBtnItems>();
                 dglBtnItm.SetBtnOptions(choice.text, choice.index);
                 Button newChoiceBtn = dglBtnItm.GetComponentInChildren<Button>();
                 newChoiceBtn.onClick.AddListener(() => OnClickChoiceButton(choice));
-
                 //newChoiceBtn.onClick.Invoke();
                 /*  .AddListener(delegate
                  {

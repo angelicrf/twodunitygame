@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2279709210589414248}
   - component: {fileID: 2279709210589414250}
   - component: {fileID: 2227401673576198162}
+  - component: {fileID: 2772108919904671585}
   m_Layer: 5
   m_Name: BtnTestDialog
   m_TagString: Untagged
@@ -136,6 +137,26 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2772108919904671585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2279709210589414254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: -1
+  m_PreferredHeight: -1
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!1 &2279709211047538975
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,7 +222,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Choic
+  m_text: new choice
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 598e65bf65244dc93ab7aa493d2604d9, type: 2}
   m_sharedMaterial: {fileID: 3700650950743859370, guid: 598e65bf65244dc93ab7aa493d2604d9, type: 2}
