@@ -7,6 +7,7 @@ public class PausedMenu : MonoBehaviour
 {
     public GameObject pausedPanel;
     public GameObject inventoryPanel;
+    public GameObject dialogPanel;
     public bool isPaused = false;
 
     void Update()
@@ -40,6 +41,19 @@ public class PausedMenu : MonoBehaviour
             else
             {
                 inventoryPanel.SetActive(false);
+                Time.timeScale = 1.5f;
+            }
+        }
+        if (Input.GetButtonDown("DialogCheck"))
+        {
+            if (isPaused)
+            {
+                dialogPanel.SetActive(true);
+                Time.timeScale = 0f;
+            }
+            else
+            {
+                dialogPanel.SetActive(false);
                 Time.timeScale = 1.5f;
             }
         }
