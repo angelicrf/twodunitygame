@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Collision
+  - Ground
+  - Circle
+  - Square
+  - PotBreak
+  - Log
+  - AskMark
+  - KeyItem
+  - PatrolLog
+  - Bow
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Logs
+  - Points
+  - EnemyLog
+  - Projectile
+  - Player Projectile
+  - Player
+  - MiniMap
+  - SliderOne
+  - SliderTwo
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 4172251471
+    locked: 0
+  - name: MiniMap
+    uniqueID: 791711057
+    locked: 0

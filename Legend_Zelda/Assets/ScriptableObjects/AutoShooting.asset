@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 567ef7b704b0373fcb57349de78b6bb3, type: 3}
+  m_Name: AutoShooting
+  m_EditorClassIdentifier: 
+  durationChange: 0.3
+  magicCost: 1
+  plMagicValue: {fileID: 11400000, guid: 468c92ca9645c49ff87490ca87bb7f72, type: 2}
+  plMagicSignal: {fileID: 11400000, guid: dfa72f195d83f9a9fa5b66b2c71a5d29, type: 2}
+  ballObject: {fileID: 3686333663595077951, guid: 77df5777b142278d3bc1ab250e2600c1, type: 3}
+  numberShoot: 4
+  angleshoot: 82
